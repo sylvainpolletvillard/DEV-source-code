@@ -1,0 +1,26 @@
+
+<header>
+  <button [ngClass]="{burgerVertical: menuMobile, burgerHorizontal: !menuMobile}" (click)="ToggleMenuBurger()"><img src="assets/img/burger.svg" alt="bouton mobile"/></button>
+  <a href="#">
+    <img src="assets/img/creamNG-logo.svg" alt=" Logo CREAM NG"/>
+  </a>
+</header>
+
+
+<!-- Accordion -->
+<app-accordion [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
+
+    <app-accordion-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=0 [isOpen]=false>
+      <ul class="contenuMenu">
+        <li><a routerLink="/button" routerLinkActive="active"> button </a></li>
+      </ul>
+    </app-accordion-item>
+
+
+    <app-accordion-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=2 [isOpen]=false>
+      <ul class="contenuMenu">
+        <li><a routerLink="/tabs" routerLinkActive="active"> tabs </a></li>
+      </ul>
+    </app-accordion-item>
+
+</app-accordion>

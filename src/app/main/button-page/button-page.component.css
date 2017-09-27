@@ -1,0 +1,15 @@
+.uploadButton input[type="file"]{
+    background-color: dimgrey;
+    color: white;
+    width: 18.1rem;
+}
+  .uploadButton input[type="submit"]{
+    display: block;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 3px;
+    background: rgb(105, 105, 105);
+    cursor: pointer;
+    border: none;
+    font: 1rem "robotoregular";
+  }
