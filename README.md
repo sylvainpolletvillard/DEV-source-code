@@ -4,7 +4,8 @@ Projet généré par [Angular CLI] version 1.3.1
 
 ## Execution
 
-Lancer avec `ng serve`et ouvrir dans le navigateur à l'URL http://localhost:4200/`.  Ouverture du navigateur automatique avec `ng serve -o`
+Il est impératif de lancer un `npm-install` pour créer le dossier node_modules
+Lancer avec `ng serve`et ouvrir dans le navigateur à l'URL http://localhost:4200/` .  Ouverture du navigateur automatique avec `ng serve -o`
 
 ## Créer un composant 
 
@@ -13,6 +14,7 @@ Lancer `ng generate component component-name` pour générer un composant
 ## Build
 
 Lancer `ng build` pour build le projet. Si c'est pour mettre dans CreamNG/Library : ne pas oublier de faire `ng build --base-href https://creamng.github.io/Library/` sinon rien ne se lance
+L'application build sera dans le dossier /dist
 
 ## Tests unitaire
 
@@ -25,3 +27,5 @@ Le seul plugin JS utilisté est prettify.js permettant de colorié le `code`affi
 ## Credits
 
 Worldline - 2017 - CreamNG 
+
+
