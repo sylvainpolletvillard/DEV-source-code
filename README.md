@@ -1,29 +1,27 @@
 # Projet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+Projet généré par [Angular CLI] version 1.3.1 
 
-## Development server
+## Execution
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Lancer avec `ng serve`et ouvrir dans le navigateur à l'URL http://localhost:4200/`.  Ouverture du navigateur automatique avec `ng serve -o`
 
-## Code scaffolding
+## Créer un composant 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Lancer `ng generate component component-name` pour générer un composant
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Lancer `ng build` pour build le projet. Si c'est pour mettre dans CreamNG/Library : ne pas oublier de faire `ng build --base-href https://creamng.github.io/Library/` sinon rien ne se lance
 
-## Running unit tests
+## Tests unitaire
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Lancer `ng test` pour executer les tests unitaires (aucun de créer pour le moment)
 
-## Running end-to-end tests
+## Code Highlight
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Le seul plugin JS utilisté est prettify.js permettant de colorié le `code`affiché sur la page
 
-## Further help
+## Credits
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+Worldline - 2017 - CreamNG 
