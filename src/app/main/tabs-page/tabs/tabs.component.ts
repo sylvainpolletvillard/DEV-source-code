@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation, Input, ElementRef, AfterViewInit, ViewChi
 import { TabComponent } from './tab/tab.component';
 
 @Component({
-  selector: 'app-tabs',
+  selector: 'c3m-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css'],
   encapsulation: ViewEncapsulation.None

@@ -12,46 +12,46 @@
 
     <!-- TABS DEMO -->
 
-    <app-tabs class="presentationTabV">
-      <app-tab tabTitle="Title1">
+    <c3m-tabs class="presentationTabV">
+      <c3m-tab tabTitle="Title1">
         Content 1
-      </app-tab>
-      <app-tab tabTitle="Title2">
+      </c3m-tab>
+      <c3m-tab tabTitle="Title2">
         Content 2
-      </app-tab>
-      <app-tab tabTitle="Title3">
+      </c3m-tab>
+      <c3m-tab tabTitle="Title3">
         Content 3
-      </app-tab>
-      <app-tab tabTitle="Title4">
+      </c3m-tab>
+      <c3m-tab tabTitle="Title4">
         Content 4
-      </app-tab>
-    </app-tabs>
+      </c3m-tab>
+    </c3m-tabs>
 
 <p> This component is accessible and semantic.
 The css provides for cases where the width of the tab is greater than the width of the page. It is possible to change the default open tab with the viable startIndexActiv in tabs.component.ts</p>
     <!-- TABS SNIPPETS -->
 
-    <app-tabs>
+    <c3m-tabs>
 
-      <app-tab tabTitle="HTML">
+      <c3m-tab tabTitle="HTML">
         <p class="pre-code"> To call the component </p>
         <div class="code">
                     <pre class="prettyprint linenums">
                       <code class="language-html">
-                        &#x3C;app-tabs &#x3E;
-                            &#x3C;app-tab tabTitle=&#x22;Title1&#x22;&#x3E;
+                        &#x3C;c3m-tabs &#x3E;
+                            &#x3C;c3m-tab tabTitle=&#x22;Title1&#x22;&#x3E;
                                 Content 1
-                            &#x3C;/app-tab&#x3E;
-                            &#x3C;app-tab tabTitle=&#x22;Title2&#x22;&#x3E;
+                            &#x3C;/c3m-tab&#x3E;
+                            &#x3C;c3m-tab tabTitle=&#x22;Title2&#x22;&#x3E;
                                 Content 2
-                            &#x3C;/app-tab&#x3E;
-                            &#x3C;app-tab tabTitle=&#x22;Title3&#x22;&#x3E;
+                            &#x3C;/c3m-tab&#x3E;
+                            &#x3C;c3m-tab tabTitle=&#x22;Title3&#x22;&#x3E;
                                 Content 3
-                            &#x3C;/app-tab&#x3E;
-                            &#x3C;app-tab tabTitle=&#x22;Title4&#x22;&#x3E;
+                            &#x3C;/c3m-tab&#x3E;
+                            &#x3C;c3m-tab tabTitle=&#x22;Title4&#x22;&#x3E;
                                 Content 4
-                            &#x3C;/app-tab&#x3E;
-                        &#x3C;/app-tabs&#x3E;
+                            &#x3C;/c3m-tab&#x3E;
+                        &#x3C;/c3m-tabs&#x3E;
                       </code>
                     </pre>
         </div>
@@ -93,9 +93,9 @@ The css provides for cases where the width of the tab is greater than the width 
         </div>
 
 
-      </app-tab>
+      </c3m-tab>
 
-      <app-tab tabTitle="CSS">
+      <c3m-tab tabTitle="CSS">
         <p class="pre-code"> To call the component </p>
         <div class="code">
               <pre class="prettyprint linenums">
@@ -129,13 +129,13 @@ The css provides for cases where the width of the tab is greater than the width 
                         cursor: pointer;
                         color:black;
                      &#125;
-                        app-tab .content[aria-hidden=&#x22;false&#x22;] &#123;
+                        c3m-tab .content[aria-hidden=&#x22;false&#x22;] &#123;
                           padding: 1rem;
                           background-color: rgba(218, 218, 218, 0.68);
                           padding-top: 2.2rem;
                           font: 1rem &#x22;robotolight&#x22;;
                          &#125;
-                          app-tab .content[aria-hidden=&#x22;true&#x22;] &#123;
+                          c3m-tab .content[aria-hidden=&#x22;true&#x22;] &#123;
                             display: none;
                            &#125;
                             .tabsContainer ul &#x3E; li.over &#123;
@@ -156,9 +156,9 @@ The css provides for cases where the width of the tab is greater than the width 
             </pre>
         </div>
 
-      </app-tab>
+      </c3m-tab>
 
-      <app-tab tabTitle="TypeScript">
+      <c3m-tab tabTitle="TypeScript">
         <p class="pre-code">For <strong>tabs-page.component.ts</strong></p>
           <div class="code">
               <pre class="prettyprint linenums">
@@ -167,7 +167,7 @@ The css provides for cases where the width of the tab is greater than the width 
                       import &#123; TabComponent &#125; from &#x27;./tab/tab.component&#x27;;
 
                       @Component(&#123;
-                        selector: &#x27;app-tabs&#x27;,
+                        selector: &#x27;-tabs&#x27;,
                         templateUrl: &#x27;./tabs.component.html&#x27;,
                         styleUrls: [&#x27;./tabs.component.css&#x27;],
                         encapsulation: ViewEncapsulation.None
@@ -262,7 +262,7 @@ The css provides for cases where the width of the tab is greater than the width 
                                   import &#123; AppComponent &#125; from &#x27;../../../../app.component&#x27;;
 
                                   @Component(&#123;
-                                    selector: &#x27;app-tab&#x27;,
+                                    selector: &#x27;c3m-tab&#x27;,
                                     templateUrl: &#x27;./tab.component.html&#x27;,
                                     styleUrls: [&#x27;./tab.component.css&#x27;],
                                     encapsulation: ViewEncapsulation.None
@@ -275,7 +275,7 @@ The css provides for cases where the width of the tab is greater than the width 
                                     tabID: string;
                                     panelID: string;
 
-                                    constructor(tabs: TabsComponent, app: AppComponent) &#123;
+                                    constructor(tabs: TabsComponent, : AppComponent) &#123;
                                       tabs.addTab(this);
                                       this.idTab = app.randomID();
                                     &#125;
@@ -306,8 +306,8 @@ The css provides for cases where the width of the tab is greater than the width 
                     </code>
               </pre>
           </div>
-      </app-tab>
-    </app-tabs>
+      </c3m-tab>
+    </c3m-tabs>
 
 
   </div>

@@ -3,7 +3,7 @@ import { TabsComponent } from '../tabs.component';
 import { AppComponent } from '../../../../app.component';
 
 @Component({
-  selector: 'app-tab',
+  selector: 'c3m-tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.css'],
   encapsulation: ViewEncapsulation.None

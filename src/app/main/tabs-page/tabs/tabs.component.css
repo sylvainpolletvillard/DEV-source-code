@@ -27,13 +27,13 @@
         color:black;
         font: 1.1rem"robotolight";
     }
-        app-tab .content[aria-hidden="false"]{
+        c3m-tab .content[aria-hidden="false"]{
           padding: 1rem;
           background-color: #F5F5F5;
           padding-top: 2.2rem;
           font: 1rem "robotolight";
         }
-          app-tab .content[aria-hidden="true"]{
+          c3m-tab .content[aria-hidden="true"]{
             display:none;
           }
             .tabsContainer ul > li.over{
