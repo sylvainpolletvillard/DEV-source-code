@@ -18,7 +18,7 @@ export class TabsComponent implements AfterViewInit {
   arrayTmp: ElementRef[] = [];
   startIndexActiv = 0;
 
-  /* Gestion du resize pour le breakpoint des tab */
+  /* resize breakpoint tab */
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if ( this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop ) {
@@ -45,7 +45,7 @@ export class TabsComponent implements AfterViewInit {
     this.cdr.detectChanges();
   }
 
-  /* Ajout d'un tab dans le tableau de tab et selection du tab actif */
+  /* add tab to tab table and select tab active */
   addTab(tab: TabComponent) {
     if (this.tabs.length === this.startIndexActiv) {
       tab.isActive = true;
@@ -53,7 +53,7 @@ export class TabsComponent implements AfterViewInit {
     this.tabs.push(tab);
   }
 
-  /* Fermeture des tabs et ouverture du bon tab */
+  /* close tabs et open the active tab */
   selectTab(tab: TabComponent) {
     this.tabs.forEach((TabComponent) => {
       TabComponent.isActive = false;
@@ -61,7 +61,7 @@ export class TabsComponent implements AfterViewInit {
     tab.isActive = true;
     }
 
-  /* Gestion du breakpoint des tab*/
+  /* breakpoint tab */
   ngAfterViewInit(): void {
 
     this.arrayTmp = this.tabsElement.toArray();
@@ -78,7 +78,7 @@ export class TabsComponent implements AfterViewInit {
   }
 
 
-  /* Constructeur d'un tab */
+  /* constructor tab */
   constructor(private cdr: ChangeDetectorRef) {
   }
 

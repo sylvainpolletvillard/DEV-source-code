@@ -1,5 +1,5 @@
 /* CSS ACCORDION */
-app-accordion{
+c3m-accordion{
     display:block;
     width: 75%;
     height: 100%;
@@ -107,7 +107,7 @@ header{
 }
 
 @media screen and (min-width: 1300px){
-    app-accordion{
+    c3m-accordion{
         width:17.5%;
     }
 }

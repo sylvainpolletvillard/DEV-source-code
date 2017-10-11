@@ -192,6 +192,11 @@ html{
 }
 pre.prettyprint{
     border: 0px solid #888;
+    overflow-x:auto;
+}
+
+.content .code{
+  overflow-x:hidden;
 }
 ol.linenums{
     margin-top: 0;

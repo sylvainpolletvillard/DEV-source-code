@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation, Input, OnChanges, SimpleChanges, OnDestro
 import { AccordionComponent } from '../accordion.component';
 
 @Component({
-  selector: 'app-accordion-item',
+  selector: 'c3m-accordion-item',
   templateUrl: './accordion-item.component.html',
   styleUrls: ['./accordion-item.component.css'],
   encapsulation: ViewEncapsulation.None
@@ -16,17 +16,17 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, AfterViewIn
   tabID: string;
   panelID: string;
 
-  /* Par defaut on ajoute l'élément dans l'accordion */
+  /* By default , add item to accordion */
   constructor(private accordion: AccordionComponent) {
     this.accordion.addGroup(this);
   }
 
-  /* Fonction permettant de retirer l'élément de l'accordion */
+  /* remove item to accordion*/
   ngOnDestroy() {
     this.accordion.removeGroup(this);
   }
 
-  /* Fonction permettant de savoir */
+  /* changes */
   ngOnChanges(changes: SimpleChanges) {
     for (const change in changes) {
       if (changes.hasOwnProperty(change)) {
@@ -49,7 +49,7 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, AfterViewIn
   }
 
 
-  /* Ouvre lélément de l'accordion */
+  /* open accordion'element */
   toggleOpen(): void {
     if (!this.isOpen) {
       this.isOpen = true;

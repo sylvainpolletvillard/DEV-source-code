@@ -8,19 +8,19 @@
 
 
 <!-- Accordion -->
-<app-accordion [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
+<c3m-accordion [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
 
-    <app-accordion-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=0 [isOpen]=false>
+    <c3m-accordion-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=0 [isOpen]=false>
       <ul class="contenuMenu">
         <li><a routerLink="/button" routerLinkActive="active"> button </a></li>
       </ul>
-    </app-accordion-item>
+    </c3m-accordion-item>
 
 
-    <app-accordion-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=2 [isOpen]=false>
+    <c3m-accordion-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=2 [isOpen]=false>
       <ul class="contenuMenu">
         <li><a routerLink="/tabs" routerLinkActive="active"> tabs </a></li>
       </ul>
-    </app-accordion-item>
+    </c3m-accordion-item>
 
-</app-accordion>
+</c3m-accordion>
