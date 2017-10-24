@@ -133,135 +133,99 @@ html{
   .pre-code strong{
     color:#5d5d5d;
   }
-            app-tabs div.code{
+            c3m-tabs div.code{
               margin-left: 0;
               background-color: #3e3e3e;
               color: white;
               overflow-x: auto;
               width: 100%;
             }
-              app-tabs ol.display-code{
+              c3m-tabs ol.display-code{
                 list-style: decimal;
                 margin-left: 2.2rem;
               }
-                    app-tabs ol.display-code li{
+                    c3m-tabs ol.display-code li{
                         padding: 0.4rem 0.4rem 0.4rem 1rem;
                         margin-left: -0.2rem;
                     }
-                        app-tabs ol.display-code pre span{
+                        c3m-tabs ol.display-code pre span{
                           color:#f7901e;
                         }
-                          app-tabs ol.display-code em{
+                          c3m-tabs ol.display-code em{
                                 color: #2ad020;
                           }
 
 /* POUR LA GENERATION DE SNIPPETS CODE  */
 
-.str{
+c3m-tabs .str{
     color: #fd5ce8;
 }
-.kwd{
+c3m-tabs .kwd{
     color: #6CBE45;
 }
-.com{
+c3m-tabs .com{
     color: #3c9fd0;
 }
-.typ{
+c3m-tabs .typ{
     color: #75ebff;
 }
-.lit{
+c3m-tabs .lit{
     color: #FACD22;
 }
-.pun{
+c3m-tabs .pun{
     color: #F1F2F3;
 }
-.pln{
+c3m-tabs .pln{
     color: #F1F2F3;
 }
-.tag{
+c3m-tabs .tag{
     color: #8AC763;
 }
-.atn{
+c3m-tabs .atn{
     color: #E0E2E4;
 }
-.atv{
+c3m-tabs .atv{
     color: #ED9C21;
 }
-.dec{
+c3m-tabs .dec{
     color: purple;
 }
-pre.prettyprint{
+c3m-tabs pre.prettyprint{
     border: 0px solid #888;
     overflow-x:auto;
 }
 
-.content .code{
+c3m-tabs .content .code{
   overflow-x:hidden;
 }
-ol.linenums{
+c3m-tabs ol.linenums{
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
     min-width: 100%;
 }
-.prettyprint {
+c3m-tabs .prettyprint {
     background: #3E3E3E
 }
-li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9{
+c3m-tabs li.L0, c3m-tabs li.L1, c3m-tabs li.L2, c3m-tabs li.L3, c3m-tabs li.L4, c3m-tabs li.L5, c3m-tabs li.L6, c3m-tabs li.L7, c3m-tabs li.L8, c3m-tabs li.L9{
     color: #d4d4d4;
     list-style-type: decimal;
     padding: 0.2rem 0px;
     margin-left: 2rem;
 }
-li.L1, li.L3, li.L5, li.L7, li.L9 {
+c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
     background: rgba(84, 84, 84, 0.43);
     padding: 0.2rem 0px;
 }
-@media print
-{
-    .str{
-        color: #060;
-    }
-    .kwd{
-        color: #006;
-        font-weight: bold;
-    }
-    .com{
-        color: #600;
-        font-style: italic;
-    }
-    .typ{
-        color: #404;
-        font-weight: bold;
-    }
-    .lit{
-        color: #044;
-    }
-    .pun{
-        color: #440;
-    }
-    .pln{
-        color: #000;
-    }
-    .tag{
-        color: #006;
-        font-weight: bold;
-    }
-    .atn{
-        color: #404;
-    }
-    .atv{
-        color: #060;
-    }
-}
+
 
 
 @media screen and (min-width: 750px) {
-      app-tabs div.code{
+      c3m-tabs div.code{
         margin:0 auto;
         width: 90%;
       }
-      app-tabs ol.display-code{
+      c3m-tabs ol.display-code{
         margin-left: 0;
       }
       .pre-code{

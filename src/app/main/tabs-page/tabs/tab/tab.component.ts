@@ -17,16 +17,19 @@ export class TabComponent implements OnInit, AfterViewInit {
   panelID: string;
 
 
+  /* Constructor Tab Component */
   constructor(tabs: TabsComponent, app: AppComponent) {
     tabs.addTab(this);
     this.idTab = app.randomID();
    }
 
+   /* ID for Accessbility */
   ngOnInit() {
     this.tabID = 'tab' + this.idTab;
     this.panelID = 'panel' + this.idTab;
   }
 
+  /* ID for Accessbility */
   ngAfterViewInit() {
     this.tabID = 'tab' + this.idTab;
     this.panelID = 'panel' + this.idTab;

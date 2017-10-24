@@ -9,8 +9,10 @@ import { TabComponent } from './tab/tab.component';
 })
 export class TabsComponent implements AfterViewInit {
 
+  /* List of Tabs Element */
   @ViewChildren('tabs') tabsElement: QueryList<ElementRef>;
 
+  /* Variables */
   tabs: TabComponent[] = [];
   isOver: boolean;
   widthBreak: number;
@@ -18,7 +20,7 @@ export class TabsComponent implements AfterViewInit {
   arrayTmp: ElementRef[] = [];
   startIndexActiv = 0;
 
-  /* resize breakpoint tab */
+  /* Resize breakpoint tab */
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if ( this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop ) {
@@ -61,8 +63,9 @@ export class TabsComponent implements AfterViewInit {
     tab.isActive = true;
     }
 
+
   /* breakpoint tab */
-  ngAfterViewInit(): void {
+  ngAfterViewInit(){
 
     this.arrayTmp = this.tabsElement.toArray();
     for ( let i = 0; i < this.arrayTmp.length - 1; i ++ ) {
@@ -76,6 +79,7 @@ export class TabsComponent implements AfterViewInit {
     }
       this.cdr.detectChanges();
   }
+
 
 
   /* constructor tab */

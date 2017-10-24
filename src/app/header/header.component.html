@@ -12,14 +12,14 @@
 
     <c3m-accordion-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=0 [isOpen]=false>
       <ul class="contenuMenu">
-        <li><a routerLink="/button" routerLinkActive="active"> button </a></li>
+        <li (click)="ToggleMenuBurger()"><a routerLink="/button" routerLinkActive="active"> button </a></li>
       </ul>
     </c3m-accordion-item>
 
 
     <c3m-accordion-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=2 [isOpen]=false>
       <ul class="contenuMenu">
-        <li><a routerLink="/tabs" routerLinkActive="active"> tabs </a></li>
+        <li (click)="ToggleMenuBurger()"><a routerLink="/tabs" routerLinkActive="active"> tabs </a></li>
       </ul>
     </c3m-accordion-item>
 

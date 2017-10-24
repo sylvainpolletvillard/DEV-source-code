@@ -39,10 +39,13 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, AfterViewIn
     }
   }
 
+  /* initialisation */
   ngOnInit() {
     this.tabID = 'tab' + this.index;
     this.panelID = 'panel' + this.index;
   }
+
+  /* when view init */
   ngAfterViewInit() {
     this.tabID = 'tab' + this.index;
     this.panelID = 'panel' + this.index;

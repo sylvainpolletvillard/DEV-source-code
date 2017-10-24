@@ -1,4 +1,33 @@
-!function(){
+!function(){/*
+
+ Copyright (C) 2013 Google Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ Copyright (C) 2006 Google Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
 (function(){function ba(g){function k(){try{M.doScroll("left")}catch(g){t.setTimeout(k,50);return}z("poll")}function z(k){if("readystatechange"!=k.type||"complete"==A.readyState)("load"==k.type?t:A)[B](p+k.type,z,!1),!q&&(q=!0)&&g.call(t,k.type||k)}var Y=A.addEventListener,q=!1,C=!0,x=Y?"addEventListener":"attachEvent",B=Y?"removeEventListener":"detachEvent",p=Y?"":"on";if("complete"==A.readyState)g.call(t,"lazy");else{if(A.createEventObject&&M.doScroll){try{C=!t.frameElement}catch(da){}C&&k()}A[x](p+
 "DOMContentLoaded",z,!1);A[x](p+"readystatechange",z,!1);t[x](p+"load",z,!1)}}function U(){V&&ba(function(){var g=N.length;ca(g?function(){for(var k=0;k<g;++k)(function(g){t.setTimeout(function(){t.exports[N[g]].apply(t,arguments)},0)})(k)}:void 0)})}for(var t=window,A=document,M=A.documentElement,O=A.head||A.getElementsByTagName("head")[0]||M,B="",F=A.getElementsByTagName("script"),q=F.length;0<=--q;){var P=F[q],Z=P.src.match(/^[^?#]*\/run_prettify\.js(\?[^#]*)?(?:#.*)?$/);if(Z){B=Z[1]||"";P.parentNode.removeChild(P);
 break}}var V=!0,H=[],Q=[],N=[];B.replace(/[?&]([^&=]+)=([^&]+)/g,function(g,k,z){z=decodeURIComponent(z);k=decodeURIComponent(k);"autorun"==k?V=!/^[0fn]/i.test(z):"lang"==k?H.push(z):"skin"==k?Q.push(z):"callback"==k&&N.push(z)});q=0;for(B=H.length;q<B;++q)(function(){var g=A.createElement("script");g.onload=g.onerror=g.onreadystatechange=function(){!g||g.readyState&&!/loaded|complete/.test(g.readyState)||(g.onerror=g.onload=g.onreadystatechange=null,--T,T||t.setTimeout(U,0),g.parentNode&&g.parentNode.removeChild(g),

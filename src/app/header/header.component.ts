@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,21 +6,18 @@ import { Component, OnInit, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./header.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
 
   menuMobile = false;
 
-  constructor() { }
 
-  ngOnInit() {
-  }
-
+  /* Action button burger */
   public ToggleMenuBurger() {
       if (this.menuMobile) {
           this.menuMobile = false;
+
       } else if (!this.menuMobile) {
         this.menuMobile = true;
       }
   }
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-tabs-page',
@@ -6,11 +6,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./tabs-page.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class TabsPageComponent implements OnInit {
+export class TabsPageComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

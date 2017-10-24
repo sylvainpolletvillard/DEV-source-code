@@ -1,3 +1,5 @@
+
+<!-- TITLE TABS COMPONENT PAGE -->
 <div class="panelTitle">
   <h2> <strong> Tabs </strong> Component </h2>
   <ul>
@@ -5,13 +7,15 @@
   </ul>
 </div>
 
+
+<!-- DESCRIPTION TABS COMPONENT PAGE -->
 <div class="titleComponent">
   <div class="descriptionComponent" id="nrmTabs">
     <h3> Normal Tabs </h3>
     <p> Its' a tabs divided into 2 components: one for the container (TabsComponent) and the other for the content (TabComponent)</p>
 
-    <!-- TABS DEMO -->
 
+    <!-- TABS DEMO -->
     <c3m-tabs class="presentationTabV">
       <c3m-tab tabTitle="Title1">
         Content 1
@@ -27,38 +31,45 @@
       </c3m-tab>
     </c3m-tabs>
 
-<p> This component is accessible and semantic.
-The css provides for cases where the width of the tab is greater than the width of the page. It is possible to change the default open tab with the viable startIndexActiv in tabs.component.ts</p>
+
+    <p> This component is accessible and semantic.
+    The css provides for cases where the width of the
+    tab is greater than the width of the page. It is possible
+    to change the default open tab with the viable startIndexActiv
+    in tabs.component.ts</p>
+
+
+
     <!-- TABS SNIPPETS -->
-
     <c3m-tabs>
-
       <c3m-tab tabTitle="HTML">
         <p class="pre-code"> To call the component </p>
         <div class="code">
-                    <pre class="prettyprint linenums">
-                      <code class="language-html">
-                        &#x3C;c3m-tabs &#x3E;
-                            &#x3C;c3m-tab tabTitle=&#x22;Title1&#x22;&#x3E;
-                                Content 1
-                            &#x3C;/c3m-tab&#x3E;
-                            &#x3C;c3m-tab tabTitle=&#x22;Title2&#x22;&#x3E;
-                                Content 2
-                            &#x3C;/c3m-tab&#x3E;
-                            &#x3C;c3m-tab tabTitle=&#x22;Title3&#x22;&#x3E;
-                                Content 3
-                            &#x3C;/c3m-tab&#x3E;
-                            &#x3C;c3m-tab tabTitle=&#x22;Title4&#x22;&#x3E;
-                                Content 4
-                            &#x3C;/c3m-tab&#x3E;
-                        &#x3C;/c3m-tabs&#x3E;
-                      </code>
-                    </pre>
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+              <code>
+                  &#x3C;c3m-tabs &#x3E;
+                      &#x3C;c3m-tab tabTitle=&#x22;Title1&#x22;&#x3E;
+                          Content 1
+                      &#x3C;/c3m-tab&#x3E;
+                      &#x3C;c3m-tab tabTitle=&#x22;Title2&#x22;&#x3E;
+                          Content 2
+                      &#x3C;/c3m-tab&#x3E;
+                      &#x3C;c3m-tab tabTitle=&#x22;Title3&#x22;&#x3E;
+                          Content 3
+                      &#x3C;/c3m-tab&#x3E;
+                      &#x3C;c3m-tab tabTitle=&#x22;Title4&#x22;&#x3E;
+                          Content 4
+                      &#x3C;/c3m-tab&#x3E;
+                  &#x3C;/c3m-tabs&#x3E;
+              </code>
+            </pre>
         </div>
         <p class="pre-code"> For <strong>tabs.component.html</strong> </p>
         <div class="code">
+            <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint linenums">
-              <code class="language-html">
+              <code>
                   &#x3C;div class=&#x22;tabsContainer&#x22;&#x3E;
                     &#x3C;ul&#x3E;
                           &#x3C;li #tabs *ngFor=&#x22;let tab of tabs&#x22;
@@ -80,8 +91,9 @@ The css provides for cases where the width of the tab is greater than the width 
         </div>
           <p class="pre-code"> For <strong>tab.component.html</strong> </p>
         <div class="code">
+            <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint linenums">
-              <code class="language-html">
+              <code>
                       &#x3C;div class=&#x22;content&#x22;
                             [attr.aria-hidden]=&#x22;!isActive&#x22;
                             [attr.aria-labeledby]=&#x22;tabID&#x22;
@@ -94,12 +106,12 @@ The css provides for cases where the width of the tab is greater than the width 
 
 
       </c3m-tab>
-
       <c3m-tab tabTitle="CSS">
         <p class="pre-code"> To call the component </p>
         <div class="code">
+              <!--?prettify lang=css linenums=true?-->
               <pre class="prettyprint linenums">
-              <code class="language-css">
+              <code>
 
                   /* GESTION DES SNIPPETS */
 
@@ -157,12 +169,12 @@ The css provides for cases where the width of the tab is greater than the width 
         </div>
 
       </c3m-tab>
-
       <c3m-tab tabTitle="TypeScript">
         <p class="pre-code">For <strong>tabs-page.component.ts</strong></p>
           <div class="code">
+              <!--?prettify lang=js linenums=true?-->
               <pre class="prettyprint linenums">
-                <code class="language-js">
+                  <code>
                       import &#123; Component, ViewEncapsulation, Input, ElementRef, AfterViewInit, ViewChildren, QueryList, ChangeDetectorRef, HostListener &#125; from &#x27;@angular/core&#x27;;
                       import &#123; TabComponent &#125; from &#x27;./tab/tab.component&#x27;;
 
@@ -255,50 +267,52 @@ The css provides for cases where the width of the tab is greater than the width 
 
           <p class="pre-code">For <strong>tab-page.component.ts</strong></p>
           <div class="code">
+             <!--?prettify lang=js linenums=true?-->
                         <pre class="prettyprint linenums">
-                          <code class="language-js">
-                                  import &#123; Component, OnInit, ViewEncapsulation, Input, AfterViewInit&#125; from &#x27;@angular/core&#x27;;
-                                  import &#123; TabsComponent &#125; from &#x27;../tabs.component&#x27;;
-                                  import &#123; AppComponent &#125; from &#x27;../../../../app.component&#x27;;
+                          <code>
+                                import &#123; Component, OnInit, ViewEncapsulation, Input, AfterViewInit&#125; from &#x27;@angular/core&#x27;;
+                                import &#123; TabsComponent &#125; from &#x27;../tabs.component&#x27;;
+                                import &#123; AppComponent &#125; from &#x27;../../../../app.component&#x27;;
 
-                                  @Component(&#123;
-                                    selector: &#x27;c3m-tab&#x27;,
-                                    templateUrl: &#x27;./tab.component.html&#x27;,
-                                    styleUrls: [&#x27;./tab.component.css&#x27;],
-                                    encapsulation: ViewEncapsulation.None
-                                  &#125;)
-                                  export class TabComponent implements OnInit, AfterViewInit &#123;
+                                @Component(&#123;
+                                  selector: &#x27;c3m-tab&#x27;,
+                                  templateUrl: &#x27;./tab.component.html&#x27;,
+                                  styleUrls: [&#x27;./tab.component.css&#x27;],
+                                  encapsulation: ViewEncapsulation.None
+                                &#125;)
+                                export class TabComponent implements OnInit, AfterViewInit &#123;
 
-                                    @Input() tabTitle;
-                                    @Input() isActive: boolean;
-                                    @Input() idTab: number;
-                                    tabID: string;
-                                    panelID: string;
+                                  @Input() tabTitle;
+                                  @Input() isActive: boolean;
+                                  @Input() idTab: number;
+                                  tabID: string;
+                                  panelID: string;
 
-                                    constructor(tabs: TabsComponent, : AppComponent) &#123;
-                                      tabs.addTab(this);
-                                      this.idTab = app.randomID();
-                                    &#125;
-
-                                    ngOnInit() &#123;
-                                      this.tabID = &#x27;tab&#x27; + this.idTab;
-                                      this.panelID = &#x27;panel&#x27; + this.idTab;
-                                    &#125;
-
-                                    ngAfterViewInit() &#123;
-                                      this.tabID = &#x27;tab&#x27; + this.idTab;
-                                      this.panelID = &#x27;panel&#x27; + this.idTab;
-
-                                    &#125;
+                                  constructor(tabs: TabsComponent, : AppComponent) &#123;
+                                    tabs.addTab(this);
+                                    this.idTab = app.randomID();
                                   &#125;
+
+                                  ngOnInit() &#123;
+                                    this.tabID = &#x27;tab&#x27; + this.idTab;
+                                    this.panelID = &#x27;panel&#x27; + this.idTab;
+                                  &#125;
+
+                                  ngAfterViewInit() &#123;
+                                    this.tabID = &#x27;tab&#x27; + this.idTab;
+                                    this.panelID = &#x27;panel&#x27; + this.idTab;
+
+                                  &#125;
+                                &#125;
                           </code>
                         </pre>
           </div>
 
           <p class="pre-code">It's the <strong> Random Function </strong> that generates id automatically for "aria" and "id" attributes <strong> in the AppComponent </strong> for example</p>
           <div class="code">
+             <!--?prettify lang=js linenums=true?-->
               <pre class="prettyprint linenums">
-                    <code class="language-js">
+                    <code>
                         public randomID() &#123;
                           const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
                           return idRandom;
@@ -308,7 +322,6 @@ The css provides for cases where the width of the tab is greater than the width 
           </div>
       </c3m-tab>
     </c3m-tabs>
-
 
   </div>
 
