@@ -6,6 +6,8 @@ c3m-accordion > ul{
 c3m-accordion-item > li{
     border:none;
     position:relative;
+    z-index: 5;
+    background-color: #535353;
 }
 
 c3m-accordion-item > li.closed{
@@ -24,20 +26,26 @@ c3m-accordion-item > li > button {
     line-height: 1.7rem;
     text-align: left;
     color: white;
-    background-color: #535353;
+    background-color: initial;
     background-size: 2.1rem;
     padding: 0.5rem;
     cursor: pointer;
+    z-index: 10;
+    position: relative;
+    padding-right: 3rem;
 }
 c3m-accordion-item > li::before {
     content: " ";
     width: 40px;
     height: 40px;
     display: block;
-    background: url(/assets/img/arrow-down-bold_white.svg) no-repeat;
+    background: url(https://creamng.github.io/Library/assets/img/arrow-down-bold_white.svg) no-repeat;
     position: absolute;
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    margin-left: 87.9%;
+    z-index: 1;
+    position: absolute;
+    right: 12px;
 }
 c3m-accordion-item > li.closed:before{
     transform: rotate(0deg);
