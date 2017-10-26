@@ -13,8 +13,13 @@ Lancer `ng generate component component-name` pour générer un composant
 
 ## Build
 
-Lancer `ng build` pour build le projet. Si c'est pour mettre dans CreamNG/Library : ne pas oublier de faire `ng build --base-href https://creamng.github.io/Library/` sinon rien ne se lance
-L'application build sera dans le dossier /dist
+Lancer `ng build --prod --output-path docs --base-href https://creamng.github.io/Library/` pour build
+le projet. Le dossier /docs contiendra le contenu à mettre dans le repo "Library" pour être disponible sur 
+la page Git
+
+De plus, il est nécessaire de copier coller le fichier "/docs/index.html" et de le renommer en "/docs/404.html" en n'oubliant
+pas d'écraser au préalable l'ancien fichier.
+
 
 ## Tests unitaire
 
