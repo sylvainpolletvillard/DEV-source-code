@@ -1,4 +1,4 @@
-
+<!-- Header -->
 <header>
   <button [ngClass]="{burgerVertical: menuMobile, burgerHorizontal: !menuMobile}" (click)="ToggleMenuBurger()"><img src="assets/img/burger.svg" alt="bouton mobile"/></button>
   <a href="#">
@@ -7,20 +7,24 @@
 </header>
 
 
-<!-- Accordion -->
-<c3m-accordion [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
+<!-- Nav -->
+<nav>
+    <!-- Accordion -->
+    <c3m-menu [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
 
-    <c3m-accordion-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=0 [isOpen]=false>
-      <ul class="contenuMenu">
-        <li (click)="ToggleMenuBurger()"><a routerLink="/button" routerLinkActive="active"> button </a></li>
-      </ul>
-    </c3m-accordion-item>
+        <c3m-menu-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=0 [isOpen]=false>
+            <ul class="contenuMenu">
+                <li (click)="ToggleMenuBurger()"><a routerLink="/button" routerLinkActive="active"> button </a></li>
+            </ul>
+        </c3m-menu-item>
 
 
-    <c3m-accordion-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=2 [isOpen]=false>
-      <ul class="contenuMenu">
-        <li (click)="ToggleMenuBurger()"><a routerLink="/tabs" routerLinkActive="active"> tabs </a></li>
-      </ul>
-    </c3m-accordion-item>
+        <c3m-menu-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=2 [isOpen]=false>
+            <ul class="contenuMenu">
+                <li (click)="ToggleMenuBurger()"><a routerLink="/tabs" routerLinkActive="active"> Tabs </a></li>
+                <li (click)="ToggleMenuBurger()"><a routerLink="/accordion" routerLinkActive="active">  Accordion </a></li>
+            </ul>
+        </c3m-menu-item>
+    </c3m-menu>
+</nav>
 
-</c3m-accordion>

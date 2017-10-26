@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 export class AppComponent implements AfterViewChecked {
   title = 'app';
 
-  @ViewChild(HeaderComponent) header:HeaderComponent;
+  @ViewChild(HeaderComponent) header: HeaderComponent;
 
 
   // Initialise Code-Prettify
@@ -30,7 +30,7 @@ export class AppComponent implements AfterViewChecked {
 
 
 
-  public togggle(){
+  public CallToggleMenuBurger() {
     this.header.ToggleMenuBurger();
   }
 

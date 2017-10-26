@@ -1,5 +1,5 @@
 /* CSS ACCORDION */
-c3m-accordion{
+c3m-menu{
     display:block;
     width: 75%;
     height: 100%;
@@ -93,7 +93,7 @@ header{
     header a{
       margin-left: 1rem;
     }
-    c3m-accordion{
+    c3m-menu{
         display: inline-block;
         width:24.5%;
         left:0;
@@ -108,7 +108,7 @@ header{
 }
 
 @media screen and (min-width: 1300px){
-    c3m-accordion{
+    c3m-menu{
         width:17.5%;
     }
 }

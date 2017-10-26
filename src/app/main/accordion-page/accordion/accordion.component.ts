@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 
 @Component({
