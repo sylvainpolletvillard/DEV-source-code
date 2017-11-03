@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./header.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class HeaderComponent{
+export class HeaderComponent {
 
   menuMobile = false;
 
@@ -15,9 +15,15 @@ export class HeaderComponent{
   public ToggleMenuBurger() {
       if (this.menuMobile) {
           this.menuMobile = false;
-
       } else if (!this.menuMobile) {
         this.menuMobile = true;
       }
   }
+
+  public ToggleMenuBurgerMain(){
+      if (this.menuMobile) {
+          this.menuMobile = false;
+      }
+  }
+
 }

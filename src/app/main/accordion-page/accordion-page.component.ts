@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'c3m-accordion-page',
@@ -6,11 +6,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./accordion-page.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class AccordionPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class AccordionPageComponent{
 
 }

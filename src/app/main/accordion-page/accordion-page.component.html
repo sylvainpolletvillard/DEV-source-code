@@ -54,25 +54,18 @@
           <pre class="prettyprint linenums">
               <code>
                       &#x3C;c3m-accordion&#x3E;
-
-                      &#x3C;c3m-accordion-item nameButton=&#x22;Title1&#x22;  [index]=0 [isOpen]=false&#x3E;
-                        Content 1
-                      &#x3C;/c3m-accordion-item&#x3E;
-
-
-                      &#x3C;c3m-accordion-item nameButton=&#x22;Title 2&#x22;  [index]=1 [isOpen]=false&#x3E;
-                       Content 2
-                      &#x3C;/c3m-accordion-item&#x3E;
-
-                      &#x3C;c3m-accordion-item nameButton=&#x22;Title3&#x22;  [index]=2 [isOpen]=false&#x3E;
-                        Content 3
-                      &#x3C;/c3m-accordion-item&#x3E;
-
-
-                      &#x3C;c3m-accordion-item nameButton=&#x22;Title 4&#x22;  [index]=3 [isOpen]=false&#x3E;
-                        Content 4
-                      &#x3C;/c3m-accordion-item&#x3E;
-
+                          &#x3C;c3m-accordion-item nameButton=&#x22;Title1&#x22;  [index]=0 [isOpen]=false&#x3E;
+                            Content 1
+                          &#x3C;/c3m-accordion-item&#x3E;
+                          &#x3C;c3m-accordion-item nameButton=&#x22;Title 2&#x22;  [index]=1 [isOpen]=false&#x3E;
+                           Content 2
+                          &#x3C;/c3m-accordion-item&#x3E;
+                          &#x3C;c3m-accordion-item nameButton=&#x22;Title3&#x22;  [index]=2 [isOpen]=false&#x3E;
+                            Content 3
+                          &#x3C;/c3m-accordion-item&#x3E;
+                          &#x3C;c3m-accordion-item nameButton=&#x22;Title 4&#x22;  [index]=3 [isOpen]=false&#x3E;
+                            Content 4
+                          &#x3C;/c3m-accordion-item&#x3E;
                     &#x3C;/c3m-accordion&#x3E;
               </code>
             </pre>
@@ -120,62 +113,61 @@
           <pre class="prettyprint linenums">
               <code>
 
-                c3m-accordion &#x3E; ul &#123;
-                    width: 30%;
-                    box-shadow: 0px 7px 5px -4px rgba(50, 50, 50, 0.62);
-                    margin-bottom: 1.5rem;
-                &#125;
+                   c3m-accordion &#x3E; ul &#123;
+                        width: 50%;
+                        box-shadow: 0px 7px 5px -4px rgba(50, 50, 50, 0.62);
+                        margin-bottom: 1.5rem;
+                    &#125;
+                        c3m-accordion-item &#x3E; li &#123;
+                            border:none;
+                            position:relative;
+                            z-index: 5;
+                            background-color: #535353;
+                        &#125;
+                            c3m-accordion-item &#x3E; li.closed &#123;
+                                border-bottom: 1px solid white;
+                            &#125;
+                            c3m-accordion-item:last-child &#x3E; li.closed &#123;
+                                border:none;
+                            &#125;
+                                c3m-accordion-item &#x3E; li.closed &#x3E; .panel-collapse &#123;
+                                    display: none;
+                                &#125;
+                                c3m-accordion-item &#x3E; li::before &#123;
+                                     content: &#x22; &#x22;;
+                                     width: 40px;
+                                     height: 40px;
+                                     display: block;
+                                     background: url(https://creamng.github.io/Library/assets/img/arrow-down-bold_white.svg) no-repeat;
+                                     position: absolute;
+                                     transform: rotate(-180deg);
+                                     z-index: 1;
+                                     transition: all 0.3s;
+                                     position: absolute;
+                                     right: 0;
+                                 &#125;
+                                c3m-accordion-item &#x3E; li.closed:before &#123;
+                                    transform: rotate(0deg);
+                                &#125;
+                                c3m-accordion-item &#x3E; li &#x3E; button &#123;
+                                    height: 100%;
+                                    width: 100%;
+                                    line-height: 1.7rem;
+                                    text-align: left;
+                                    color: white;
+                                    background-color: initial;
+                                    background-size: 2.1rem;
+                                    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+                                    cursor: pointer;
+                                    z-index: 10;
+                                    position: relative;
+                                &#125;
+                                c3m-accordion .panel-collapse &#123;
+                                    padding: 1.5rem;
+                                    color:white;
+                                    background-color: #9F9F9F;
+                                &#125;
 
-                c3m-accordion-item &#x3E; li&#123;
-                    border:none;
-                    position:relative;
-                &#125;
-
-                c3m-accordion-item &#x3E; li.closed&#123;
-                    border-bottom: 1px solid white;
-                &#125;
-
-                c3m-accordion-item:last-child &#x3E; li.closed &#123;
-                    border:none;
-                &#125;
-
-                c3m-accordion-item &#x3E; li.closed &#x3E; .panel-collapse &#123;
-                    display: none;
-                &#125;
-
-                c3m-accordion-item &#x3E; li &#x3E; button &#123;
-                    height: 100%;
-                    width: 100%;
-                    line-height: 1.7rem;
-                    text-align: left;
-                    color: white;
-                    background-color: #535353;
-                    background-size: 2.1rem;
-                    padding: 0.5rem;
-                    cursor: pointer;
-                &#125;
-
-                c3m-accordion-item &#x3E; li::before &#123;
-                    content: &#x22; &#x22;;
-                    width: 40px;
-                    height: 40px;
-                    display: block;
-                    background: url(/assets/img/arrow-down-bold_white.svg) no-repeat;
-                    position: absolute;
-                    transform: rotate(180deg);
-                    margin-left: 87.9%;
-                &#125;
-
-                c3m-accordion-item &#x3E; li.closed:before&#123;
-                    transform: rotate(0deg);
-                &#125;
-
-                c3m-accordion .panel-collapse &#123;
-                  padding: 1.5rem;
-                  color:white;
-                  background-color: #9F9F9F;
-
-                &#125;
               </code>
             </pre>
         </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-button-page',
@@ -6,11 +6,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./button-page.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ButtonPageComponent implements OnInit {
+export class ButtonPageComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
