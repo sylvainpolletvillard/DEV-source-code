@@ -8,6 +8,6 @@
       <label for="inputTest">A simple text input</label>
       <input type="text" id="inputTest">
 
-      <button (click)="ToggleOpen()" (keydown)="focusable.focus()" class="dialog-close" [attr.aria-label]="btnCloseLabel">&times;</button>
+      <button (click)="ToggleOpen()" (keydown.tab)="focusable.focus()" class="dialog-close" [attr.aria-label]="btnCloseLabel">&times;</button>
     </div>
 </div>
