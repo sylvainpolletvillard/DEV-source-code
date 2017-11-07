@@ -20,6 +20,8 @@ import { BtnFileComponent } from './main/button-page/btn-file/btn-file.component
 import { BtnSubmitComponent } from './main/button-page/btn-submit/btn-submit.component';
 import { CarouselPageComponent } from './main/carousel-page/carousel-page.component';
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
+import { ModalComponent } from './main/modal-page/modal/modal.component';
+import { ModalAlertComponent } from './main/modal-page/modal-alert/modal-alert.component';
 
 export const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent, data: { title: 'Accueil' } },
@@ -53,6 +55,8 @@ export const appRoutes: Routes = [
     BtnSubmitComponent,
     CarouselPageComponent,
     ModalPageComponent,
+    ModalComponent,
+    ModalAlertComponent,
   ],
   imports: [
     BrowserModule,

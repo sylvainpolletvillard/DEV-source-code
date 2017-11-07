@@ -28,8 +28,6 @@ export class AppComponent implements AfterViewChecked {
   }
 
 
-
-
   public CallToggleMenuBurger() {
     this.header.ToggleMenuBurgerMain();
   }

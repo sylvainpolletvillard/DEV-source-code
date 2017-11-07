@@ -4,7 +4,7 @@ c3m-menu{
     width: 75%;
     height: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 9;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
     background-color: white;
     overflow: hidden;
@@ -27,7 +27,7 @@ header{
     display: block;
     height: 5rem;
     width: 100%;
-    z-index: 999;
+    z-index: 9;
     background-color: #005b8e;
 }
   header img.logoAngular{

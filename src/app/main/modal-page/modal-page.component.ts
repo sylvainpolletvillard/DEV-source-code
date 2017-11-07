@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'c3m-modal-page',
@@ -8,9 +9,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ModalPageComponent implements OnInit {
 
+  @ViewChild(ModalComponent) modal: ModalComponent;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+    public OpenModal() {
+        this.modal.ToggleOpen();
+    }
 
 }
