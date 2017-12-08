@@ -1,4 +1,4 @@
-# CREAM NG
+![Logo](https://creamng.github.io/Library/assets/img/creamNG-logo.svg)
 
 A full Accessible and Responsiv library Angular2
 
