@@ -1,10 +1,10 @@
 # CREAM NG
 
-A full Accessible and Responsiv library [Angular2]
+A full Accessible and Responsiv library Angular2
 
-Projet généré par [Angular CLI] version 1.3.1 
+Projet généré par Angular CLI version 1.3.1 
 
-** In Developement**
+**In Developement**
 
 
 ## Sommaire
@@ -36,7 +36,7 @@ Créer un service
 Lancer `ng generate component service name` pour générer un composant.
 
 Comment build 
-=====================-
+=====================
 
 Lancer `ng build --prod --output-path docs --base-href https://creamng.github.io/Library/` pour build
 le projet. Le dossier /docs contiendra le contenu à mettre dans le repo "Library" pour être disponible sur 
