@@ -10,7 +10,11 @@ Ouverture du navigateur automatique avec `ng serve -o`.
 
 ## Créer un composant 
 
-Lancer `ng generate component component-name` pour générer un composant.
+Lancer `ng generate component component name` pour générer un composant.
+
+## Créer un service 
+
+Lancer `ng generate component service name` pour générer un composant.
 
 ## Build
 
@@ -29,7 +33,19 @@ Lancer `ng test` pour executer les tests unitaires (aucun de créer pour le mome
 ## Code Highlight
 
 Le seul plugin JS utilisé est prettify.js permettant de structurer le `code` affiché sur la page.
-
+Afficher du code sur la page, nous procédons de la manière suivante : 
+- ` <div class="code">'
+  `  <!--?prettify lang=html linenums=true?--> `avec commme choix html, css, javascript( pour les .ts)
+  `   <pre class="prettyprint linenums"> `
+  `     <code> `
+- Il faut penser à modifier les éléments spéciaux comme ceci :   
+           {     by   &#123;
+           }     by   &#125;
+           <     by   &#x3C;
+           >     by   &#x3E;
+           "     by   &#x22;
+ (les trois derniers peuvent être générer avec https://mothereff.in/html-entities
+ 
 ## Credits
 
 Worldline - 2017 - CreamNG 
