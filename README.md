@@ -34,16 +34,24 @@ Lancer `ng test` pour executer les tests unitaires (aucun de créer pour le mome
 
 Le seul plugin JS utilisé est prettify.js permettant de structurer le `code` affiché sur la page.
 Afficher du code sur la page, nous procédons de la manière suivante : 
-- ` <div class="code">'
-  `  <!--?prettify lang=html linenums=true?--> `avec commme choix html, css, javascript( pour les .ts)
-  `   <pre class="prettyprint linenums"> `
-  `     <code> `
-- Il faut penser à modifier les éléments spéciaux comme ceci :   
-           {     by   &#123;
-           }     by   &#125;
-           <     by   &#x3C;
-           >     by   &#x3E;
-           "     by   &#x22;
+
+```html
+<div class="code">
+<!--?prettify lang=html linenums=true?--> 
+<pre class="prettyprint linenums"> 
+<code> 
+```
+
+dans lang=html , on peut également avoir css ou javascript( pour les .ts)
+
+Il faut penser à modifier les éléments spéciaux comme ceci : 
+```html
+{     by   &#123;
+}     by   &#125;
+<     by   &#x3C;
+>     by   &#x3E;
+"     by   &#x22;
+```
  (les trois derniers peuvent être générer avec https://mothereff.in/html-entities
  
 ## Credits
