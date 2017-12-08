@@ -9,15 +9,24 @@ Projet généré par Angular CLI version 1.3.1
 
 ## Sommaire
 
-1. Installation
-2. Créer un composant
-3. Créer un service
-4. Comment build 
-5. Tests unitaire
-7. Afficher le code HTML/CSS/JS en couleur
-8. Crédits 
+* Installation
+* Créer un composant
+* Créer un service
+* Comment build 
+* Tests unitaire
+* Afficher le code HTML/CSS/JS en couleur
+* Crédits 
 
 
+| Accessible       |     Responsive   |   SEMANTIC      |
+| ---------------- | ---------------- | ---------       |
+| ARIA             |     Media Q.     |   HTML 5        |
+| Alt              |     SVG          |   W3C Validator |
+| ...              |     ...          |   ...           |
+  
+Code 
+- [ ] not tested
+- [x] tested
 
 Installation
 =====================
