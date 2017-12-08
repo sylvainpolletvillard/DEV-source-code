@@ -1,22 +1,34 @@
-# Projet
+# CREAM NG
 
+A full Accessible and Responsiv library [Angular2]
 Projet généré par [Angular CLI] version 1.3.1 
 
-## Execution
+** In Developement**
+
+## SOMMAIRE
+
+1. Créer un composant
+2. Créer un service
+3. Comment build 
+4. Tests unitaire
+5. Afficher le code HTML/CSS/JS en couleur
+6. Crédits 
 
 Il est impératif de lancer un `npm-install` pour créer le dossier node_modules.
 Lancer avec `ng serve` et ouvrir dans le navigateur à l'URL http://localhost:4200/` .  
 Ouverture du navigateur automatique avec `ng serve -o`.
 
-## Créer un composant 
+Créer un composant 
+=====================
 
 Lancer `ng generate component component name` pour générer un composant.
 
-## Créer un service 
-
+Créer un service
+=====================
 Lancer `ng generate component service name` pour générer un composant.
 
-## Build
+Comment build 
+=====================
 
 Lancer `ng build --prod --output-path docs --base-href https://creamng.github.io/Library/` pour build
 le projet. Le dossier /docs contiendra le contenu à mettre dans le repo "Library" pour être disponible sur 
@@ -26,11 +38,13 @@ De plus, il est nécessaire de copier-coller le fichier "/docs/index.html" et de
 pas d'écraser au préalable l'ancien fichier.
 
 
-## Tests unitaire
+Tests Unitaire
+=====================
 
 Lancer `ng test` pour executer les tests unitaires (aucun de créer pour le moment)
 
-## Code Highlight
+Afficher le code HTML/CSS/TS en couleurs
+=====================
 
 Le seul plugin JS utilisé est prettify.js permettant de structurer le `code` affiché sur la page.
 Afficher du code sur la page, nous procédons de la manière suivante : 
@@ -52,9 +66,10 @@ Il faut penser à modifier les éléments spéciaux comme ceci :
 >     by   &#x3E;
 "     by   &#x22;
 ```
- (les trois derniers peuvent être générer avec https://mothereff.in/html-entities
+ (les trois derniers peuvent être générer avec "https://mothereff.in/html-entities)"
  
-## Credits
+Crédits
+=====================
 
 Worldline - 2017 - CreamNG 
 
