@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +23,15 @@ import { CarouselPageComponent } from './main/carousel-page/carousel-page.compon
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
 import { ModalComponent } from './main/modal-page/modal/modal.component';
 import { ModalAlertComponent } from './main/modal-page/modal-alert/modal-alert.component';
+import { CarouselComponent } from './main/carousel-page/carousel/carousel.component';
+import { CarouselItemComponent } from './main/carousel-page/carousel/carousel-item/carousel-item.component';
+import { TablePageComponent } from './main/table-page/table-page.component';
+import { ColumnTableComponent } from './main/table-page/column-table/column-table.component';
+import { ToggleTableComponent } from './main/table-page/toggle-table/toggle-table.component';
+import { PageSwipeTableComponent } from './main/table-page/page-swipe-table/page-swipe-table.component';
+import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
+import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
+import {PagerService} from './main/pagination-page/pagination/pager.service';
 
 export const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent, data: { title: 'Accueil' } },
@@ -30,6 +40,8 @@ export const appRoutes: Routes = [
   { path: 'accordion', component: AccordionPageComponent, data: { title: 'Accordion' } },
   { path: 'modal', component: ModalPageComponent, data: { title: 'modal' } },
   { path: 'carousel', component: CarouselPageComponent, data: { title: 'carousel' } },
+  { path: 'table', component: TablePageComponent, data: { title: 'table' } },
+  { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   //  { path: '**', component: PageNotFoundComponent }
 ];
@@ -57,13 +69,24 @@ export const appRoutes: Routes = [
     ModalPageComponent,
     ModalComponent,
     ModalAlertComponent,
+    CarouselComponent,
+    CarouselItemComponent,
+    TablePageComponent,
+    ColumnTableComponent,
+    ToggleTableComponent,
+    PageSwipeTableComponent,
+    PaginationPageComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [
+      PagerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
