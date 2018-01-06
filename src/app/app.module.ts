@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { NgModule } from '@angular/core';
+import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -32,6 +32,10 @@ import { PageSwipeTableComponent } from './main/table-page/page-swipe-table/page
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
 import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
 import {PagerService} from './main/pagination-page/pagination/pager.service';
+import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
+import { NavbarComponent } from './main/navbar-page/navbar/navbar.component';
+import { DropdownComponent } from './main/navbar-page/navbar/dropdown/dropdown.component';
+import { DropdownItemComponent } from './main/navbar-page/navbar/dropdown/dropdown-item/dropdown-item.component';
 
 export const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent, data: { title: 'Accueil' } },
@@ -42,6 +46,7 @@ export const appRoutes: Routes = [
   { path: 'carousel', component: CarouselPageComponent, data: { title: 'carousel' } },
   { path: 'table', component: TablePageComponent, data: { title: 'table' } },
   { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
+  { path: 'navbar', component: NavbarPageComponent, data: { title: 'navbar' } },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   //  { path: '**', component: PageNotFoundComponent }
 ];
@@ -76,13 +81,18 @@ export const appRoutes: Routes = [
     ToggleTableComponent,
     PageSwipeTableComponent,
     PaginationPageComponent,
-    PaginationComponent
+    PaginationComponent,
+    NavbarPageComponent,
+    NavbarComponent,
+    DropdownComponent,
+    DropdownItemComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
+  schemas: [NO_ERRORS_SCHEMA],
   exports: [RouterModule],
   providers: [
       PagerService

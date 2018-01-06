@@ -20,7 +20,7 @@ export class HeaderComponent {
       }
   }
 
-  public ToggleMenuBurgerMain(){
+  public ToggleMenuBurgerMain() {
       if (this.menuMobile) {
           this.menuMobile = false;
       }

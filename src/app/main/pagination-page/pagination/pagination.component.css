@@ -21,6 +21,10 @@ c3m-pagination .paginationContainer{
                margin-right: 0.3rem;
                margin-bottom: 0.6rem;
            }
+
+           c3m-pagination .pagination li.active{
+               background-color: #7a7579;
+           }
            c3m-pagination .pagination button{
                background-color: initial;
                height: 100%;
