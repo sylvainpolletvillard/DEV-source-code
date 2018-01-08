@@ -124,7 +124,10 @@ html{
     font: 1rem "robotolight";
     margin-bottom: 1rem;
   }
-
+  .titleComponent > div > p > strong{
+    font-family:"robotobold";
+    color: darkslategrey;
+  }
   .pre-code{
       margin-bottom: 1rem;
       font: 1.1rem "robotoregular";
