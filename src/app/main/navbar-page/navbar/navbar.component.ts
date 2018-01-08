@@ -16,7 +16,10 @@ export class NavbarComponent implements AfterViewInit {
     @ViewChildren('navItems') itemsElement: QueryList<ElementRef>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* Dropdowns Tab */
+=======
+>>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
 =======
 >>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     dropdowns: DropdownComponent[]=[];
@@ -55,7 +58,10 @@ export class NavbarComponent implements AfterViewInit {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* Click on Burger Button */
+=======
+>>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
 =======
 >>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     toggleBurger() {
@@ -96,9 +102,15 @@ export class NavbarComponent implements AfterViewInit {
     /* constructor navbar */
     constructor(private cdr: ChangeDetectorRef) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
     /* Close All the Dropdowns */
+=======
+
+    }
+
+>>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
 =======
 
     }
@@ -111,7 +123,10 @@ export class NavbarComponent implements AfterViewInit {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* Add a Dropdown to Dropdowns Tab */
+=======
+>>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
 =======
 >>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     addTab(dropdown: DropdownComponent){
