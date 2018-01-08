@@ -5,7 +5,7 @@ c3m-tabs.presentationTabV > div > ul > li {
 c3m-tabs.presentationTabV > div > ul > li > a {
     color: white;
     font: 0.9rem "robotolight";
-    padding:0.4rem;
+    padding: 0.5rem 0.6rem;
 }
 
 c3m-tabs.presentationTabV > div > ul > li.active {

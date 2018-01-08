@@ -9,8 +9,8 @@
 
     .tabsContainer ul > li{
       display: inline-block;
-      padding: 0 1em;
       text-align: center;
+      cursor: pointer;
       background-color: rgb(189, 189, 189);
       margin-right: 0.4rem;
     }
@@ -18,13 +18,12 @@
       background-color: #F5F5F5;
     }
 
-    .tabsContainer > ul > li a {
-        display:block;
-        padding: 0.4rem;
+    .tabsContainer > ul > li button {
+        padding: 0.5rem 1.3rem;
         width: 100%;
         background-color: initial;
-        cursor: pointer;
         color:black;
+        cursor:pointer;
         font: 1.1rem"robotolight";
     }
         c3m-tab .content[aria-hidden="false"]{

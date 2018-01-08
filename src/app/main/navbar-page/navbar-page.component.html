@@ -3,8 +3,8 @@
 <div class="panelTitle">
   <h2> <strong> Navbar </strong> Component </h2>
   <ul>
-    <li><a href="#">Normal Navbar</a></li>
-    <li><a href="#">Fixed Top </a></li>
+    <li><a scrollTo href="#nrmNav">Normal Navbar</a></li>
+    <li><a scrollTo href="#fixedTopNav">Fixed Top </a></li>
   </ul>
 </div>
 
@@ -49,6 +49,9 @@
               <code>
                       &#x3C;!-- Navbar --&#x3E;
                         &#x3C;nav&#x3E;
+
+                          &#x3C;a routerLink=&#x22;#&#x22; class=&#x22;skip&#x22; alt=&#x22;go to main content (skip the menu)&#x22;&#x3E; go to main content &#x3C;/a&#x3E;
+
                           &#x3C;!-- Burger Button --&#x3E;
                           &#x3C;button class=&#x22;burgerbtn&#x22; [attr.aria-expanded]=&#x22;isOpen&#x22; [attr.aria-selected]=&#x22;isOpen&#x22;
                                         [ngClass]=&#x22;&#123;over: isOver, isOpen: isOpen&#125;&#x22; title=&#x22;burger button&#x22; (click)=&#x27;toggleBurger()&#x27;&#x3E;
@@ -246,6 +249,10 @@
                         &#125;
                             c3m-navbar .burgerbtn.over.isOpen&#123;
                                 transform: rotate(90deg);
+                            &#125;
+                           c3m-navbar nav .skip&#123;
+                                position:absolute;
+                                left:-9999px;
                             &#125;
 
               </code>
@@ -501,12 +508,8 @@
                   </pre>
               </div>
           </c3m-tab>
+
       </c3m-tabs>
 
-
-
-
-
-
-  </div>
-</div>
+      </div>
+    </div>

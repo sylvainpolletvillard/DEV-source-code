@@ -32,8 +32,7 @@ export class DropdownComponent {
     openDropdown() {
       if (this.isOpen === true) {
           this.navbar.closeAllDropdown();
-      }
-      else {
+      } else {
           this.navbar.closeAllDropdown();
           this.isOpen = true;
       }

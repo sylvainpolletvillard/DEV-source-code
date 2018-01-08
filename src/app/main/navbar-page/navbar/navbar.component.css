@@ -138,7 +138,10 @@ c3m-navbar.fixed-top nav{
     left: 0;
     width: 100%;
 }
-
+    c3m-navbar nav .skip{
+        position:absolute;
+        left:-9999px;
+    }
 
 
 

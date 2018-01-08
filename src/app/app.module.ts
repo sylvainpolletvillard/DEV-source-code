@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { AppComponent } from './app.component';
+import { ScrollToModule} from 'ng2-scroll-to';
+
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
@@ -31,11 +34,12 @@ import { ToggleTableComponent } from './main/table-page/toggle-table/toggle-tabl
 import { PageSwipeTableComponent } from './main/table-page/page-swipe-table/page-swipe-table.component';
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
 import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
-import {PagerService} from './main/pagination-page/pagination/pager.service';
+import { PagerService} from './main/pagination-page/pagination/pager.service';
 import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
 import { NavbarComponent } from './main/navbar-page/navbar/navbar.component';
 import { DropdownComponent } from './main/navbar-page/navbar/dropdown/dropdown.component';
-import { DropdownItemComponent } from './main/navbar-page/navbar/dropdown/dropdown-item/dropdown-item.component';
+import { DropdownItemComponent} from './main/navbar-page/navbar/dropdown/dropdown-item/dropdown-item.component';
+
 
 export const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent, data: { title: 'Accueil' } },
@@ -90,6 +94,7 @@ export const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
+    ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   schemas: [NO_ERRORS_SCHEMA],
