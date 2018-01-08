@@ -15,13 +15,7 @@ export class NavbarComponent implements AfterViewInit {
     /* List of Nav Items */
     @ViewChildren('navItems') itemsElement: QueryList<ElementRef>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /* Dropdowns Tab */
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     dropdowns: DropdownComponent[]=[];
 
     /* Variables */
@@ -57,13 +51,7 @@ export class NavbarComponent implements AfterViewInit {
         this.cdr.detectChanges();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /* Click on Burger Button */
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     toggleBurger() {
         if (this.isOpen === true) {
             this.isOpen = false;
@@ -101,34 +89,16 @@ export class NavbarComponent implements AfterViewInit {
 
     /* constructor navbar */
     constructor(private cdr: ChangeDetectorRef) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
 
     /* Close All the Dropdowns */
-=======
-
-    }
-
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
-
-    }
-
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     closeAllDropdown(){
         this.dropdowns.forEach((DropdownComponent) => {
             DropdownComponent.isOpen = false;
         });
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /* Add a Dropdown to Dropdowns Tab */
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     addTab(dropdown: DropdownComponent){
         this.dropdowns.push(dropdown);
     }

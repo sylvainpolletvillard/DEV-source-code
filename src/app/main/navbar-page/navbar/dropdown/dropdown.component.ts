@@ -29,25 +29,11 @@ export class DropdownComponent {
     }
 
     /* Open the dropdown menu */
-<<<<<<< HEAD
-<<<<<<< HEAD
     openDropdown() {
       if (this.isOpen === true) {
           this.navbar.closeAllDropdown();
       }
       else {
-=======
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-    openDropdown(){
-      if(this.isOpen === true){
-          this.navbar.closeAllDropdown();
-      }
-      else{
-<<<<<<< HEAD
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
           this.navbar.closeAllDropdown();
           this.isOpen = true;
       }

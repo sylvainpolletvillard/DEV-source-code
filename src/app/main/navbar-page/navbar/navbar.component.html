@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
     <!-- Navbar -->
-=======
-<!-- Navbar -->
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
-<!-- Navbar -->
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     <nav>
       <!-- Burger Button -->
       <button class="burgerbtn"
               [attr.aria-expanded]="isOpen"
               [attr.aria-selected]="isOpen"
               [ngClass]="{over: isOver, isOpen: isOpen}"
-<<<<<<< HEAD
-<<<<<<< HEAD
               title="burger button"
               (click)='toggleBurger()'>
 
@@ -68,58 +58,4 @@
 
         </div>
 
-=======
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-              title="burger button">
-
-          <img src="assets/img/burger.svg"
-               alt="burger button"
-               (click)='toggleBurger()'/>
-
-      </button>
-
-      <!-- Logo -->
-      <a [ngClass]="{over: isOver}"
-         #navItems routerLink="#"
-         routerLinkActive="active"
-         title="Logo" class="logo">
-
-          <img src="assets/img/logoExample.png" alt="Logo">
-      </a>
-
-      <div class="containerDemo" [ngClass]="{over: isOver}">
-
-          <!-- LINK LIST -->
-          <ul class="navbarItems" [ngClass]="{over: isOver, isOpen: isOpen}" >
-
-              <!-- DROPDOWN -->
-              <li #navItems>
-                  <c3m-dropdown type="bottom" name="Item 1">
-
-                        <c3m-dropdown-item route="#" name="Menu Item 1-1"></c3m-dropdown-item>
-                        <c3m-dropdown-item route="#" name="Menu Item 1-2"></c3m-dropdown-item>
-                        <c3m-dropdown-item route="#" name="Menu Item 1-3"></c3m-dropdown-item>
-
-                  </c3m-dropdown>
-              </li>
-
-              <li #navItems>
-                  <c3m-dropdown type="bottom" name="Item 2">
-
-                      <c3m-dropdown-item route="#" name="Menu Item 2-1"></c3m-dropdown-item>
-                      <c3m-dropdown-item route="#" name="Menu Item 2-2"></c3m-dropdown-item>
-                      <c3m-dropdown-item route="#" name="Menu Item 2-3"></c3m-dropdown-item>
-
-                  </c3m-dropdown>
-              </li>
-
-              <!-- SIMPLE LINK -->
-              <li #navItems><a routerLink="#" routerLinkActive="active">Item 3</a></li>
-          </ul>
-      </div>
-<<<<<<< HEAD
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     </nav>

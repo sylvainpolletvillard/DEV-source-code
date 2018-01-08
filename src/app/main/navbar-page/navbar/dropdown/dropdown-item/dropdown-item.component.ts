@@ -10,24 +10,12 @@ import {AppComponent} from '../../../../../app.component';
 })
 export class DropdownItemComponent{
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   /* Inputs */
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
   @Input() name;
   @Input() idItem: number;
   @Input() route;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   /* Dropdown Item Constructor */
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
     constructor(dropdown: DropdownComponent, app: AppComponent) {
       dropdown.addTab(this);
       this.idItem = app.randomID();

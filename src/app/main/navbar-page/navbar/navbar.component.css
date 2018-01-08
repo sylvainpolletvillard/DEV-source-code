@@ -3,15 +3,7 @@ c3m-navbar nav{
     background-color: #545454;
     padding: 0.9rem 1.1rem;
     position:relative;
-<<<<<<< HEAD
-<<<<<<< HEAD
     margin-bottom: 14.3rem;
-=======
-    margin-bottom: 12.8rem;
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
-    margin-bottom: 12.8rem;
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
 }
 
 /* NAVBAR LINK */
@@ -139,8 +131,6 @@ c3m-dropdown[type="bottom"] ul{
             transform: rotate(90deg);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
  /* FIXED TOP */
 c3m-navbar.fixed-top nav{
     position: fixed;
@@ -148,10 +138,6 @@ c3m-navbar.fixed-top nav{
     left: 0;
     width: 100%;
 }
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
-=======
->>>>>>> aa0ead50813120bcc05d3aaf09b43573a06ac7e6
 
 
 
