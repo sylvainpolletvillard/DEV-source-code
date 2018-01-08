@@ -1,6 +1,6 @@
 ![Logo](https://creamng.github.io/Library/assets/img/creamNG-logo.svg)
 
-A full Accessible and Responsiv library Angular2
+Une librairie Angular 2 Responsive et Accessible ! 
 
 Projet généré par Angular CLI version 1.3.1 
 
