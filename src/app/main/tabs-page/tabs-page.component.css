@@ -23,7 +23,9 @@ c3m-tabs.presentationTabV > div{
     margin-bottom: 2.5rem;
     width: 90%;
 }
-
+c3m-tabs.presentationTabV>div>ul button{
+    color:white;
+}
 
 @media screen and (min-width:850px){
 

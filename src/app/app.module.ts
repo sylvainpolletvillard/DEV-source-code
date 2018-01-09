@@ -39,6 +39,8 @@ import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
 import { NavbarComponent } from './main/navbar-page/navbar/navbar.component';
 import { DropdownComponent } from './main/navbar-page/navbar/dropdown/dropdown.component';
 import { DropdownItemComponent} from './main/navbar-page/navbar/dropdown/dropdown-item/dropdown-item.component';
+import { SliderPageComponent } from './main/slider-page/slider-page.component';
+import { SliderComponent } from './main/slider-page/slider/slider.component';
 
 
 export const appRoutes: Routes = [
@@ -51,6 +53,7 @@ export const appRoutes: Routes = [
   { path: 'table', component: TablePageComponent, data: { title: 'table' } },
   { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
   { path: 'navbar', component: NavbarPageComponent, data: { title: 'navbar' } },
+  { path: 'slider', component: SliderPageComponent, data: { title: 'slider' } },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   //  { path: '**', component: PageNotFoundComponent }
 ];
@@ -89,7 +92,9 @@ export const appRoutes: Routes = [
     NavbarPageComponent,
     NavbarComponent,
     DropdownComponent,
-    DropdownItemComponent
+    DropdownItemComponent,
+    SliderPageComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@
 <!-- DESCRIPTION TABS COMPONENT PAGE -->
 <div class="titleComponent">
   <div class="descriptionComponent" id="nrmTabs">
-    <h3> Normal Tabs </h3>
+    <h3> Normal Tabs <a href="https://github.com/CreamNG/Components/tree/master/tabs" class="gitBtn" target="_blank"><img src="assets/img/github-box.svg" alt="download on github"><span>Github</span></a> </h3>
     <p> Its' a tabs divided into 2 components: one for the container (TabsComponent) and the other for the content (TabComponent)</p>
 
 
@@ -80,7 +80,7 @@
                               [attr.aria-selected]=&#x22;tab.isActive&#x22;
                               id= &#123; &#123; tab.tabID &#125; &#125; &#x3E;
 
-                            &#x3C;a &#x3E; &#123; &#123; tab.tabTitle &#125;&#125; &#x3C;/a&#x3E;
+                            &#x3C;button &#x3E; &#123; &#123; tab.tabTitle &#125;&#125; &#x3C;/button&#x3E;
                           &#x3C;/li&#x3E;
                     &#x3C;/ul&#x3E;
 
@@ -133,13 +133,13 @@
                       background-color: rgba(218, 218, 218, 0.68);
                      &#125;
 
-                    .tabsContainer &#x3E; ul &#x3E; li a  &#123;
-                        display:block;
-                        padding: 0.4rem;
+                    .tabsContainer &#x3E; ul &#x3E; li button  &#123;
+                       padding: 0.5rem 1.3rem;
                         width: 100%;
                         background-color: initial;
-                        cursor: pointer;
                         color:black;
+                        cursor:pointer;
+                        font: 1.1rem"robotolight";
                      &#125;
                         c3m-tab .content[aria-hidden=&#x22;false&#x22;] &#123;
                           padding: 1rem;
