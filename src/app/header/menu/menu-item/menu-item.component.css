@@ -20,6 +20,9 @@ c3m-menu-item > li{
           padding: 1rem;
           cursor:pointer;
       }
+      c3m-menu-item.help > li > button{
+          color: #1a79b8;
+      }
         c3m-menu-item > li > button img{
           height:1.7rem;
           margin-right: 0.7rem;

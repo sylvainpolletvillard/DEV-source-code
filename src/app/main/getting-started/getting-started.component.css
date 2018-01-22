@@ -1,0 +1,64 @@
+.HowInstallAngular{
+    background-color: rgba(160, 160, 160, 0.38);
+}
+.HowInstallAngular h2{
+    display: block;
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+    font-family: "robotobold";
+    color: rgba(58, 58, 58, 0.83);
+    margin-left:2rem;
+}
+ .HowInstallAngular p{
+   display:block;
+   margin-bottom:1rem;
+   margin-left:2rem;
+ }
+  .HowInstallAngular p small{
+      font: 1rem "robotolight";
+      display: block;
+      width: 90%;
+      margin-bottom: 2rem;
+  }
+    .HowInstallAngular p a{
+      text-decoration: underline;
+      color: #4490da;
+    }
+      .HowInstallAngular p span{
+        display:block;
+        margin-top: 0.1rem;
+      }
+        .HowInstallAngular p strong {
+            font-family: "robotobold";
+            color: #4490da;
+        }
+
+         .HowInstallAngular p em{
+            font: 1rem "robotoitalic";
+            color: #4490da;
+         }
+         .HowInstallAngular pre{
+             display: block;
+         }
+             .HowInstallAngular pre code{
+                 padding: 0.3rem 0.5rem;
+                 border-radius: 3px;
+                 background-color: white;
+                 display: inline-block;
+                 margin-left: -1.8rem;
+                 white-space: pre;
+                 white-space: pre-wrap;
+                 word-break: break-all;
+                 word-wrap: break-word;
+              }
+                .HowInstallAngular ul{
+                    list-style: disc;
+                    margin-left: 4rem;
+                    margin-bottom: 0.9rem;
+                }
+
+                @media screen and (max-width: 600px){
+                    .HowInstallAngular pre code{
+                        width:80%;
+                    }
+                }

@@ -59,7 +59,7 @@
   "defaults": {
     "styleExt": "css",
     "component": {
-       "viewEncapsulation": "None"
+      "viewEncapsulation": "None"
     }
   }
 }

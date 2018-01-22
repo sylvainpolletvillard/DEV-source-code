@@ -18,15 +18,20 @@
 <nav>
     <c3m-menu [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
 
-        <c3m-menu-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=0 [isOpen]=false>
+        <c3m-menu-item nameButton="Help" class="help" urlImage="assets/img/help-box.svg" [index]=0 [isOpen]=false>
+            <ul class="contenuMenu">
+                <li (click)="ToggleMenuBurger()"><a routerLink="/gettingStarted" routerLinkActive="active"> Getting Started </a></li>
+            </ul>
+        </c3m-menu-item>
+
+        <c3m-menu-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=1 [isOpen]=false>
             <ul class="contenuMenu">
                 <li (click)="ToggleMenuBurger()"><a routerLink="/button" routerLinkActive="active"> Buttons </a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/slider" routerLinkActive="active"> Slider </a></li>
             </ul>
         </c3m-menu-item>
 
-
-        <c3m-menu-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=2 [isOpen]=false>
+        <c3m-menu-item nameButton="Rich Components" urlImage="assets/img/richElement.svg" [index]=1 [isOpen]=false>
             <ul class="contenuMenu">
                 <li (click)="ToggleMenuBurger()"><a routerLink="/tabs" routerLinkActive="active"> Tabs </a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/accordion" routerLinkActive="active">  Accordion </a></li>
@@ -37,7 +42,7 @@
             </ul>
         </c3m-menu-item>
 
-        <c3m-menu-item nameButton="Blocks" urlImage="assets/img/page-layout-header.svg" [index]=3 [isOpen]=false>
+        <c3m-menu-item nameButton="Blocks" urlImage="assets/img/page-layout-header.svg" [index]=2 [isOpen]=false>
             <ul class="contenuMenu">
                 <li (click)="ToggleMenuBurger()"><a routerLink="/navbar" routerLinkActive="active"> Navbar </a></li>
             </ul>

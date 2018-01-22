@@ -41,6 +41,7 @@ import { DropdownComponent } from './main/navbar-page/navbar/dropdown/dropdown.c
 import { DropdownItemComponent} from './main/navbar-page/navbar/dropdown/dropdown-item/dropdown-item.component';
 import { SliderPageComponent } from './main/slider-page/slider-page.component';
 import { SliderComponent } from './main/slider-page/slider/slider.component';
+import { GettingStartedComponent } from './main/getting-started/getting-started.component';
 
 
 export const appRoutes: Routes = [
@@ -54,7 +55,9 @@ export const appRoutes: Routes = [
   { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
   { path: 'navbar', component: NavbarPageComponent, data: { title: 'navbar' } },
   { path: 'slider', component: SliderPageComponent, data: { title: 'slider' } },
+  { path: 'gettingStarted', component: GettingStartedComponent, data: { title: 'gettingStarted' } },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
+
   //  { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -94,7 +97,8 @@ export const appRoutes: Routes = [
     DropdownComponent,
     DropdownItemComponent,
     SliderPageComponent,
-    SliderComponent
+    SliderComponent,
+    GettingStartedComponent
   ],
   imports: [
     BrowserModule,
