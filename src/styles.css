@@ -75,112 +75,116 @@ html{
   height: 100%;
 }
 
-
-
-
-
-.panelTitle{
-  box-shadow: 6px 0px 14px 1px rgba(50, 50, 50, 0.62);
+img{
+    max-width:100%;
+    border:0;
 }
+
+
+
+/* *********** PANEL TITLE ************* */
+
 .panelTitle > h2{
     font: 1.6rem "robotoregular";
-    padding: 2rem;
     color: rgba(58, 58, 58, 0.83);
 }
-.panelTitle ul {
-  padding-bottom:1.3rem;
-}
-.panelTitle li {
-    display: inline-block;
-    margin-left: 2.1rem;
-    padding: 0.4rem;
-    font: 1.1rem "robotolight";
-}
-.panelTitle li:hover a{
-  text-decoration: underline;
-}
+    .panelTitle ul {
+      padding-bottom:1.3rem;
+    }
+        .panelTitle li {
+            display: inline-block;
+            margin-left: 2.1rem;
+            padding: 0.4rem;
+            font: 1.1rem "robotolight";
+        }
+                .panelTitle li:hover a{
+                  text-decoration: underline;
+                }
+
+
+/* ********** TITLE COMPONENT *********** */
 
 .titleComponent{
     background-color: rgba(160, 160, 160, 0.38);
-    height: 100%;
-    padding: 1rem 3%;
 }
   .titleComponent > div {
     margin-bottom:3rem;
   }
-  .titleComponent > div h3{
-        text-transform: uppercase;
-    font: 1.4rem "robotolight";
-  }
-  .titleComponent > div > h3::before{
-    content: "";
-    height: 1.25rem;
-    display: inline-block;
-    width: 1.4rem;
-    background-image: url(./assets/img/step-forward.svg);
-  }
+      .titleComponent > div h3{
+            text-transform: uppercase;
+        font: 1.4rem "robotolight";
+      }
+          .titleComponent > div > h3::before{
+            content: "";
+            height: 1.25rem;
+            display: inline-block;
+            width: 1.4rem;
+            background-image: url(./assets/img/step-forward.svg);
+          }
+              .titleComponent .gitBtn{
+                  text-decoration: none;
+                  color: #312c2c;
+                  font: 1rem "robotoregular";
+                  line-height: 1.8rem;
+                  text-transform: capitalize;
+                  margin-left: 0.5rem;
+                  background-color: whitesmoke;
+                  border-radius: 3px;
+                  border: none;
+                  cursor: pointer;
+                  padding: 0.4rem;
+              }
+                .titleComponent .gitBtn img{
+                    height:1.7rem;
+                }
+                    .titleComponent .gitBtn span{
+                        display:none;
+                    }
+                    .titleComponent .gitBtn:hover{
+                        background-color: white;
+                    }
+                      .titleComponent > div > p {
+                          font: 1rem "robotolight";
+                      }
+                          .titleComponent > div > p > strong{
+                            font-family:"robotobold";
+                            color: darkslategrey;
+                          }
 
-  .titleComponent .gitBtn{
-      text-decoration: none;
-      color: #312c2c;
-      font: 1rem "robotoregular";
-      line-height: 1.8rem;
-      text-transform: capitalize;
-      margin-left: 0.5rem;
-      background-color: whitesmoke;
-      border-radius: 3px;
-      border: none;
-      cursor: pointer;
-      padding: 0.4rem;
-  }
-        .titleComponent .gitBtn img{
-            height:1.7rem;
-        }
-            .titleComponent .gitBtn span{
-                display:none;
-            }
-            .titleComponent .gitBtn:hover{
-                background-color: white;
-            }
+  /* **************** CODE SNIPPPEETTSS *************** */
 
-  .titleComponent > div > p{
-    margin-top: 0.5rem;
-    font: 1rem "robotolight";
-    margin-bottom: 1rem;
-  }
-  .titleComponent > div > p > strong{
-    font-family:"robotobold";
-    color: darkslategrey;
-  }
   .pre-code{
       margin-bottom: 1rem;
       font: 1.1rem "robotoregular";
       margin-top: 1rem;
   }
-  .pre-code strong{
-    color:#5d5d5d;
-  }
-            c3m-tabs div.code{
-              margin-left: 0;
-              background-color: #3e3e3e;
-              color: white;
-              overflow-x: auto;
-              width: 100%;
-            }
-              c3m-tabs ol.display-code{
-                list-style: decimal;
-                margin-left: 2.2rem;
-              }
-                    c3m-tabs ol.display-code li{
-                        padding: 0.4rem 0.4rem 0.4rem 1rem;
-                        margin-left: -0.2rem;
+      .pre-code strong{
+        color:#5d5d5d;
+      }
+
+      /* ************ CODE SNIPPETS IN TABS COMPONENTS ********** */
+
+        c3m-tabs div.code{
+          margin-left: 0;
+          background-color: #3e3e3e;
+          color: white;
+          overflow-x: auto;
+          width: 100%;
+        }
+          c3m-tabs ol.display-code{
+            list-style: decimal;
+            margin-left: 2.2rem;
+          }
+                c3m-tabs ol.display-code li{
+                    padding: 0.4rem 0.4rem 0.4rem 1rem;
+                    margin-left: -0.2rem;
+                }
+                    c3m-tabs ol.display-code pre span{
+                      color:#f7901e;
                     }
-                        c3m-tabs ol.display-code pre span{
-                          color:#f7901e;
-                        }
-                          c3m-tabs ol.display-code em{
-                                color: #2ad020;
-                          }
+                      c3m-tabs ol.display-code em{
+                            color: #2ad020;
+                      }
 
 /* POUR LA GENERATION DE SNIPPETS CODE  */
 
@@ -218,8 +222,9 @@ c3m-tabs .dec{
     color: purple;
 }
 c3m-tabs pre.prettyprint{
-    border: 0px solid #888;
     overflow-x:auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 c3m-tabs .content .code{
@@ -234,15 +239,14 @@ c3m-tabs ol.linenums{
 c3m-tabs .prettyprint {
     background: #3E3E3E
 }
-c3m-tabs li.L0, c3m-tabs li.L1, c3m-tabs li.L2, c3m-tabs li.L3, c3m-tabs li.L4, c3m-tabs li.L5, c3m-tabs li.L6, c3m-tabs li.L7, c3m-tabs li.L8, c3m-tabs li.L9{
-    color: #d4d4d4;
-    list-style-type: decimal;
-    padding: 0.2rem 0px;
-    margin-left: 2rem;
+c3m-tabs li.L0, c3m-tabs li.L1, c3m-tabs li.L2, c3m-tabs li.L3, c3m-tabs li.L4, c3m-tabs li.L5, c3m-tabs li.L6, c3m-tabs li.L7, c3m-tabs li.L8, c3m-tabs li.L9{;
+    padding: 0.2rem 0;
+    margin-left: -3rem;
 }
 c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
-    background: rgba(84, 84, 84, 0.43);
-    padding: 0.2rem 0px;
+    background: initial;
+    padding: 0.2rem 0;
+    margin-left: -3rem;
 }
 
 
@@ -288,12 +292,27 @@ c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
 }
 
 
-@media screen and (min-width: 850px) {
 
-      .titleComponent{
-          padding: 1rem 5%;
-      }
+
+@media screen and (min-width: 1000px) {
+
     .titleComponent .gitBtn span{
         display:inline;
     }
+
+    app-root {
+        display: flex;
+        flex-wrap: wrap;
+    }
+        app-header {
+            flex: 1 1 25%;
+            max-width:350px;
+        }
+        app-main {
+            flex: 1 1 75%;
+        }
+        app-footer {
+            flex-basis: 100%;
+        }
+
 }

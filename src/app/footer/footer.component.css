@@ -1,22 +1,22 @@
-.footerContent{
+footer{
     background-color: rgba(189, 186, 186, 0.63);
-    height: 2.4rem;
-    margin-left: 0;
+
+
     color: #5d5b5b;
 }
-  .footerContent p{
+  footer p{
     font: 0.8rem "robotolight";
     line-height: 2.4rem;
     float: right;
     margin-right: 3rem;
     font-weight: bold;
   }
-  .footerContent p span {
+  footer p span {
     font-weight: initial;
   }
 
 
-  @media screen and (min-width: 850px){
+  @media screen and (min-width: 1000px){
       .footerContent p{
         font-size: 1rem;
       }
