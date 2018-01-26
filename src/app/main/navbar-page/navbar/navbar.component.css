@@ -86,7 +86,7 @@ c3m-dropdown[type="bottom"] ul{
               vertical-align: sub;
               margin-left: 0.3rem;
               transition:transform 0.3s;
-              background: url(assets/img/arrow-down-bold_white.svg) no-repeat right;
+              background: url(/assets/img/arrow-down-bold_white.svg) no-repeat right;
           }
                 c3m-dropdown > button.isOpen::after{
                     transform: rotate(180deg);

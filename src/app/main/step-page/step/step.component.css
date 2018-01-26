@@ -1,0 +1,69 @@
+c3m-step ol {
+  clear: both;
+  counter-reset: step;
+  padding: 0.5rem;
+}
+
+c3m-step ol li {
+  list-style-type: none;
+  font-size: 0.9em;
+  background: white;
+  text-align: center;
+  display: inline-block;
+  padding: 0.2rem 1.2rem;
+  margin-bottom:1rem;
+}
+c3m-step ol li::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1.2em;
+  content: counter(step);
+  counter-increment: step;
+  text-align: center;
+  border-radius: 1.5em;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.6rem;
+}
+
+  /* FUTURE */
+  c3m-step ol li.future {
+    color: #9b9b9b;
+  }
+    c3m-step ol li.future::before {
+      color: #9F9797;
+      background: #e4e1e1;
+    }
+
+    /* ACTIVE */
+    c3m-step ol li.active {
+      color: #0053A4;
+    }
+      c3m-step ol li.active::before {
+        color: white;
+        background: #0053A4;
+      }
+
+      /* PAST */
+      c3m-step ol li.past {
+        color: #5f5050;
+      }
+        c3m-step ol li.past::before {
+          color: white;
+          background: #5f5050;
+        }
+
+
+/* BREAKPOINT */
+
+c3m-step ol.over li {
+  width:100%;
+  text-align: left;
+  display: block;
+  padding: 0.5rem;
+}
+  c3m-step ol.over li:before{
+    display: inline-block;
+    margin: 0;
+  }
