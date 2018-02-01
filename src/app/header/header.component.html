@@ -19,13 +19,6 @@
     <!-- MENU -->
     <c3m-menu [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
 
-        <!-- GROUP HELP -->
-        <c3m-menu-item nameButton="Help" class="help" urlImage="assets/img/help-box.svg" [index]=0 [isOpen]=false>
-            <ul class="contenuMenu">
-                <li (click)="ToggleMenuBurger()"><a routerLink="/gettingStarted" routerLinkActive="active"> Getting Started </a></li>
-            </ul>
-        </c3m-menu-item>
-
         <!-- GROUP FORM ELEMENTS -->
         <c3m-menu-item nameButton="Form Element" urlImage="assets/img/formElement.svg" [index]=1 [isOpen]=false>
             <ul class="contenuMenu">
@@ -54,10 +47,12 @@
             </ul>
         </c3m-menu-item>
 
+        <!-- GROUP HELP -->
+        <c3m-menu-item nameButton="Help" class="help" urlImage="assets/img/help-box.svg" [index]=0 [isOpen]=false>
+            <ul class="contenuMenu">
+                <li (click)="ToggleMenuBurger()"><a routerLink="/gettingStarted" routerLinkActive="active"> Getting Started </a></li>
+            </ul>
+        </c3m-menu-item>
+
     </c3m-menu>
 </header>
-
-
-
-
-

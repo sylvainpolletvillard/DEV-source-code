@@ -1,3 +1,6 @@
+/* --------------------------- CREAM NG MAIN CSS ------------------- */
+/* 2018 */
+
 /* RESET */
 
 
@@ -20,12 +23,19 @@ time, mark, audio, video,button {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: top;
+	box-sizing: border-box;
 }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
 	line-height: 1;
 }
@@ -46,123 +56,124 @@ table {
 }
 
 body {
-  font: 1em "robotoregular", Helvetica, Arial, sans-serif;
-  height: 100%;
-  width: 100%;
+  font: 100%/1.2 "robotoregular", Helvetica, Arial, sans-serif;
 }
-a{
+
+p, li, dt, dd {font-size: 1em;}
+li p, li li, li dt, li dd {font-size: 100%;}
+
+a {
 	text-decoration: none;
 	color:#929191;
 }
-a:hover{
+a:hover {
 	text-decoration: none;
 }
 
-*{
-	box-sizing: border-box;
-}
+hr {display:none;}
 
-hr{
-	display:none;
-}
-a.skip_links{
+a.skip_links {
   left: -99999px;
   position: absolute;
 }
 
-html{
-  width: 100%;
-  height: 100%;
-}
+img {max-width:100%; border:0;}
 
-img{
-    max-width:100%;
-    border:0;
+strong {
+	font-family: "robotobold", Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
-
 
 
 /* *********** PANEL TITLE ************* */
 
-.panelTitle > h2{
-    font: 1.6rem "robotoregular";
-    color: rgba(58, 58, 58, 0.83);
-}
-    .panelTitle ul {
-      padding-bottom:1.3rem;
+.panelTitle {padding: 2vh 5%;}
+
+	.panelTitle h2 {
+	    font: 1.6rem "robotoregular", Helvetica, Arial, sans-serif;
+			margin-bottom: 1em;
+	}
+	.panelTitle ul {
+	}
+    .panelTitle li {
+        display: inline-block;
+        font: 1.1rem "robotolight", Helvetica, Arial, sans-serif;
     }
-        .panelTitle li {
-            display: inline-block;
-            margin-left: 2.1rem;
-            padding: 0.4rem;
-            font: 1.1rem "robotolight";
-        }
-                .panelTitle li:hover a{
-                  text-decoration: underline;
-                }
+		.panelTitle li + li {margin-left: 2rem;}
+    	.panelTitle li a {padding: 0.5em 0;}
+    	.panelTitle li a:hover {text-decoration: underline;}
 
 
 /* ********** TITLE COMPONENT *********** */
 
-.titleComponent{
+.titleComponent {
     background-color: rgba(160, 160, 160, 0.38);
+		padding: 2vh 5%;
 }
-  .titleComponent > div {
-    margin-bottom:3rem;
-  }
-      .titleComponent > div h3{
-            text-transform: uppercase;
-        font: 1.4rem "robotolight";
+  .titleComponent > div {margin-bottom: 3rem;}
+
+      .titleComponent > div h3 {
+        font: 1.4rem "robotolight", Helvetica, Arial, sans-serif;
+				text-transform: uppercase;
+				margin-bottom: 1rem;
       }
-          .titleComponent > div > h3::before{
-            content: "";
-            height: 1.25rem;
-            display: inline-block;
+          .titleComponent > div > h3::before {
+						display: inline-block;
             width: 1.4rem;
+            height: 1.25rem;
+            content: "";
             background-image: url(./assets/img/step-forward.svg);
           }
-              .titleComponent .gitBtn{
-                  text-decoration: none;
-                  color: #312c2c;
-                  font: 1rem "robotoregular";
-                  line-height: 1.8rem;
-                  text-transform: capitalize;
-                  margin-left: 0.5rem;
-                  background-color: whitesmoke;
-                  border-radius: 3px;
-                  border: none;
-                  cursor: pointer;
-                  padding: 0.4rem;
-              }
-                .titleComponent .gitBtn img{
-                    height:1.7rem;
+					.titleComponent > div > h3 a {float: right;}
+
+  .titleComponent .gitBtn {
+      font: 1rem/1.8 "robotoregular", Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      text-transform: capitalize;
+			color: #312c2c;
+      background-color: whitesmoke;
+      padding: 0.4rem;
+      margin-left: 0.5rem;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+  }
+      .titleComponent .gitBtn img {
+          height: 1.7rem;
+      }
+          .titleComponent .gitBtn span {
+              display: none;
+          }
+          .titleComponent .gitBtn:hover {
+              background-color: white;
+          }
+            .titleComponent > div > p {
+                font: 1rem "robotolight", Helvetica, Arial, sans-serif;
+            }
+                .titleComponent > div > p > strong {
+                  color: #000;
                 }
-                    .titleComponent .gitBtn span{
-                        display:none;
-                    }
-                    .titleComponent .gitBtn:hover{
-                        background-color: white;
-                    }
-                      .titleComponent > div > p {
-                          font: 1rem "robotolight";
-                      }
-                          .titleComponent > div > p > strong{
-                            font-family:"robotobold";
-                            color: darkslategrey;
-                          }
+
+div.demo {background: #FFF; padding: 1rem; margin: 2rem 0;}
+
+div.explain dl {display: table-row; margin-bottom: 0.5em;}
+	div.explain dt, div.explain dd {display: table-cell; padding: 0 0 0.5em;}
+	div.explain dt {
+		font-family: robotobold, Helvetica, Arial, sans-serif;
+		color: #000;
+		padding-right: 1em;
+	}
 
   /* **************** CODE SNIPPPEETTSS *************** */
 
-  .pre-code{
-      margin-bottom: 1rem;
-      font: 1.1rem "robotoregular";
-      margin-top: 1rem;
+  .pre-code {
+      font: 1.1rem "robotoregular", Helvetica, Arial, sans-serif;
+      margin: 1rem 0;
   }
-      .pre-code strong{
-        color:#5d5d5d;
-      }
+      .pre-code strong {color:#5d5d5d;}
 
-      /* ************ CODE SNIPPETS IN TABS COMPONENTS ********** */
+
+/* ************ CODE SNIPPETS IN TABS COMPONENTS ********** */
 
         c3m-tabs div.code{
           margin-left: 0;
@@ -252,51 +263,48 @@ c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
 
 /* GITHUB FORK BUTTON */
 
-.github-corner:hover .octo-arm{
-    animation:octocat-wave 560ms ease-in-out
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
 }
+
 @keyframes octocat-wave {
-    0%,100%{
-        transform:rotate(0)
-    }20%,60%{
-        transform:rotate(-25deg)
-    }40%,80%{
-        transform:rotate(10deg)
+    0%,100% {
+        transform: rotate(0)
+    }20%,60% {
+        transform: rotate(-25deg)
+    }40%,80% {
+        transform: rotate(10deg)
     }
 }
 
-@media (max-width:500px){
-    .github-corner:hover .octo-arm{
-         animation:none
+@media (max-width: 500px){
+    .github-corner:hover .octo-arm {
+         animation: none;
     }
-    .github-corner .octo-arm{
-        animation:octocat-wave 560ms ease-in-out
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
     }
 }
 
 @media screen and (min-width: 750px) {
-      c3m-tabs div.code{
-        margin:0 auto;
+      c3m-tabs div.code {
         width: 90%;
+	      margin: 0 auto;
       }
-      c3m-tabs ol.display-code{
+      c3m-tabs ol.display-code {
         margin-left: 0;
       }
-      .pre-code{
+      .pre-code {
+					width: 90%;
           font: 1.1rem "robotoregular";
-          margin: 0 auto;
-          margin-top: 1rem;
-          margin-bottom: 1rem;
-          width: 90%;
+          margin: 1rem auto;
       }
 }
 
-
-
-
 @media screen and (min-width: 1000px) {
+	.titleComponent {padding: 5vh 5%;}
 
-    .titleComponent .gitBtn span{
+    .titleComponent .gitBtn span {
         display:inline;
     }
 
@@ -304,15 +312,10 @@ c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
         display: flex;
         flex-wrap: wrap;
     }
-        app-header {
-            flex: 1 1 25%;
-            max-width:350px;
-        }
-        app-main {
-            flex: 1 1 75%;
-        }
-        app-footer {
-            flex-basis: 100%;
-        }
-
+    app-header {
+        flex: 1 1 25%;
+        max-width: 350px;
+    }
+    app-main {flex: 1 1 75%;}
+    app-footer {flex-basis: 100%;}
 }

@@ -14,12 +14,15 @@
     <!-- NORMAL BUTTON -->
     <div class="descriptionComponent" id="normalBtn">
     <h3> Normal Button <a href="https://github.com/CreamNG/Components/tree/master/buttons/btn" class="gitBtn" target="_blank"><img src="assets/img/github-box.svg" alt="download on github"><span>Github</span></a> </h3>
-    <p> It's a normal button. </p>
-    <c3m-btn>normal</c3m-btn>
-    <c3m-btn ngClass="info" >info</c3m-btn>
-    <c3m-btn ngClass="warning" >warning</c3m-btn>
-    <c3m-btn ngClass="danger" >danger</c3m-btn>
-    <c3m-btn ngClass="success">success</c3m-btn>
+    <p>General action buttons.</p>
+
+    <div class="demo">
+      <c3m-btn>normal</c3m-btn>
+      <c3m-btn ngClass="info" >info</c3m-btn>
+      <c3m-btn ngClass="warning" >warning</c3m-btn>
+      <c3m-btn ngClass="danger" >danger</c3m-btn>
+      <c3m-btn ngClass="success">success</c3m-btn>
+    </div>
 
       <c3m-tabs>
           <c3m-tab tabTitle="HTML">
@@ -128,10 +131,12 @@
 
     <!-- UPLOAD BUTTON -->
     <div class="descriptionComponent" id="uploadBtn">
-        <h3> Upload Button<a href="https://github.com/CreamNG/Components/tree/master/buttons/btn-file" class="gitBtn" target="_blank"><img src="assets/img/github-box.svg" alt="download on github"><span>Github</span></a></h3>
-        <p> It's a file upload button (multiple files) </p>
-        <c3m-btn-file>Choose a file</c3m-btn-file>
+        <h3>Upload Button <a href="https://github.com/CreamNG/Components/tree/master/buttons/btn-file" class="gitBtn" target="_blank"><img src="assets/img/github-box.svg" alt="download on github"><span>Github</span></a></h3>
+        <p>Allow the upload of multiple files.</p>
 
+        <div class="demo">
+          <c3m-btn-file>Choose a file</c3m-btn-file>
+        </div>
 
         <c3m-tabs>
             <c3m-tab tabTitle="HTML">
@@ -231,9 +236,12 @@
     <!-- SUBMIT BUTTON -->
     <div class="descriptionComponent" id="submitBtn">
 
-        <h3> Submit Button <a href="https://github.com/CreamNG/Components/tree/master/buttons/btn-submit" class="gitBtn" target="_blank"><img src="assets/img/github-box.svg" alt="download on github"><span>Github</span></a></h3>
-        <p> It's a file submit button (need a form tag) </p>
-        <c3m-btn-submit inputValue="submit"></c3m-btn-submit>
+        <h3>Submit Button <a href="https://github.com/CreamNG/Components/tree/master/buttons/btn-submit" class="gitBtn" target="_blank"><img src="assets/img/github-box.svg" alt="download on github"><span>Github</span></a></h3>
+        <p>A standard submit input (should appear inside a form or be attached to one).</p>
+
+        <div class="demo">
+          <c3m-btn-submit inputValue="submit"></c3m-btn-submit>
+        </div>
 
         <c3m-tabs>
             <c3m-tab tabTitle="HTML">
