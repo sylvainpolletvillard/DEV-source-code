@@ -1,9 +1,9 @@
 .menu-group.closed > .panel-collapse {display: none;}
 
-c3m-menu-item > li {
-      color: #000;
-      border-top: 1px solid rgba(255,255,255,.5);
-    }
+  c3m-menu-item > li {
+    color: #000;
+    border-top: 1px solid rgba(255,255,255,.5);
+  }
       c3m-menu-item > li > button {
           height: 100%;
           width: 100%;
@@ -14,34 +14,84 @@ c3m-menu-item > li {
           background-color: initial;
           padding: 1rem;
           cursor:pointer;
+          transform: perspective(1px) translateZ(0);
+          position:relative;
+          transition-property: color;
+          transition-duration: 0.5s;
       }
-      c3m-menu-item > li > button:hover, c3m-menu-item > li > button:active, c3m-menu-item > li > button:focus {
-        color: #333;
-        background-color: #EEE;
-      }
-      c3m-menu-item.help > li > button {
-          color: #45ABBC;
-      }
-        c3m-menu-item > li > button img {
-          height: 1.7rem;
-          margin-right: 0.7rem;
+        c3m-menu-item > li > button:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #EEE;
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            transition-property: transform;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
         }
+        c3m-menu-item > li > button:hover:before,
+        c3m-menu-item > li > button:focus:before,
+        c3m-menu-item > li > button:active:before {
+          transform: scaleX(1);
+          transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        }
+
+        c3m-menu-item > li > button:hover,
+        c3m-menu-item > li > button:active,
+        c3m-menu-item > li > button:focus {
+          color: #333;
+          font-weight: bold;
+        }
+          c3m-menu-item > li > button svg {
+            display: inline;
+            height: 1.7rem;
+            margin-right: 0.7rem;
+            width: 24px;
+            fill: white;
+            vertical-align: middle;
+            transition : fill 1.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+          }
+            c3m-menu-item.help > li > button svg{
+              fill: #45ABBC;
+            }
+              c3m-menu-item.help > li > button{
+                color: #45ABBC;
+              }
+                c3m-menu-item > li > button:hover > svg,
+                c3m-menu-item > li > button:active > svg,
+                c3m-menu-item > li > button:focus > svg {
+                  fill: #333;
+                }
+                c3m-menu-item.help > li > button:hover svg,
+                c3m-menu-item.help > li > button:active svg,
+                c3m-menu-item.help > li > button:focus svg{
+                  fill: #45ABBC;
+                }
+
+
+    /* Menu Items */
         .contenuMenu li {
           padding: 0 0 0.4rem 1rem;
           font: 1rem/1 "robotolight", Helvetica, Arial, sans-serif;
         }
-        .contenuMenu li:first-child {margin-top: 0.5em;}
+          .contenuMenu li:first-child {margin-top: 0.5em;}
 
-        .contenuMenu li a {
-          display: block;
-          width: 80%;
-          font-size: 0.9rem;
-          text-align: left;
-          background-color: initial;
-          padding: 0.5rem 0 0.5rem 1rem;
-          cursor: pointer;
-        }
-        .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
-          color: #333;
-          background-color: #EEE;
-        }
+            .contenuMenu li a {
+              display: block;
+              width: 80%;
+              font-size: 0.9rem;
+              text-align: left;
+              background-color: initial;
+              padding: 0.5rem 0 0.5rem 1rem;
+              cursor: pointer;
+              color: #eae2e2;
+            }
+              .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
+                color: #333;
+                background-color: #EEE;
+              }

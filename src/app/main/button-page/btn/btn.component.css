@@ -10,14 +10,14 @@
           opacity:0.8;
       }
           c3m-btn.success button{
-              background-color: green;
+              background-color: #6CBE45;
           }
           c3m-btn.info button{
-              background-color: #1773B2;
+              background-color: #45ABBC;
           }
           c3m-btn.warning button{
-              background-color: orange;
+              background-color: #D769A8;
           }
           c3m-btn.danger button{
-              background-color: orangered;
+              background-color: #ED9C21;
           }

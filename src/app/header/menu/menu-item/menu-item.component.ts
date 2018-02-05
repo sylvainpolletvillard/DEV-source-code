@@ -10,7 +10,7 @@ import { MenuComponent } from '../menu.component';
 export class MenuItemComponent implements OnDestroy, OnChanges, AfterViewInit, OnInit {
 
   @Input() nameButton: string;
-  @Input() urlImage: string;
+  @Input() idSvg: string;
   @Input() isOpen: boolean;
   @Input() index: number;
   tabID: string;

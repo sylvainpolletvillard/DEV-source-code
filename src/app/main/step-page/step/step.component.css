@@ -1,57 +1,61 @@
+
+/* Step List */
 c3m-step ol {
   clear: both;
   counter-reset: step;
   padding: 0.5rem;
 }
-
-c3m-step ol li {
-  list-style-type: none;
-  font-size: 0.9em;
-  background: white;
-  text-align: center;
-  display: inline-block;
-  padding: 0.2rem 1.2rem;
-  margin-bottom:1rem;
-}
-c3m-step ol li::before {
-  width: 1.5rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-size: 1.2em;
-  content: counter(step);
-  counter-increment: step;
-  text-align: center;
-  border-radius: 1.5em;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.6rem;
-}
-
-  /* FUTURE */
-  c3m-step ol li.future {
-    color: #9b9b9b;
+  /* Step List Item */
+  c3m-step ol li {
+    list-style-type: none;
+    font-size: 0.9em;
+    background: #585454;
+    text-align: center;
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    margin-bottom:1rem;
   }
-    c3m-step ol li.future::before {
-      color: #9F9797;
-      background: #e4e1e1;
+  /* Step List Item Number */
+    c3m-step ol li::before {
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      font-size: 1.2em;
+      content: counter(step);
+      counter-increment: step;
+      text-align: center;
+      border-radius: 1.5em;
+      display: block;
+      margin: 0 auto 0.6rem auto;
     }
+
+    /* FUTURE */
+    c3m-step ol li.future {
+      color: rgba(99, 224, 49, 0.6);
+      background-color: gray;
+    }
+      c3m-step ol li.future::before {
+        color: white;
+        background: rgba(99, 224, 49, 0.6);
+
+      }
 
     /* ACTIVE */
     c3m-step ol li.active {
-      color: #0053A4;
+      color: #44abbc;
     }
       c3m-step ol li.active::before {
         color: white;
-        background: #0053A4;
+        background: #44abbc;
       }
 
       /* PAST */
       c3m-step ol li.past {
-        color: #5f5050;
+        color: #ed9c20;
       }
         c3m-step ol li.past::before {
           color: white;
-          background: #5f5050;
+          background: #ed9c20;
         }
 
 

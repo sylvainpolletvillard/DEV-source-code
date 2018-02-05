@@ -100,8 +100,29 @@ strong {
         font: 1.1rem "robotolight", Helvetica, Arial, sans-serif;
     }
 		.panelTitle li + li {margin-left: 2rem;}
-    	.panelTitle li a {padding: 0.5em 0;}
-    	.panelTitle li a:hover {text-decoration: underline;}
+    	.panelTitle li a {
+        padding: 0.5em 0 0.3rem 0;
+        color: #686868;
+        transform: perspective(1px) translateZ(0);
+        position: relative;
+      }
+        .panelTitle li a:before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          left: 50%;
+          right: 50%;
+          bottom: 0;
+          background: #333333;
+          height: 2px;
+          transition-property: left, right;
+          transition-duration: 0.1s;
+          transition-timing-function: ease-out;
+        }
+    	.panelTitle li a:hover:before {
+        left: 0;
+        right: 0;
+      }
 
 
 /* ********** TITLE COMPONENT *********** */
@@ -113,56 +134,94 @@ strong {
   .titleComponent > div {margin-bottom: 3rem;}
 
       .titleComponent > div h3 {
-        font: 1.4rem "robotolight", Helvetica, Arial, sans-serif;
-				text-transform: uppercase;
-				margin-bottom: 1rem;
+        font: 1.4rem "robotoregular", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
       }
-          .titleComponent > div > h3::before {
-						display: inline-block;
-            width: 1.4rem;
-            height: 1.25rem;
-            content: "";
-            background-image: url(./assets/img/step-forward.svg);
+        .titleComponent > div > h3 a {float: right;}
+          .titleComponent > div > h3 > svg{
+            display: inline;
+            width: 22.2px;
+            height: 32px;
+            vertical-align: bottom;
           }
-					.titleComponent > div > h3 a {float: right;}
-
+   /* GitHub Button */
   .titleComponent .gitBtn {
       font: 1rem/1.8 "robotoregular", Helvetica, Arial, sans-serif;
       text-decoration: none;
       text-transform: capitalize;
 			color: #312c2c;
-      background-color: whitesmoke;
-      padding: 0.4rem;
+      background-color: #FFF;
+      padding: 0.4rem 0.5rem 0.2rem 0.5rem;
       margin-left: 0.5rem;
       border-radius: 3px;
       border: none;
       cursor: pointer;
+      transition-property: color;
+      transition-duration: 0.3s;
+      position:relative;
+      transform: perspective(1px) translateZ(0);
   }
-      .titleComponent .gitBtn img {
-          height: 1.7rem;
+      /* Git Hub IMG */
+      .titleComponent .gitBtn svg {
+        display: inline;
+        height: 1.7rem;
+        fill: #333;
+        width:24px;
+        vertical-align: middle;
+        transition: fill 0.3s ease-out;
       }
           .titleComponent .gitBtn span {
               display: none;
           }
+
+          /* GitHub Button Hover */
           .titleComponent .gitBtn:hover {
-              background-color: white;
+              color: white;
           }
-            .titleComponent > div > p {
-                font: 1rem "robotolight", Helvetica, Arial, sans-serif;
+            .titleComponent .gitBtn:hover svg{
+              fill:white;
             }
-                .titleComponent > div > p > strong {
-                  color: #000;
-                }
+            .titleComponent .gitBtn:before{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 3px;
+                background: #2098D1;
+                transform: scale(0);
+                transition-property: transform;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            }
+              .titleComponent .gitBtn:hover:before,
+              .titleComponent .gitBtn:focus:before,
+              .titleComponent .gitBtn:active:before {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+              }
 
-div.demo {background: #FFF; padding: 1rem; margin: 2rem 0;}
+  .titleComponent > div > p {
+    font: 1rem "robotolight", Helvetica, Arial, sans-serif;
+  }
+    .titleComponent > div > p > strong {
+      color: #000;
+    }
 
-div.explain dl {display: table-row; margin-bottom: 0.5em;}
-	div.explain dt, div.explain dd {display: table-cell; padding: 0 0 0.5em;}
-	div.explain dt {
-		font-family: robotobold, Helvetica, Arial, sans-serif;
-		color: #000;
-		padding-right: 1em;
-	}
+    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0;}
+
+      div.explain dl {display: table-row; margin-bottom: 0.5em;}
+
+        div.explain dt, div.explain dd {display: table-cell; padding: 0 0 0.5em;}
+
+          div.explain dt {
+            font-family: robotobold, Helvetica, Arial, sans-serif;
+            color: #000;
+            padding-right: 1em;
+          }
 
   /* **************** CODE SNIPPPEETTSS *************** */
 
@@ -197,67 +256,66 @@ div.explain dl {display: table-row; margin-bottom: 0.5em;}
                             color: #2ad020;
                       }
 
-/* POUR LA GENERATION DE SNIPPETS CODE  */
+  /* POUR LA GENERATION DE SNIPPETS CODE  */
 
-c3m-tabs .str{
-    color: #fd5ce8;
-}
-c3m-tabs .kwd{
-    color: #6CBE45;
-}
-c3m-tabs .com{
-    color: #3c9fd0;
-}
-c3m-tabs .typ{
-    color: #75ebff;
-}
-c3m-tabs .lit{
-    color: #FACD22;
-}
-c3m-tabs .pun{
-    color: #F1F2F3;
-}
-c3m-tabs .pln{
-    color: #F1F2F3;
-}
-c3m-tabs .tag{
-    color: #8AC763;
-}
-c3m-tabs .atn{
-    color: #E0E2E4;
-}
-c3m-tabs .atv{
-    color: #ED9C21;
-}
-c3m-tabs .dec{
-    color: purple;
-}
-c3m-tabs pre.prettyprint{
-    overflow-x:auto;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-}
-
-c3m-tabs .content .code{
-  overflow-x:hidden;
-}
-c3m-tabs ol.linenums{
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline-block;
-    min-width: 100%;
-}
-c3m-tabs .prettyprint {
-    background: #3E3E3E
-}
+  c3m-tabs .str{
+      color: #ef86d7;
+  }
+  c3m-tabs .kwd{
+      color: #6cd839;
+  }
+  c3m-tabs .com{
+      color: #3fcfe6;
+  }
+  c3m-tabs .typ{
+      color: #3fcfe6;
+  }
+  c3m-tabs .lit{
+      color: #f59e17;
+  }
+  c3m-tabs .pun{
+      color: #F1F2F3;
+  }
+  c3m-tabs .pln{
+      color: #F1F2F3;
+  }
+  c3m-tabs .tag{
+      color: #6cd839;
+  }
+  c3m-tabs .atn{
+      color: #E0E2E4;
+  }
+  c3m-tabs .atv{
+      color: #f59e17;
+  }
+  c3m-tabs .dec{
+      color: #ef86d7;
+  }
+   c3m-tabs pre.prettyprint{
+      overflow-x:auto;
+      /* word-wrap: break-word;
+      white-space: pre-wrap;*/
+  }
+    c3m-tabs .content .code{
+      overflow-x:hidden;
+    }
+      c3m-tabs ol.linenums{
+          margin-top: 0;
+          margin-bottom: 0;
+          display: inline-block;
+          min-width: 100%;
+      }
+        c3m-tabs .prettyprint {
+            background: #3E3E3E
+        }
 c3m-tabs li.L0, c3m-tabs li.L1, c3m-tabs li.L2, c3m-tabs li.L3, c3m-tabs li.L4, c3m-tabs li.L5, c3m-tabs li.L6, c3m-tabs li.L7, c3m-tabs li.L8, c3m-tabs li.L9{;
     padding: 0.2rem 0;
-    margin-left: -3rem;
+
 }
 c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
     background: initial;
     padding: 0.2rem 0;
-    margin-left: -3rem;
+
 }
 
 

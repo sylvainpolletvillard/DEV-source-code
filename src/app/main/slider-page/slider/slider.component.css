@@ -1,54 +1,63 @@
 /* INPUT CSS */
+
+/* DEFAULT INPUT */
 c3m-slider input[type=range] {
     -webkit-appearance: none;
     width: 30%;
     margin: 8.8px 0;
     display:inline-block;
 }
+  /* DEFAULT INPUT FOCUS */
     c3m-slider input[type=range]:focus {
         outline: none;
     }
+        /* TRACK */
         c3m-slider input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 8.4px;
             cursor: pointer;
-            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-            background: #bdbdbd;
+            box-shadow: none;
+            background: #45ABBC;
             border-radius: 1.3px;
             border: 0.2px solid #010101;
         }
+            /* BALL */
             c3m-slider input[type=range]::-webkit-slider-thumb {
                 box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.63), 0px 0px 0px rgba(13, 13, 13, 0.63);
                 border: 1px solid rgba(0, 0, 0, 0.28);
                 height: 26px;
                 width: 26px;
                 border-radius: 12px;
-                background: rgba(105, 105, 105, 0.97);
+                background: #585454;
                 cursor: pointer;
                 -webkit-appearance: none;
                 margin-top: -9px;
             }
+                /* FOCUS TRACK */
                 c3m-slider input[type=range]:focus::-webkit-slider-runnable-track {
-                    background: #c2c2c2;
+                    background: #45ABBC;
                 }
+                /* TRACK */
                 c3m-slider input[type=range]::-moz-range-track {
                     width: 100%;
                     height: 8.4px;
                     cursor: pointer;
-                    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-                    background: #bdbdbd;
+                    box-shadow: none;
+                    background: #45ABBC;
                     border-radius: 1.3px;
                     border: 0.2px solid #010101;
                 }
+                /* BALL */
                     c3m-slider input[type=range]::-moz-range-thumb {
                         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.63), 0px 0px 0px rgba(13, 13, 13, 0.63);
                         border: 1px solid rgba(0, 0, 0, 0.28);
                         height: 26px;
                         width: 26px;
                         border-radius: 12px;
-                        background: rgba(105, 105, 105, 0.97);
+                        background: #585454;
                         cursor: pointer;
                     }
+                        /* TRACK */
                         input[type=range]::-ms-track {
                             width: 100%;
                             height: 8.4px;
@@ -58,16 +67,16 @@ c3m-slider input[type=range] {
                             color: transparent;
                         }
                         c3m-slider input[type=range]::-ms-fill-lower {
-                            background: #b8b8b8;
+                            background: #45ABBC;
                             border: 0.2px solid #010101;
                             border-radius: 2.6px;
-                            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                            box-shadow: none;
                         }
                         c3m-slider input[type=range]::-ms-fill-upper {
-                            background: #bdbdbd;
+                            background: #45ABBC;
                             border: 0.2px solid #010101;
                             border-radius: 2.6px;
-                            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                            box-shadow: none;
                         }
                             c3m-slider input[type=range]::-ms-thumb {
                                 box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.63), 0px 0px 0px rgba(13, 13, 13, 0.63);
@@ -75,15 +84,15 @@ c3m-slider input[type=range] {
                                 height: 26px;
                                 width: 26px;
                                 border-radius: 12px;
-                                background: rgba(105, 105, 105, 0.97);
+                                background: #585454;
                                 cursor: pointer;
                                 height: 8.4px;
                             }
                             c3m-slider input[type=range]:focus::-ms-fill-lower {
-                                background: #bdbdbd;
+                                background: #45ABBC;
                             }
                             c3m-slider input[type=range]:focus::-ms-fill-upper {
-                                background: #c2c2c2;
+                                background: #45ABBC;
                             }
  /* Label */
 c3m-slider label{
@@ -98,16 +107,18 @@ c3m-slider label{
 c3m-slider output{
     display: inline;
     position: static;
-    font: 1.3rem "rotoboregular";
+    font: 1.3rem "robotoregular";
     margin-left: 0.9rem;
     vertical-align: middle;
     text-transform: uppercase;
+    color: #44abbc;
+    font-weight: bold;
 }
     c3m-slider.bubble output {
         position: absolute;
-        background-color: dimgray;
+        background-color: #585454;
         width: 40px;
-        height: 30px;
+        height: 27.2px;
         text-align: center;
         color: white;
         border-radius: 10px;
@@ -122,7 +133,7 @@ c3m-slider output{
             position: absolute;
             width: 0;
             height: 0;
-            border-bottom: 10px solid dimgray;
+            border-bottom: 10px solid #585454;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
             bottom: 100%;
