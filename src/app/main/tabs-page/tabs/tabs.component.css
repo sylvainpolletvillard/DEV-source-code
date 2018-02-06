@@ -24,13 +24,13 @@
         background-color: initial;
         color:black;
         cursor:pointer;
-        font: 1.1rem"robotolight";
+        font: 1.1rem "quicksandlight";
     }
         c3m-tab .content[aria-hidden="false"]{
           padding: 1rem;
           background-color: #F5F5F5;
           padding-top: 2.2rem;
-          font: 1rem "robotolight";
+          font: 1rem "quicksandlight";
         }
           c3m-tab .content[aria-hidden="true"]{
             display:none;

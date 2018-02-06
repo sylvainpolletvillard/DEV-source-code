@@ -10,7 +10,7 @@
           line-height: 1.7rem;
           font-size: 1rem;
           text-align: left;
-          color: #EEE;
+          color: #2b2828;
           background-color: initial;
           padding: 1rem;
           cursor:pointer;
@@ -49,10 +49,10 @@
         }
           c3m-menu-item > li > button svg {
             display: inline;
-            height: 1.7rem;
+            height: 1.8rem;
             margin-right: 0.7rem;
             width: 24px;
-            fill: white;
+            fill: black;
             vertical-align: middle;
             transition : fill 1.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
           }
@@ -77,7 +77,7 @@
     /* Menu Items */
         .contenuMenu li {
           padding: 0 0 0.4rem 1rem;
-          font: 1rem/1 "robotolight", Helvetica, Arial, sans-serif;
+          font: 1rem/1 "quicksandlight", Helvetica, Arial, sans-serif;
         }
           .contenuMenu li:first-child {margin-top: 0.5em;}
 
@@ -89,9 +89,26 @@
               background-color: initial;
               padding: 0.5rem 0 0.5rem 1rem;
               cursor: pointer;
-              color: #eae2e2;
+              color: #333;
             }
               .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
                 color: #333;
                 background-color: #EEE;
               }
+
+
+
+  /* DESKTOP */
+  @media screen and (min-width:1000px){
+    c3m-menu-item > li > button {
+      color: #eee;
+    }
+
+    c3m-menu-item > li > button svg{
+      fill: #eee;
+    }
+
+      .contenuMenu li a{
+        color: #eae2e2;
+      }
+  }

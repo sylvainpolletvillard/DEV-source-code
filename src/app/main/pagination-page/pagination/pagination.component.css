@@ -7,7 +7,7 @@ c3m-pagination .paginationContainer{
     }
         c3m-pagination .paginationItems li{
             color: #3e3535;
-            font: 1rem "robotoitalic";
+            font: 1rem quicksandregular, Helvetica, Arial, sans-serif;
         }
           c3m-pagination .pagination{
               margin-top:2rem;

@@ -107,7 +107,7 @@ c3m-slider label{
 c3m-slider output{
     display: inline;
     position: static;
-    font: 1.3rem "robotoregular";
+    font: 1.2rem "quicksandregular";
     margin-left: 0.9rem;
     vertical-align: middle;
     text-transform: uppercase;
@@ -115,18 +115,19 @@ c3m-slider output{
     font-weight: bold;
 }
     c3m-slider.bubble output {
-        position: absolute;
-        background-color: #585454;
-        width: 40px;
-        height: 27.2px;
-        text-align: center;
-        color: white;
-        border-radius: 10px;
-        display: inline-block;
-        bottom: -2.7rem;
-        left: 0;
-        margin-left:0;
-        transform: translate(-50%);
+      position: absolute;
+      background-color: #585454;
+      width: 40px;
+      height: 26.2px;
+      text-align: center;
+      color: white;
+      border-radius: 10px;
+      display: inline-block;
+      bottom: -2.4rem;
+      left: 0;
+      margin-left: 0;
+      padding-top: 0.3rem;
+      transform: translate(-50%);
     }
         c3m-slider.bubble output:after {
             content: "";

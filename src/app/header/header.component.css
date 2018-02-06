@@ -1,6 +1,6 @@
 
 /* HEADER */
-header {background-color: #267ace;}
+header {background-color: #333333;}
 
     header > button {
         position: absolute;
@@ -25,7 +25,7 @@ header {background-color: #267ace;}
 
     header > p {
         text-align: center;
-        padding: 0.5rem 0;
+        padding: 1.3rem 0 1.1rem;
     }
 
     c3m-menu {
@@ -34,6 +34,8 @@ header {background-color: #267ace;}
         background-color: #FFF;
         transition: left 0.6s;
         z-index: 999;
+        height: 100%;
+        width: 45%;
     }
 
 @media screen and (min-width: 1000px) {
@@ -54,6 +56,9 @@ header {background-color: #267ace;}
           text-align: center;
           padding: 1.5rem 0;
       }
+       header > p{
+        padding: 0;
+       }
         .mobileClose, .mobileOpen {
           left: 0;
           height: 100%;

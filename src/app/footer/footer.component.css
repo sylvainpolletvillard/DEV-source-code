@@ -5,7 +5,7 @@ footer{
     color: #5d5b5b;
 }
   footer p{
-    font: 0.8rem "robotolight";
+    font: 0.8rem "quicksandlight", Helvetica, Arial, sans-serif;
     line-height: 2.4rem;
     float: right;
     margin-right: 3rem;

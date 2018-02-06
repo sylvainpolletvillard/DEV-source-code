@@ -56,7 +56,7 @@ table {
 }
 
 body {
-  font: 100%/1.2 "robotoregular", Helvetica, Arial, sans-serif;
+  font: 100%/1.2 "quicksandregular", Helvetica, Arial, sans-serif;
 }
 
 p, li, dt, dd {font-size: 1em;}
@@ -80,7 +80,7 @@ a.skip_links {
 img {max-width:100%; border:0;}
 
 strong {
-	font-family: "robotobold", Helvetica, Arial, sans-serif;
+	font-family: "quicksandbold", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 }
 
@@ -90,14 +90,14 @@ strong {
 .panelTitle {padding: 2vh 5%;}
 
 	.panelTitle h2 {
-	    font: 1.6rem "robotoregular", Helvetica, Arial, sans-serif;
+	    font: 1.6rem "quicksandregular", Helvetica, Arial, sans-serif;
 			margin-bottom: 1em;
 	}
 	.panelTitle ul {
 	}
     .panelTitle li {
         display: inline-block;
-        font: 1.1rem "robotolight", Helvetica, Arial, sans-serif;
+        font: 1.1rem "quicksandlight", Helvetica, Arial, sans-serif;
     }
 		.panelTitle li + li {margin-left: 2rem;}
     	.panelTitle li a {
@@ -134,7 +134,7 @@ strong {
   .titleComponent > div {margin-bottom: 3rem;}
 
       .titleComponent > div h3 {
-        font: 1.4rem "robotoregular", Helvetica, Arial, sans-serif;
+        font: 1.4rem "quicksandregular", Helvetica, Arial, sans-serif;
         text-transform: uppercase;
         margin-bottom: 1rem;
       }
@@ -147,7 +147,7 @@ strong {
           }
    /* GitHub Button */
   .titleComponent .gitBtn {
-      font: 1rem/1.8 "robotoregular", Helvetica, Arial, sans-serif;
+      font: 1rem/1.8 "quicksandregular", Helvetica, Arial, sans-serif;
       text-decoration: none;
       text-transform: capitalize;
 			color: #312c2c;
@@ -205,20 +205,20 @@ strong {
               }
 
   .titleComponent > div > p {
-    font: 1rem "robotolight", Helvetica, Arial, sans-serif;
+    font: 1rem "quicksandlight", Helvetica, Arial, sans-serif;
   }
     .titleComponent > div > p > strong {
       color: #000;
     }
 
-    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0;}
+    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0; background: #fff url(/assets/img/demo-bkgd.png) repeat;}
 
       div.explain dl {display: table-row; margin-bottom: 0.5em;}
 
         div.explain dt, div.explain dd {display: table-cell; padding: 0 0 0.5em;}
 
           div.explain dt {
-            font-family: robotobold, Helvetica, Arial, sans-serif;
+            font-family: "quicksandbold", Helvetica, Arial, sans-serif;
             color: #000;
             padding-right: 1em;
           }
@@ -226,7 +226,7 @@ strong {
   /* **************** CODE SNIPPPEETTSS *************** */
 
   .pre-code {
-      font: 1.1rem "robotoregular", Helvetica, Arial, sans-serif;
+      font: 1.1rem "quicksandregular", Helvetica, Arial, sans-serif;
       margin: 1rem 0;
   }
       .pre-code strong {color:#5d5d5d;}
@@ -293,8 +293,6 @@ strong {
   }
    c3m-tabs pre.prettyprint{
       overflow-x:auto;
-      /* word-wrap: break-word;
-      white-space: pre-wrap;*/
   }
     c3m-tabs .content .code{
       overflow-x:hidden;
@@ -308,9 +306,8 @@ strong {
         c3m-tabs .prettyprint {
             background: #3E3E3E
         }
-c3m-tabs li.L0, c3m-tabs li.L1, c3m-tabs li.L2, c3m-tabs li.L3, c3m-tabs li.L4, c3m-tabs li.L5, c3m-tabs li.L6, c3m-tabs li.L7, c3m-tabs li.L8, c3m-tabs li.L9{;
+c3m-tabs li.L0, c3m-tabs li.L1, c3m-tabs li.L2, c3m-tabs li.L3, c3m-tabs li.L4, c3m-tabs li.L5, c3m-tabs li.L6, c3m-tabs li.L7, c3m-tabs li.L8, c3m-tabs li.L9{
     padding: 0.2rem 0;
-
 }
 c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
     background: initial;
@@ -354,7 +351,7 @@ c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
       }
       .pre-code {
 					width: 90%;
-          font: 1.1rem "robotoregular";
+          font: 1.1rem "quicksandregular", Helvetica, Arial, sans-serif;
           margin: 1rem auto;
       }
 }
