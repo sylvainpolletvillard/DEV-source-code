@@ -84,6 +84,9 @@ strong {
 	font-weight: normal;
 }
 
+.svgLibrary{
+  display:none;
+}
 
 /* *********** PANEL TITLE ************* */
 
@@ -138,7 +141,7 @@ strong {
         text-transform: uppercase;
         margin-bottom: 1rem;
       }
-        .titleComponent > div > h3 a {float: right;}
+        .titleComponent > div > h3 a {float: right; }
           .titleComponent > div > h3 > svg{
             display: inline;
             width: 22.2px;
@@ -191,7 +194,7 @@ strong {
                 right: 0;
                 bottom: 0;
                 border-radius: 3px;
-                background: #2098D1;
+                background: #45abbc;
                 transform: scale(0);
                 transition-property: transform;
                 transition-duration: 0.3s;
@@ -293,6 +296,7 @@ strong {
   }
    c3m-tabs pre.prettyprint{
       overflow-x:auto;
+      white-space: pre-wrap;
   }
     c3m-tabs .content .code{
       overflow-x:hidden;
@@ -313,6 +317,10 @@ c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
     background: initial;
     padding: 0.2rem 0;
 
+}
+
+main{
+  background: url(assets/img/background.jpg);
 }
 
 
@@ -366,6 +374,7 @@ c3m-tabs li.L1, c3m-tabs li.L3, c3m-tabs li.L5, c3m-tabs li.L7, c3m-tabs li.L9 {
     app-root {
         display: flex;
         flex-wrap: wrap;
+        overflow: hidden;
     }
     app-header {
         flex: 1 1 25%;

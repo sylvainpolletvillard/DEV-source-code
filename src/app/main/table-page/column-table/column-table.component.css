@@ -4,22 +4,23 @@ c3m-column-table table{
     width:75%
 }
     c3m-column-table caption{
-        font: 1.3rem "robotoregular";
+        font: 1.3rem "quicksandregular";
         margin-bottom: 0.6rem;
         color: #1b1b1f;
         text-align: left;
     }
         c3m-column-table thead th {
-            color: white;
-            background-color: rgb(105, 105, 105);
-            padding: 1rem 0.4rem;
-            border: 1px solid #423e3e;
+          color: #333333;
+          background-color: rgb(237, 156, 32);
+          padding: 1rem 0.4rem;
+          border: 1px solid #423e3e;
+          font-weight: bold;
         }
             c3m-column-table tbody td {
-                color: black;
-                background-color: white;
-                padding: 1rem 0.4rem;
-                border: 1px solid #423e3e;
+              color: #333333;
+              background-color: #44abbc;
+              padding: 1rem 0.4rem;
+              border: 1px solid #333333;
             }
              c3m-column-table tbody strong{
                  display:none;
@@ -38,7 +39,7 @@ c3m-column-table table{
         display:block;
         padding:0.5rem;
         border-radius:3px;
-        background-color: white;
+        background-color: #44abbc;
     }
     c3m-column-table tbody{
         display:block;
@@ -53,17 +54,17 @@ c3m-column-table table{
             margin-bottom: 1.9rem;
         }
             c3m-column-table tbody tr td{
-                display:block;
-                width:100%;
-                color: #353232;
-                background-color: initial;
-                padding: 0.3rem 0.4rem;
-                border: none;
-                border-bottom: 1px solid #b1abab8a;
+              display: block;
+              width: 100%;
+              color: #eaeaea;
+              background-color: initial;
+              padding: 0.3rem 0.4rem;
+              border: none;
+              border-bottom: 1px solid #efefef8a;
             }
                 c3m-column-table tbody strong{
                     display: inline-block;
-                    color: rgb(105, 105, 105);
+                    color: rgb(245, 245, 245);
                     width: 30%;
                     font-weight: bold;
                     font-size: 1.1rem;
@@ -73,10 +74,11 @@ c3m-column-table table{
                             width:60%;
                         }
                             c3m-column-table caption{
-                                display: block;
-                                width: 100%;
-                                font-size: 1.5rem;
-                                color: #1385c5;
+                              display: block;
+                              width: 100%;
+                              font-size: 1.5rem;
+                              color: #fdfdfd;
+                              font-weight: bold;
                             }
 
 }

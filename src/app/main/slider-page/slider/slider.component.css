@@ -3,7 +3,7 @@
 /* DEFAULT INPUT */
 c3m-slider input[type=range] {
     -webkit-appearance: none;
-    width: 30%;
+    width: 50%;
     margin: 8.8px 0;
     display:inline-block;
 }
@@ -23,8 +23,6 @@ c3m-slider input[type=range] {
         }
             /* BALL */
             c3m-slider input[type=range]::-webkit-slider-thumb {
-                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.63), 0px 0px 0px rgba(13, 13, 13, 0.63);
-                border: 1px solid rgba(0, 0, 0, 0.28);
                 height: 26px;
                 width: 26px;
                 border-radius: 12px;
@@ -49,8 +47,6 @@ c3m-slider input[type=range] {
                 }
                 /* BALL */
                     c3m-slider input[type=range]::-moz-range-thumb {
-                        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.63), 0px 0px 0px rgba(13, 13, 13, 0.63);
-                        border: 1px solid rgba(0, 0, 0, 0.28);
                         height: 26px;
                         width: 26px;
                         border-radius: 12px;
@@ -79,8 +75,6 @@ c3m-slider input[type=range] {
                             box-shadow: none;
                         }
                             c3m-slider input[type=range]::-ms-thumb {
-                                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.63), 0px 0px 0px rgba(13, 13, 13, 0.63);
-                                border: 1px solid rgba(0, 0, 0, 0.28);
                                 height: 26px;
                                 width: 26px;
                                 border-radius: 12px;

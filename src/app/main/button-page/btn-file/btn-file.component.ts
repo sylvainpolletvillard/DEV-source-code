@@ -7,8 +7,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None
 })
 export class BtnFileComponent {
+    /* File List */
     files: FileList;
 
+    /* OnChange method */
     onChange(files: FileList) {
         this.files = files;
     }

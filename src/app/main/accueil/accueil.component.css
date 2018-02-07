@@ -1,95 +1,70 @@
-.firstBlock {
-  position: relative;
-  overflow: hidden;
-  height: 23rem;
-  box-shadow: 6px 0px 14px 1px rgba(50, 50, 50, 0.62);
-}
-  .firstBlock img {
-    position: absolute;
-    width: 100%;
-  }
-  .firstBlock h2 {
-    position: absolute;
-    width: 70%;
-    top: 30.2%;
-    left: 15%;
-    font: 2.3rem "robotoblack", Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #FFF;
-    background-color: rgb(27, 122, 185);
-    padding: 0.5rem 0;
-    border-radius: 5px;
-  }
-  .firstBlock p {
-    position: absolute;
-    width: 70%;
-    top: 51%;
-    left: 15%;
-    font: 1.2rem "robotobold", Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #1b7ab9;
-    background-color: rgb(255, 255, 255);
-    padding: 0.5rem 5%;
-    border-radius: 5px;
-  }
+
+    /* Welcome Title */
     .whyNgCream h2 {
-        font: 1.6rem "robotobold", Helvetica, Arial, sans-serif;
+        font: 2rem "quicksandbold", Helvetica, Arial, sans-serif;
         text-align: center;
         color: #333;
-        padding: 2rem;
+        padding: 2rem 1rem 0.5rem;
     }
+      /* Welcome Paragraph */
       .whyNgCream {
         display: block;
-        padding-top: 1rem;
+        padding: 1rem;
+        background-color: rgba(249, 249, 249, 0.72);
       }
-      .whyNgCream p {
-          width: 90%;
-          max-width: 30em;
-          line-height: 1.45;
+        .whyNgCream p {
           text-align: center;
-          margin: 0 auto 1rem;
-      }
+          font: 1.3rem/1.3 "quicksandlight", Helvetica, Arial, sans-serif;
+        }
+            .whyNgCream p strong{
+              font-family: "quicksandbold", Helvetica, Arial, sans-serif;
+              color:  #44abbc;
+            }
+              .whyNgCream p a{
+                font-family: "quicksandbold", Helvetica, Arial, sans-serif;
+                font-size: 1.1rem;
+                color:  #d769a8
+              }
 
-      .whyNgCream p:first-of-type {
-        font-size: 1.3em;
-      }
+      /* Containers with SVG icons */
       .ngCreamBecause {
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         margin: 0 auto;
         padding-top: 1rem;
-        background-color: whitesmoke;
+        background-color:rgba(249, 249, 249, 0.72);
         padding-bottom: 3rem;
 
       }
-      .ngCreamBecause li{
-        margin: 0 auto;
-        margin-bottom: 2rem;
-      }
-      .ngCreamBecause li img {
-          height: 5.9rem;
-      }
-      .ngCreamBecause li h3 {
-        font: 1.1rem "robotoregular", Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        margin-top: 0.6rem;
-        margin-bottom: 0.8rem;
-        font-weight: bold;
-      }
-      .ngCreamBecause li p{
-          display: block;
+        .ngCreamBecause li{
           margin: 0 auto;
-          width: 70%;
-          font: 1rem "robotolight", Helvetica, Arial, sans-serif;
+          margin-bottom: 2rem;
+        }
+          /* The SVG */
+          .ngCreamBecause li svg {
+            width: 7.9rem;
+            height: 7.9rem;
+            fill: #333333;
+          }
+            .ngCreamBecause li h3 {
+              font: 1.1rem "quicksandbold", Helvetica, Arial, sans-serif;
+              text-transform: uppercase;
+              margin-bottom: 0.8rem;
+            }
+              .ngCreamBecause li p{
+                  display: block;
+                  margin: 0 auto;
+                  width: 70%;
+                  font: 1rem/1.2 "quicksandlight", Helvetica, Arial, sans-serif;
+              }
+                .ngCreamBecause li p strong{
+                  font-family: "quicksandbold", Helvetica, Arial, sans-serif;
+                  color:  #44abbc;
+                }
 
-          line-height: 1.5rem;
-      }
-        .ngCreamBecause li p strong {
-          font-weight: bold;
-      }
 
-
+/* BREAKPOINT */
 
 @media screen and (min-width: 450px) {
     .ngCreamBecause li {
@@ -97,33 +72,23 @@
     }
 }
 
-@media screen and (min-width: 600px) {
-    .firstBlock h2 {
-      display: inline-block;
-      position: relative;
-      width: auto;
-      font: 2.6rem "robotoblack", Helvetica, Arial, sans-serif;
-      text-align: left;
-      padding: 0.5rem 1rem;
-    }
-    .firstBlock p {
-      position: relative;
-      width: auto;
-      top: 34%;
-      font: 1.6rem "robotobold", Helvetica, Arial, sans-serif;
-      text-align: left;
-      padding: 1rem;
-    }
-}
-
-@media screen and (min-width: 1100px) {
-    .firstBlock p {
-      width: auto;
-    }
-}
+/* BREAKPOINT */
 
 @media screen and (min-width: 850px) {
     .ngCreamBecause li {
       width: 33%;
     }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .whyNgCream h2{
+    font-size: 4rem;
+  }
+  .ngCreamBecause{
+    padding-top: 4rem;
+  }
+  .ngCreamBecause li{
+    margin-bottom: 8.6rem;
+  }
 }

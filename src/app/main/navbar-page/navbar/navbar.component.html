@@ -16,15 +16,19 @@
 
       </button>
 
+      <div class="navChild" [ngClass]="{over: isOver}">
+          <!-- Logo -->
+          <a [ngClass]="{over: isOver}"
+            #navItems routerLink="#"
+            routerLinkActive="active"
+            title="Logo" class="logo">
 
-        <!-- Logo -->
-        <a [ngClass]="{over: isOver}"
-          #navItems routerLink="#"
-          routerLinkActive="active"
-          title="Logo" class="logo">
+            <svg>
+              <use xlink:href="#logoNavSvg"></use>
+            </svg>
+          </a>
 
-            <img src="assets/img/logoExample.png" alt="Logo">
-        </a>
+
 
         <!-- Only for Demo -->
         <div class="containerDemo" [ngClass]="{over: isOver}">
@@ -59,6 +63,7 @@
 
             </ul>
 
+        </div>
         </div>
 
     </nav>

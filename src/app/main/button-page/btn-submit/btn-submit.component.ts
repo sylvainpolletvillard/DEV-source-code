@@ -10,5 +10,6 @@ export class BtnSubmitComponent {
 
   constructor() { }
 
+  /* Input Submit value */
   @Input() inputValue: string;
 }

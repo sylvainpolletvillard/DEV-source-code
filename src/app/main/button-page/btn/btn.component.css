@@ -1,4 +1,5 @@
-  c3m-btn button{
+ /* BUTTON */
+ c3m-btn button{
     color: white;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 3px;
@@ -6,9 +7,11 @@
     cursor:pointer;
     margin-bottom:1.6rem;
   }
+      /* BUTTON HOVER */
       c3m-btn button:hover{
           opacity:0.8;
       }
+          /* COLORS OF DIFFERENTS BUTTONS */
           c3m-btn.success button{
               background-color: #6CBE45;
           }

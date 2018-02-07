@@ -1,11 +1,11 @@
 /* Parent Container */
 .HowInstallAngular{
-    background-color: white;
+    background-color: #3940385c;
     padding: 4vh 5%;
 }
   /* Childs Containers */
   .stepGS{
-    background-color: rgba(160, 160, 160, 0.38);
+    background-color: #f5f5f5;
     padding: 2vh 2%;
     margin-bottom: 4vh;
   }

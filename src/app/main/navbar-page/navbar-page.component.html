@@ -12,26 +12,49 @@
 <!-- DESCRIPTION NAVBAR COMPONENT PAGE -->
 <div class="titleComponent">
   <div class="descriptionComponent" id="nrmNav">
-    <h3> Normal Navbar
-        <a href="https://github.com/CreamNG/Components/tree/master/navbar" class="gitBtn" target="_blank">
-            <img src="assets/img/github-box.svg" alt="download on github"/>
-            <span>Github</span>
-        </a>
-    </h3>
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Normal Navbar
+
+      <a href="https://github.com/CreamNG/Components/tree/master/navbar" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+  </h3>
+
     <p> Its' a navbar with a burger button, links and dropdown</p>
 
-    <!-- NAVBAR -->
-    <c3m-navbar>
+    <div class="demo">
+      <!-- NAVBAR -->
+      <c3m-navbar></c3m-navbar>
+    </div>
 
-    </c3m-navbar>
-
-        <p> Change the <strong>src</strong> attribute of <strong>a.logo</strong> for change the logo image</p>
-        <p> In <strong> li #navItems </strong>, create a <strong>a </strong> tag to create a normal link </p>
-        <p> In <strong> li #navItems </strong>, create a <strong>c3m-dropdown Component</strong> to create a dropdown </p>
-        <p> A <strong> Dropdown </strong> need a <strong> name </strong> and <strong> Dropdown Items Component </strong> .</p>
-        <p> A <strong> Dropdown Item </strong> need a <strong> route </strong> as a routerLink and a <strong> name </strong> </p>
-
-        <p> Don't miss to add <strong>arrow-down-bold_white.svg</strong> on navbar.component directory</p>
+    <div class="explain">
+      <dl>
+        <dt>SVG</dt>
+        <dd>Change the PATH value to change logo/arrow/burger</dd>
+      </dl>
+      <dl>
+        <dt>In li #navItems</dt>
+        <dd>create a "a" tag to create a normal link </dd>
+      </dl>
+      <dl>
+        <dt>In li #navItems</dt>
+        <dd>create a "c3m-dropdown Component" to create a dropdown </dd>
+      </dl>
+      <dl>
+        <dt>Dropdown</dt>
+        <dd>need a "name" and "dropdown items" component</dd>
+      </dl>
+      <dl>
+        <dt>Dropdown Item</dt>
+        <dd>need a route as routerLink and "name"</dd>
+      </dl>
+    </div>
 
 
       <!-- TABS SNIPPETS -->
@@ -220,7 +243,7 @@
                                          font-weight:bold;
                                      &#125;
                                     .navbarItems.over c3m-dropdown .dropdownContent li&#123;
-                                            font: 1rem &#x22;robotoitalic&#x22;;
+                                            font: 1rem &#x22;quicksanditalic&#x22;;
                                         margin:0.6rem 0;
                                       &#125;
                                         .navbarItems.over c3m-dropdown .dropdownContent a&#123;
@@ -478,12 +501,26 @@
 <!-- FOR FIXED TOP -->
 <div class="titleComponent">
   <div class="descriptionComponent" id="fixedTopNav">
-    <h3> Fixed Top Navbar
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Fixed Top Navbar
 
-    </h3>
-    <p> For a <strong>Fixed Top </strong> navbar, you need to add class <strong>fixed-top</strong>
-    on the <strong>c3m-dropdown </strong> tag </p>
+      <a href="https://github.com/CreamNG/Components/tree/master/navbar" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
 
+        <span>Github</span></a>
+  </h3>
+
+    <div class="explain">
+      <dl>
+        <dt>Fixed Top</dt>
+        <dd>Add fixed-top class on c3m-navbar component</dd>
+      </dl>
+    </div>
       <!-- TABS SNIPPETS -->
       <c3m-tabs>
           <c3m-tab tabTitle="HTML">

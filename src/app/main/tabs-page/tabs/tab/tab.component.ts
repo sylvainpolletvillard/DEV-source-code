@@ -13,6 +13,7 @@ export class TabComponent implements OnInit, AfterViewInit {
   @Input() tabTitle;
   @Input() isActive: boolean;
   @Input() idTab: number;
+  @Input() isDisabled: boolean;
   tabID: string;
   panelID: string;
 

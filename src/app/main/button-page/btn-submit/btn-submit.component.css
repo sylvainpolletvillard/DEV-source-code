@@ -1,3 +1,4 @@
+/* Input  */
 c3m-btn-submit input{
     color: white;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -6,8 +7,9 @@ c3m-btn-submit input{
     cursor: pointer;
     border: none;
     font-size: 1rem;
-    font-family: "Robotoregular";
+    font-family: "quicksandregular";
 }
-c3m-btn-submit input:hover{
-    opacity:0.8;
-}
+  /* Input Hover */
+  c3m-btn-submit input:hover{
+      opacity:0.8;
+  }
