@@ -3,7 +3,7 @@ import { HttpModule } from '@angular/http';
 import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { AppComponent } from './app.component';
 import { ScrollToModule} from 'ng2-scroll-to';
-
+import { LottieAnimationViewModule } from 'ng-lottie';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -111,7 +111,8 @@ export const appRoutes: Routes = [
     BrowserModule,
     HttpModule,
     ScrollToModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    LottieAnimationViewModule.forRoot()
   ],
   schemas: [NO_ERRORS_SCHEMA],
   exports: [RouterModule],
