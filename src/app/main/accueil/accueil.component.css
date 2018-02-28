@@ -92,3 +92,10 @@
     margin-bottom: 8.6rem;
   }
 }
+
+@media screen and (min-width: 1400px) {
+  lottie-animation-view > div {
+    background-color: white;
+  }
+}
+

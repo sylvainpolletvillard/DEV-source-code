@@ -12,7 +12,7 @@ export class AccueilComponent implements OnInit {
     private anim: any;
     private animationSpeed: number = 1;
 
-  constructor() { 
+  constructor() {
     this.lottieConfig = {
       path: 'assets/json/creamNGanimation.json',
       autoplay: true,

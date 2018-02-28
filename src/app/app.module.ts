@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { AppComponent } from './app.component';
 import { ScrollToModule} from 'ng2-scroll-to';
 import { LottieAnimationViewModule } from 'ng-lottie';
@@ -48,7 +48,7 @@ import { StepItemComponent } from './main/step-page/step/step-item/step-item.com
 
 
 export const appRoutes: Routes = [
-  { path: 'accueil', component: AccueilComponent, data: { title: 'Accueil' } },
+  { path: 'home', component: AccueilComponent, data: { title: 'Home' } },
   { path: 'button', component: ButtonPageComponent, data: { title: 'Button' } },
   { path: 'tabs', component: TabsPageComponent, data: { title: 'Tabs' } },
   { path: 'accordion', component: AccordionPageComponent, data: { title: 'Accordion' } },
@@ -58,9 +58,9 @@ export const appRoutes: Routes = [
   { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
   { path: 'navbar', component: NavbarPageComponent, data: { title: 'navbar' } },
   { path: 'slider', component: SliderPageComponent, data: { title: 'slider' } },
-  { path: 'gettingStarted', component: GettingStartedComponent, data: { title: 'gettingStarted' } },
+  { path: 'gettingStarted', component: GettingStartedComponent, data: { title: 'GettingStarted' } },
   { path: 'step', component: StepPageComponent, data: { title: 'Step' } },
-  { path: '', redirectTo: '/accueil', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   //  { path: '**', component: PageNotFoundComponent }
 ];
