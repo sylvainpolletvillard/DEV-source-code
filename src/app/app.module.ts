@@ -45,6 +45,8 @@ import { GettingStartedComponent } from './main/getting-started/getting-started.
 import { StepPageComponent } from './main/step-page/step-page.component';
 import { StepComponent } from './main/step-page/step/step.component';
 import { StepItemComponent } from './main/step-page/step/step-item/step-item.component';
+import { CalendarPageComponent } from './main/calendar-page/calendar-page.component';
+import { CalendarComponent } from './main/calendar-page/calendar/calendar.component';
 
 
 export const appRoutes: Routes = [
@@ -60,6 +62,7 @@ export const appRoutes: Routes = [
   { path: 'slider', component: SliderPageComponent, data: { title: 'slider' } },
   { path: 'gettingStarted', component: GettingStartedComponent, data: { title: 'GettingStarted' } },
   { path: 'step', component: StepPageComponent, data: { title: 'Step' } },
+  { path: 'calendar', component: CalendarPageComponent, data: { title: 'Calendar' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   //  { path: '**', component: PageNotFoundComponent }
@@ -105,7 +108,9 @@ export const appRoutes: Routes = [
     GettingStartedComponent,
     StepPageComponent,
     StepComponent,
-    StepItemComponent
+    StepItemComponent,
+    CalendarPageComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
