@@ -214,7 +214,7 @@ strong {
       color: #000;
     }
 
-    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0; background: #fff url(/assets/img/demo-bkgd.png) repeat;}
+    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0; background: #fff url(assets/img/demo-bkgd.png) repeat;}
 
       div.explain dl {display: table-row; margin-bottom: 0.5em;}
 
