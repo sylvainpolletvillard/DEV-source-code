@@ -21,7 +21,6 @@ c3m-calendar div > button{
     opacity: 0.8;
   }
 
-
 c3m-calendar .datepicker {
   margin: 0.5rem;
   position: absolute;
@@ -36,18 +35,18 @@ c3m-calendar div#month-wrap {
   border-radius: 3px 3px 0 0;
   color: white;
 }
-c3m-calendar div#month-wrap strong {
-  display: inline-block;
-  margin-top: 0.6rem;
-  text-align: center;
-  width: 11rem;
-}
-c3m-calendar div#month-wrap > button{
-  height: 2.3rem;
-  width: 2.3rem;
-  background-color: initial;
-  cursor: pointer;
-}
+  c3m-calendar div#month-wrap strong {
+    display: inline-block;
+    margin-top: 0.6rem;
+    text-align: center;
+    width: 11rem;
+  }
+  c3m-calendar div#month-wrap > button{
+    height: 2.3rem;
+    width: 2.3rem;
+    background-color: initial;
+    cursor: pointer;
+  }
 c3m-calendar #bn_prev {
   float: left;
 }
@@ -91,19 +90,18 @@ c3m-calendar table td {
   line-height: 2rem;
   color: #212121;
 }
-c3m-calendar table th abbr{
-  text-decoration: none;
-}
-c3m-calendar table td {
-  background-color: #ED9C21;
-  border: 1px solid #eee;
-}
-
-c3m-calendar table td.today {
-  background-color: #2b95a7;
-  border: 1px solid #eee;
-  color:white;
-}
+  c3m-calendar table th abbr{
+    text-decoration: none;
+  }
+  c3m-calendar table td {
+    background-color: #ED9C21;
+    border: 1px solid #eee;
+  }
+  c3m-calendar table td.today {
+    background-color: #2b95a7;
+    border: 1px solid #eee;
+    color:white;
+  }
 
 c3m-calendar table{
   border-collapse: collapse;

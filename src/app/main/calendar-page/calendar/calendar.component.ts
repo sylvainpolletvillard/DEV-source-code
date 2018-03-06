@@ -50,13 +50,6 @@ export class CalendarComponent implements OnInit {
       e.stopPropagation();
       return false;
     });
-
-    document.getElementById('date').addEventListener('click', function(e) {
-      thisObj.showDlg(); // OPEN MODAL
-      e.stopPropagation();
-      return false;
-    });
-
     }
 
     /* ************** MAIN FUNCTION ************** */
@@ -170,10 +163,11 @@ export class CalendarComponent implements OnInit {
 
   /* ************************** HANDLE GRID BLUR ********************** */
   handleGridBlur(e) {
-    const idActiveDescendant = document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
-    idActiveDescendant.classList.remove('focus');
-    idActiveDescendant.setAttribute('aria-selected', 'false');
-
+    if (document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'))) {
+      const idActiveDescendant = document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
+      idActiveDescendant.classList.remove('focus');
+      idActiveDescendant.setAttribute('aria-selected', 'false');
+    }
     return true;
   }
 
@@ -403,9 +397,8 @@ export class CalendarComponent implements OnInit {
   handleGridKeyDown(e) {
     const rows = this.grid.querySelectorAll('tbody tr');
     const curDay = document.getElementById(this.grid.getAttribute('aria-activedescendant'));
-    const days = this.grid.querySelectorAll('td:not(.empty)');
+    let days = this.grid.querySelectorAll('td:not(.empty)');
     const curRow = curDay.parentElement;
-
     // ALT
     if (e.altKey) {
       return true;
@@ -418,10 +411,8 @@ export class CalendarComponent implements OnInit {
         if (this.bModal === true) {
           // SHIFT + TAB
           if (e.shiftKey) {
-            console.log('SHIFT');
             this.next.focus();
           } else {
-            console.log('PAS SHIFT');
             this.prev.focus();
           }
           e.stopPropagation();
@@ -456,8 +447,8 @@ export class CalendarComponent implements OnInit {
         if (e.ctlrKey || e.shiftKey) {
           return true;
         }
-
-        const dayIndex = this.indexInParent(curDay, days) - 1;
+        days = Array.prototype.slice.call(days);
+        const dayIndex = days.indexOf(curDay) - 1;
         let prevDay = null;
 
         if (dayIndex >= 0) {
@@ -480,7 +471,8 @@ export class CalendarComponent implements OnInit {
         if (e.ctrlKey || e.shiftKey) {
           return true;
         }
-        const dayIndex = this.indexInParent(curDay, days) + 1;
+        days = Array.prototype.slice.call(days);
+        const dayIndex = days.indexOf(curDay) + 1;
         let nextDay = null;
 
         if (dayIndex < days.length) {
@@ -503,7 +495,8 @@ export class CalendarComponent implements OnInit {
         if (e.ctrlKey || e.shiftKey) {
           return true;
         }
-        let dayIndex = this.indexInParent(curDay, days) - 7;
+        days = Array.prototype.slice.call(days);
+        let dayIndex = days.indexOf(curDay) - 7;
         let prevDay = null;
 
         if (dayIndex > 0) {
@@ -516,7 +509,8 @@ export class CalendarComponent implements OnInit {
 
           this.grid.setAttribute('aria-activedescendant', prevDay.getAttribute('id'));
         } else {
-          dayIndex = 6 - this.indexInParent(curDay, days);
+          days = Array.prototype.slice.call(days);
+          dayIndex = 3 - days.indexOf(curDay) + 7;
           this.showPrevMonth(dayIndex);
         }
         e.stopPropagation();
@@ -528,7 +522,8 @@ export class CalendarComponent implements OnInit {
         if (e.ctrlKey || e.shiftKey) {
           return true;
         }
-        let dayIndex = this.indexInParent(curDay, days) + 7;
+        days = Array.prototype.slice.call(days);
+        let dayIndex = days.indexOf(curDay) + 7;
         let nextDay = null;
 
         if (dayIndex < days.length) {
@@ -541,7 +536,8 @@ export class CalendarComponent implements OnInit {
 
            this.grid.setAttribute('aria-activedescendant', nextDay.getAttribute('id'));
         } else {
-          dayIndex = 8 - this.indexInParent(curDay, days);
+          days = Array.prototype.slice.call(days);
+          dayIndex = 8 - (days.length - days.indexOf(curDay));
 
           this.showNextMonth(dayIndex);
         }
@@ -549,17 +545,89 @@ export class CalendarComponent implements OnInit {
         return false;
       }
 
+      // PAGE UP
       case this.keys.pageup: {
-        return true; // a faire
+        const active = this.grid.getAttribute('aria-activedescendant');
+
+        if (e.shifKey) {
+          return true;
+        }
+        if (e.ctrlKey) {
+          this.showPrevYear();
+        } else {
+          this.showPrevMonth(1);
+        }
+        if (this.grid.querySelector('#' + active).getAttribute('id') === undefined) {
+          const lastDay = 'day' + this.calcNumDays(this.year, this.month);
+          const lastDayId = this.grid.querySelector('#' + lastDay);
+          lastDayId.classList.add('focus');
+          lastDayId.setAttribute('aria-selected', 'true');
+        } else {
+          const lastDayId = this.grid.querySelector('#' + active);
+          lastDayId.classList.add('focus');
+          lastDayId.setAttribute('aria-selected', 'true');
+        }
+        e.stopPropagation();
+        return false;
       }
+
+      // PAGE DOWN
       case this.keys.pagedown: {
-        return true; // a faire
+        const active = this.grid.getAttribute('aria-activedescendant');
+
+        if (e.shifKey) {
+          return true;
+        }
+        if (e.ctrlKey) {
+          this.showNextYear();
+        } else {
+          this.showNextMonth(1);
+        }
+        if (this.grid.querySelector('#' + active).getAttribute('id') === undefined) {
+          const lastDay = 'day' + this.calcNumDays(this.year, this.month);
+          const lastDayId = this.grid.querySelector('#' + lastDay);
+          lastDayId.classList.add('focus');
+          lastDayId.setAttribute('aria-selected', 'true');
+        } else {
+          const lastDayId = this.grid.querySelector('#' + active);
+          lastDayId.classList.add('focus');
+          lastDayId.setAttribute('aria-selected', 'true');
+        }
+        e.stopPropagation();
+        return false;
       }
+
+      // HOME
       case this.keys.home: {
-        return true; // a faire
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+        curDay.classList.remove('focus');
+        curDay.setAttribute('aria-selected', 'false');
+
+        this.grid.querySelector('#day1').classList.add('focus');
+        this.grid.querySelector('#day1').setAttribute('aria-selected', 'true');
+        this.grid.setAttribute('aria-activedescendant', 'day1');
+        e.stopPropagation();
+        return false;
       }
+
+      // END
       case this.keys.end: {
-        return true; // a faire
+        if (e.ctrlKey || e.shiftKey) {
+          return true;
+        }
+
+        const lastDay = 'day' + this.calcNumDays(this.year, this.month);
+;
+        curDay.classList.remove('focus');
+        curDay.setAttribute('aria-selected', 'false');
+
+        this.grid.querySelector('#' + lastDay).classList.add('focus');
+        this.grid.querySelector('#' + lastDay).setAttribute('aria-selected', 'true');
+        this.grid.setAttribute('aria-activedescendant', lastDay);
+        e.stopPropagation();
+        return false;
       }
     }
     return true;
@@ -589,21 +657,6 @@ export class CalendarComponent implements OnInit {
       document.querySelector(this.target).focus();
   }
 
-  /* ************************** GET INDEX IN PARENTS OF NODELIST ELEMENT ********************** */
-  indexInParent(node, nodeList) {
-    const children = nodeList;
-    let num = 0;
-    for (var i = 0 ; i < children.length; i++) {
-         if (children[i] === node) {
-           return num;
-         }
-         if (children[i].nodeType === 1) {
-            num++;
-         }
-    }
-    return -1;
-}
-
   /* ************************** SHOW PREVIOUS MONTH ********************** */
   showPrevMonth(offset) {
     if (this.month === 0) {
@@ -628,8 +681,8 @@ export class CalendarComponent implements OnInit {
       const day = 'day' + (numDays - offset);
 
       this.grid.setAttribute('aria-activedescendant', day);
-      document.querySelector('#' + day).classList.add('focus');
-      document.querySelector('#' + day).setAttribute('aria-selected', 'true');
+      this.grid.querySelector('#' + day).classList.add('focus');
+      this.grid.querySelector('#' + day).setAttribute('aria-selected', 'true');
     }
   }
 
@@ -656,8 +709,8 @@ export class CalendarComponent implements OnInit {
       const day = 'day' + offset;
 
       this.grid.setAttribute('aria-activedescendant', day);
-      document.querySelector('#' + day).classList.add('focus');
-      document.querySelector('#' + day).setAttribute('aria-selected', 'true');
+      this.grid.querySelector('#' + day).classList.add('focus');
+      this.grid.querySelector('#' + day).setAttribute('aria-selected', 'true');
     }
   }
 
@@ -699,7 +752,7 @@ export class CalendarComponent implements OnInit {
     let curDay = 1;
     let rowCount = 1;
     this.tbody = this.grid.querySelector('tbody');
-    let gridCells = '\t<tr id="row1">\n';
+    let gridCells = '\t<tr id="row0">\n';
 
     // Clear the grid
     const tbodyChild = this.tbody.querySelector('tr');
