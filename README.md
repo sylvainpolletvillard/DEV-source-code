@@ -1,89 +1,58 @@
 ![Logo](https://creamng.github.io/Library/assets/img/creamNG-logo.svg)
 
-Une librairie Angular 2 Responsive et Accessible ! 
+**UI components for Angular**
 
-Projet généré par Angular CLI version 1.3.1 
+
+
+![Npm](https://camo.githubusercontent.com/3cb4eb3c991f38eddc8092d7d9c8c5b5d8888a33/68747470733a2f2f62616467652e667572792e696f2f6a732f253430616e67756c6172253246636f72652e737667)
+![build](https://camo.githubusercontent.com/8d227cc53b74107a9721d592157e02723beb43a9/68747470733a2f2f7472617669732d63692e6f72672f616e67756c61722f616e67756c61722e7376673f6272616e63683d6d6173746572)
+
+![licence](https://camo.githubusercontent.com/3ccf4c50a1576b0dd30b286717451fa56b783512/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667)
 
 **In Developement**
 
-
 ## Sommaire
+- Installation
 
-* Installation
-* Créer un composant
-* Créer un service
-* Comment build 
-* Tests unitaire
-* Afficher le code HTML/CSS/JS en couleur
-* Crédits 
-
-
-| Accessible       |     Responsive   |   SEMANTIC      |
-| ---------------- | ---------------- | ---------       |
-| ARIA             |     Media Q.     |   HTML 5        |
-| Alt              |     SVG          |   W3C Validator |
-| ...              |     ...          |   ...           |
-  
-Code 
-- [ ] not tested
-- [x] tested
 
 Installation
 =====================
 
-Il est impératif de lancer un `npm-install` pour créer le dossier node_modules.
-Lancer avec `ng serve` et ouvrir dans le navigateur à l'URL http://localhost:4200/` .  
-Ouverture du navigateur automatique avec `ng serve -o`.
+Run
+`npm install creamngnpm` 
 
-Créer un composant 
+In your app.module.ts
+`import { CreamNG } from 'creamngnpm';`
+And
+`@NgModule({
+  declarations: [
+    CreamNG
+   ]
+  })`
+
+HELP US
 =====================
 
-Lancer `ng generate component component name` pour générer un composant.
+To create a component
+`ng generate component component name` 
 
-Créer un service
-=====================
-Lancer `ng generate component service name` pour générer un composant.
 
-Comment build 
+Highlight System
 =====================
 
-Lancer `ng build --prod --output-path docs --base-href https://creamng.github.io/Library/` pour build
-le projet. Le dossier /docs contiendra le contenu à mettre dans le repo "Library" pour être disponible sur 
-la page Git.
+We use #prettify
+like this:
 
-De plus, il est nécessaire de copier-coller le fichier "/docs/index.html" et de le renommer en "/docs/404.html" en n'oubliant
-pas d'écraser au préalable l'ancien fichier.
+`<!--?prettify lang=html linenums=true?--> 
+    <pre class="prettyprint linenums"> 
+      <code>`
 
-
-Tests Unitaire
+Snippets System
 =====================
 
-Lancer `ng test` pour executer les tests unitaires (aucun de créer pour le moment)
+We use :
+`https://github.com/CreamNG/EntitifyIt` (Studio - Worldline)
 
-Afficher le code HTML/CSS/TS en couleurs
-=====================
-
-Le seul plugin JS utilisé est prettify.js permettant de structurer le `code` affiché sur la page.
-Afficher du code sur la page, nous procédons de la manière suivante : 
-
-```html
-<div class="code">
-<!--?prettify lang=html linenums=true?--> 
-<pre class="prettyprint linenums"> 
-<code> 
-```
-
-dans lang=html , on peut également avoir css ou javascript( pour les .ts)
-
-Il faut penser à modifier les éléments spéciaux comme ceci : 
-```html
-{     by   &#123;
-}     by   &#125;
-<     by   &#x3C;
->     by   &#x3E;
-"     by   &#x22;
-```
- (les trois derniers peuvent être générer avec [https://mothereff.in/html-entities)](https://mothereff.in/html-entities)
  
 Crédits
 =====================
