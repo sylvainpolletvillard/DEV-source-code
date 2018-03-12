@@ -14,7 +14,7 @@ SEE DEMO : https://creamng.github.io/Library/
 ## Sommaire
 - Installation
 - How to help
-- Code Highlight System
+- Syntax Highlight System
 - Snippets System
 - Credits
 
@@ -37,10 +37,10 @@ And
 How to help
 =====================
 
-###To create a component
+### To create a component
 `ng generate component component name` 
 
-###Components' structure
+### Components' structure
 
 Notice that, in order to properly display the differente snippets of components, the sctructure have to comply to the following:
 
@@ -70,7 +70,7 @@ export class AccordionPageComponent implements OnInit {
   }
 }`
 
-Code Highlight System
+Syntax Highlight System
 =====================
 
 We use #prettify like this:
