@@ -105,7 +105,6 @@ export const appRoutes: Routes = [
     GettingStartedComponent,
     StepPageComponent,
     StepComponent,
-    StepItemComponent
   ],
   imports: [
     BrowserModule,
