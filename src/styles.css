@@ -319,7 +319,6 @@ article.post {
       color: #000;
     }
 
-<<<<<<< HEAD
 /* DEMO BLOCK */
 
 div.demo {
@@ -327,10 +326,14 @@ div.demo {
 	padding: 1rem;
 	margin: 2rem 0;
 }
-=======
-    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0; background: #fff url(assets/img/demo-bkgd.png) repeat;}
->>>>>>> 2d2bb71ba9bf6c7b369486196d166a4fce5dd782
 
+    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0; background: #fff url(assets/img/demo-bkgd.png) repeat;}
+
+
+div.explain h4 {
+	font: 1.3em "quicksandbold", Helvetica, Arial, sans-serif;
+	margin-bottom: 1rem;
+}
 div.explain dl {display: table-row; margin-bottom: 0.5rem;}
 div.explain dt, div.explain dd {display: table-cell; padding: 0 0 0.5rem;}
 

@@ -2,14 +2,14 @@
 <div class="panelTitle">
   <h2> <strong> Calendar </strong> Component </h2>
   <ul>
-    <li><a scrollTo href="#simpleCalendar">Simple Calendar</a></li>
+    <li><a scrollTo href="#calendar">Simple Calendar</a></li>
 
   </ul>
 </div>
 
 <!-- Component Title -->
 <div class="titleComponent">
-  <div class="descriptionComponent" id="simpleCalendar">
+  <div class="descriptionComponent" id="calendar">
       <h3>
           <svg>
             <use xlink:href="#gitListItem"></use>
@@ -24,17 +24,13 @@
             <span>Github</span></a>
       </h3>
 
-      <p> It's a accessible calendar / date picker with this list of actions : </p>
-
-
-
     <!-- Demo -->
     <div class="demo">
         <c3m-calendar></c3m-calendar>
     </div>
 
-    <p class="a11yExplain"> ACCESSIBILITY - Keys </p>
     <div class="explain">
+      <h4>ACCESSIBILITY - Keys</h4>
       <dl>
         <dt>Up</dt>
         <dd>Go back 7 days</dd>
@@ -98,45 +94,25 @@
 
 
            <!-- TABS SNIPPETS -->
-           <c3m-tabs>
+           <c3m-tabs class="snippets">
             <c3m-tab tabTitle="HTML">
                 <p class="pre-code"> To call the component </p>
                 <div class="code">
                     <!--?prettify lang=html linenums=true?-->
                     <pre class="prettyprint linenums">
-                      <code>
-    HTML code here </code>
-
+&lt;div class=&#34;calendar&#34;&gt;
+    &lt;c3m-calendar&gt;&lt;/c3m-calendar&gt;
+&lt;/div>
                     </pre>
                 </div>
-
             </c3m-tab>
+
             <c3m-tab tabTitle="CSS">
-                <p class="pre-code"> To call the component </p>
-                <div class="code">
-                    <!--?prettify lang=css linenums=true?-->
-                    <pre class="prettyprint linenums">
-                      <code>
-    CSS code here </code>
-
-                    </pre>
-                </div>
-
             </c3m-tab>
+
             <c3m-tab tabTitle="TS">
-                <p class="pre-code"> To call the component </p>
-                <div class="code">
-                    <!--?prettify lang=javascript linenums=true?-->
-                    <pre class="prettyprint linenums">
-                      <code>
-    TypeScript code here </code>
-
-                    </pre>
-                </div>
-
             </c3m-tab>
+
           </c3m-tabs>
-
     </div>
-
 </div>
