@@ -13,6 +13,10 @@ SEE DEMO : https://creamng.github.io/Library/
 
 ## Sommaire
 - Installation
+- How to help
+- Code Highlight System
+- Snippets System
+- Credits
 
 
 Installation
@@ -30,22 +34,52 @@ And
    ]
   })`
 
-HELP US
+How to help
 =====================
 
-To create a component
+###To create a component
 `ng generate component component name` 
 
+###Components' structure
 
-Highlight System
+Notice that, in order to properly display the differente snippets of components, the sctructure have to comply to the following:
+
+- <componentName>-page
+  - <componentName>[-<specification>]
+    - <componentName>[-<specification>]-item
+
+In your "<componentName>-page.components.ts" file, you'll have to import the "OnInit" event and the "AppComponent" from "app.component". You'll also have to call the codeSnippets() function as the example shown below:
+  
+  `import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AppComponent } from '../../app.component';
+
+@Component({
+  selector: 'c3m-accordion-page',
+  templateUrl: './accordion-page.component.html',
+  styleUrls: ['./accordion-page.component.css'],
+  encapsulation: ViewEncapsulation.None
+})
+export class AccordionPageComponent implements OnInit {
+
+  constructor(private app: AppComponent) {
+  }
+
+  ngOnInit() {
+    let subComp = ['accordion-item']; // list here all sub-components
+    this.app.codeSnippets(subComp); // empty string if no sub-component
+  }
+}`
+
+Code Highlight System
 =====================
 
-We use #prettify
-like this:
+We use #prettify like this:
 
 `<!--?prettify lang=html linenums=true?--> 
     <pre class="prettyprint linenums"> 
       <code>`
+      
+Where "lang" is the code language to display.
 
 Snippets System
 =====================
@@ -54,7 +88,7 @@ We use :
 `https://github.com/CreamNG/EntitifyIt` (Studio - Worldline)
 
  
-Crédits
+Credits
 =====================
 
 Worldline - 2017 - CreamNG 
