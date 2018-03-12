@@ -44,13 +44,13 @@ How to help
 
 Notice that, in order to properly display the differente snippets of components, the sctructure have to comply to the following:
 
-- <componentName>-page
-  - <componentName>[-<specification>]
-    - <componentName>[-<specification>]-item
+- "componentName"-page
+  - "componentName"[-"specification"]
+    - "componentName"[-"specification"]-item
 
 In your "<componentName>-page.components.ts" file, you'll have to import the "OnInit" event and the "AppComponent" from "app.component". You'll also have to call the codeSnippets() function as the example shown below:
   
-  `import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+`import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../../app.component';
 
 @Component({
