@@ -10,6 +10,7 @@ export class AccueilComponent implements OnInit {
 
     public lottieConfig: Object;
     private anim: any;
+    private animationSpeed = 1;
 
   constructor() {
     this.lottieConfig = {
