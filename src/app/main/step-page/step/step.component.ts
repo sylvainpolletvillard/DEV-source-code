@@ -31,7 +31,6 @@ export class StepComponent implements AfterViewInit, AfterViewChecked {
     this.itemStepTab.forEach((StepItemComponent, index) => {
       StepItemComponent.indexStep = index + 1;
       this.itemsStepTabReference.push(StepItemComponent.reference);
-        console.log(this.itemsStepTabReference);
       if (StepItemComponent.isActive) {
         this.theActiveStepItem = StepItemComponent.indexStep;
       }

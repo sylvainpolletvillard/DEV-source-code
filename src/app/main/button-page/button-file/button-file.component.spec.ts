@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ColumnTableComponent } from './column-table.component';
+import { ButtonFileComponent } from './button-file.component';
 
-describe('ColumnTableComponent', () => {
-  let component: ColumnTableComponent;
-  let fixture: ComponentFixture<ColumnTableComponent>;
+describe('ButtonFileComponent', () => {
+  let component: ButtonFileComponent;
+  let fixture: ComponentFixture<ButtonFileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ColumnTableComponent ]
+      declarations: [ ButtonFileComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ColumnTableComponent);
+    fixture = TestBed.createComponent(ButtonFileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

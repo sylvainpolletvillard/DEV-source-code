@@ -2,8 +2,8 @@ import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
 
 @Component({
   selector: 'c3m-column-table',
-  templateUrl: './column-table.component.html',
-  styleUrls: ['./column-table.component.css'],
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class ColumnTableComponent implements AfterViewInit {

@@ -1,17 +1,17 @@
 <!-- Component Page Title -->
 <div class="panelTitle">
-  <h2> <strong> Button </strong> Component </h2>
+  <h2><strong>Button</strong> Component</h2>
   <ul>
-    <li><a scrollTo href="#normalBtn">Normal</a></li>
-    <li><a scrollTo href="#uploadBtn">Upload</a></li>
-    <li><a scrollTo href="#submitBtn">Submit</a></li>
+    <li><a scrollTo href="#button">Normal</a></li>
+    <li><a scrollTo href="#button-file">Upload</a></li>
+    <li><a scrollTo href="#button-submit">Submit</a></li>
   </ul>
 </div>
 
 <!-- Component Title -->
 <div class="titleComponent">
-    <!-- NORMAL BUTTON -->
-    <div class="descriptionComponent" id="normalBtn">
+  <!-- NORMAL BUTTON -->
+  <div class="descriptionComponent" id="button">
     <h3>
       <!-- GitHub SVG -->
       <svg>
@@ -20,7 +20,7 @@
       Normal Button
 
       <!-- GitHub Repo Link -->
-      <a href="https://github.com/CreamNG/Components/tree/master/buttons/btn" class="gitBtn" target="_blank">
+      <a href="https://github.com/CreamNG/Components/tree/master/buttons/button" class="gitBtn" target="_blank">
         <svg>
           <use xlink:href="#gitSvg"></use>
         </svg>
@@ -30,124 +30,53 @@
 
     <!-- Description -->
     <p>General action buttons.</p>
+    <blockquote>"If href has no value, then it is a button."</blockquote>
 
     <!-- Demo -->
     <div class="demo">
-      <c3m-btn>normal</c3m-btn>
-      <c3m-btn ngClass="info" >info</c3m-btn>
-      <c3m-btn ngClass="warning" >warning</c3m-btn>
-      <c3m-btn ngClass="danger" >danger</c3m-btn>
-      <c3m-btn ngClass="success">success</c3m-btn>
+      <c3m-button>normal</c3m-button>
+      <c3m-button ngClass="info">info</c3m-button>
+      <c3m-button ngClass="warning">warning</c3m-button>
+      <c3m-button ngClass="danger">danger</c3m-button>
+      <c3m-button ngClass="success">success</c3m-button>
     </div>
 
     <!-- CODE SNIPPETS -->
-      <c3m-tabs>
+    <c3m-tabs class="snippets">
 
-          <!-- SNIPPETS HTML -->
-          <c3m-tab tabTitle="HTML">
-              <p class="pre-code"> To call the component </p>
-              <div class="code">
-                  <!--?prettify lang=html linenums=true?-->
-                  <pre class="prettyprint linenums">
+      <!-- SNIPPETS HTML -->
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code"> To call the component </p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
                       <code>
   &lt;!-- Normal Buttons --&gt;
-  &lt;c3m-btn&gt;normal&lt;/c3m-btn&gt;
-  &lt;c3m-btn ngClass=&#34;info&#34; &gt;info&lt;/c3m-btn&gt;
-  &lt;c3m-btn ngClass=&#34;warning&#34; &gt;warning&lt;/c3m-btn&gt;
-  &lt;c3m-btn ngClass=&#34;danger&#34; &gt;danger&lt;/c3m-btn&gt;
-  &lt;c3m-btn ngClass=&#34;success&#34;&gt;success&lt;/c3m-btn&gt;</code>
+  &lt;c3m-button&gt;normal&lt;/c3m-button&gt;
+  &lt;c3m-button ngClass=&#34;info&#34; &gt;info&lt;/c3m-button&gt;
+  &lt;c3m-button ngClass=&#34;warning&#34; &gt;warning&lt;/c3m-button&gt;
+  &lt;c3m-button ngClass=&#34;danger&#34; &gt;danger&lt;/c3m-button&gt;
+  &lt;c3m-button ngClass=&#34;success&#34;&gt;success&lt;/c3m-button&gt;</code>
                   </pre>
-              </div>
-              <p class="pre-code"> For btn.component.html </p>
-              <div class="code">
-                  <!--?prettify lang=html linenums=true?-->
-                  <pre class="prettyprint linenums">
-                      <code>
-  &lt;!-- USE &#34;BUTTON&#34; Tag --&gt;
-  &lt;button&gt;
-      &lt;!-- ng-content contains the button text --&gt;
-      &lt;ng-content&gt;&lt;/ng-content&gt;
-  &lt;/button&gt;</code>
-                  </pre>
-              </div>
+        </div>
+      </c3m-tab>
 
-          </c3m-tab>
+      <!-- SNIPPETS CSS -->
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
 
-          <!-- SNIPPETS CSS -->
-          <c3m-tab tabTitle="CSS">
-              <p class="pre-code"> For the buttons </p>
-              <div class="code">
-                  <!--?prettify lang=css linenums=true?-->
-                  <pre class="prettyprint linenums">
-                  <code>
-  /* BUTTON */
-  c3m-btn button&#123;
-      color: white;
-      padding: 0.5rem 1rem 0.5rem 1rem;
-      border-radius: 3px;
-      background: rgb(105, 105, 105);
-      cursor:pointer;
-      margin-bottom:1.6rem;
-    &#125;
-        /* BUTTON HOVER */
-        c3m-btn button:hover&#123;
-            opacity:0.8;
-        &#125;
-            /* COLORS OF DIFFERENTS BUTTONS */
-            c3m-btn.success button&#123;
-                background-color: #6CBE45;
-            &#125;
-            c3m-btn.info button&#123;
-                background-color: #45ABBC;
-            &#125;
-            c3m-btn.warning button&#123;
-                background-color: #D769A8;
-            &#125;
-            c3m-btn.danger button&#123;
-                background-color: #ED9C21;
-            &#125;</code>
-              </pre>
-              </div>
-              <p class="pre-code"> For custom colors </p>
-              <div class="code">
-                  <!--?prettify lang=css linenums=true?-->
-                  <pre class="prettyprint linenums">
-                  <code>
-  /* Success */
-  c3m-btn.success button&#123;
-      background-color: green;
-  &#125;
-  /* Info */
-  c3m-btn.info button&#123;
-      background-color: #1773B2;
-  &#125;
-  /* Warning */
-  c3m-btn.warning button&#123;
-      background-color: orange;
-  &#125;
-  /* Danger */
-  c3m-btn.danger button&#123;
-      background-color: orangered;
-  &#125;
-                  </code>
-              </pre>
-              </div>
-
-          </c3m-tab>
-
-          <!-- SNIPPETS TYPESCRIPT -->
-          <c3m-tab tabTitle="TypeScript">
-                  <p class="pre-code"> To call the component </p>
-                  <div class="code">
-                      <!--?prettify lang=javascript linenums=true?-->
-                      <pre class="prettyprint linenums">
-                      <code>
+      <!-- SNIPPETS TYPESCRIPT -->
+      <c3m-tab tabTitle="TypeScript">
+        <p class="pre-code"> To call the component </p>
+        <div class="code">
+          <!--?prettify lang=javascript linenums=true?-->
+          <pre class="prettyprint linenums">
   import &#123;Component, ViewEncapsulation, ElementRef&#125; from &apos;@angular/core&apos;;
 
     @Component(&#123;
-      selector: &apos;c3m-btn&apos;,
-      templateUrl: &apos;./btn.component.html&apos;,
-      styleUrls: [&apos;./btn.component.css&apos;],
+      selector: &apos;c3m-button&apos;,
+      templateUrl: &apos;./button.component.html&apos;,
+      styleUrls: [&apos;./button.component.css&apos;],
       encapsulation: ViewEncapsulation.None
     &#125;)
     export class BtnComponent &#123;
@@ -159,19 +88,16 @@
         /* Alert that display ClassName */
         alert(&apos;My Class is : &apos; + this.elementRef.nativeElement.className);
       &#125;
-  &#125; </code>
+  &#125;
                   </pre>
-                  </div>
-
-          </c3m-tab>
-
-
-      </c3m-tabs>
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
   </div>
 
-    <!-- UPLOAD BUTTON -->
-    <div class="descriptionComponent" id="uploadBtn">
-      <h3>
+  <!-- UPLOAD BUTTON -->
+  <div class="descriptionComponent" id="button-file">
+    <h3>
         <svg>
           <use xlink:href="#gitListItem"></use>
         </svg>
@@ -185,124 +111,36 @@
           <span>Github</span></a>
       </h3>
 
-        <p>Allow the upload of multiple files.</p>
+    <p>Allow the upload of multiple files.</p>
 
-        <div class="demo">
-          <c3m-btn-file>Choose a file</c3m-btn-file>
-        </div>
-
-        <c3m-tabs>
-            <c3m-tab tabTitle="HTML">
-                <p class="pre-code"> To call the component </p>
-                <div class="code">
-                    <!--?prettify lang=html linenums=true?-->
-                    <pre class="prettyprint linenums">
-                      <code>
-  &lt;!-- Button Upload --&gt;
-  &#x3C;c3m-btn-file&#x3E;Choose a file&#x3C;/c3m-btn-file&#x3E;</code>
-                  </pre>
-                </div>
-
-
-                <p class="pre-code"> For btn-file.component.html </p>
-                <div class="code">
-                    <!--?prettify lang=html linenums=true?-->
-                    <pre class="prettyprint linenums">
-                      <code>
-  &lt;!-- Label --&gt;
-  &lt;label for=&#34;fileToUpload&#34;&gt;&lt;ng-content&gt;&lt;/ng-content&gt;&lt;/label&gt;
-
-  &lt;!-- USE &#34;input&#34; type file  --&gt;
-  &lt;input (change)=&#34;onChange(file.files)&#34; type=&#34;file&#34; name=&#34;fileToUpload&#34; #file id=&#34;fileToUpload&#34; multiple&gt;
-
-  &lt;!-- File name list --&gt;
-  &lt;ul&gt;
-      &lt;li *ngFor=&#34;let f of files&#34; &gt; &#123; &#123; f.name &#125; &#125; &lt;/li&gt;
-  &lt;/ul&gt; </code>
-                  </pre>
-                </div>
-
-            </c3m-tab>
-
-            <c3m-tab tabTitle="CSS">
-                <p class="pre-code"> For the button</p>
-                <div class="code">
-                    <!--?prettify lang=css linenums=true?-->
-                    <pre class="prettyprint linenums">
-                         <code>
-  /* Label */
-  c3m-btn-file label&#123;
-    color: white;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border-radius: 3px;
-    background: rgb(105, 105, 105);
-    cursor: pointer;
-    margin-bottom: 1.6rem;
-  &#125;
-  /* Label Hover */
-  c3m-btn-file label:hover&#123;
-      opacity:0.8;
-  &#125;
-
-  /* Input FILE */
-  c3m-btn-file input[type=&#34;file&#34;]&#123;
-    position:absolute;
-    left:-9999px;
-  &#125;
-
-  /* Item List file name */
-  c3m-btn-file ul li &#123;
-    font-family: &#34;quicksanditalic&#34;;
-    color: #676767;
-    margin-top: 0.3rem;
-  &#125;
-  /* First Item List file name */
-  c3m-btn-file ul li:first-child &#123;
-      margin-top: 1rem;
-  &#125;</code>
-                    </pre>
-                </div>
-
-            </c3m-tab>
-
-            <c3m-tab tabTitle="TypeScript">
-                <p class="pre-code"> To call the component </p>
-                <div class="code">
-                    <!--?prettify lang=javascript linenums=true?-->
-                    <pre class="prettyprint linenums">
-                      <code>
-  import &#123; Component, ViewEncapsulation &#125; from &apos;@angular/core&apos;;
-
-    @Component(&#123;
-        selector: &apos;c3m-btn-file&apos;,
-        templateUrl: &apos;./btn-file.component.html&apos;,
-        styleUrls: [&apos;./btn-file.component.css&apos;],
-        encapsulation: ViewEncapsulation.None
-    &#125;)
-    export class BtnFileComponent &#123;
-        /* File List */
-        files: FileList;
-
-        /* OnChange method */
-        onChange(files: FileList) &#123;
-            this.files = files;
-        &#125;
-  &#125;</code>
-                  </pre>
-                </div>
-
-            </c3m-tab>
-
-        </c3m-tabs>
+    <div class="demo">
+      <c3m-button-file>Choose a file</c3m-button-file>
     </div>
 
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code"> To call the component </p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+  &lt;!-- Button Upload --&gt;
+  &#x3C;c3m-button-file&#x3E;Choose a file&#x3C;/c3m-button-file&#x3E;
+                  </pre>
+        </div>
+      </c3m-tab>
 
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
 
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
 
+    </c3m-tabs>
+  </div>
 
-    <!-- SUBMIT BUTTON -->
-    <div class="descriptionComponent" id="submitBtn">
-      <h3>
+  <!-- SUBMIT BUTTON -->
+  <div class="descriptionComponent" id="button-submit">
+    <h3>
         <svg>
           <use xlink:href="#gitListItem"></use>
         </svg>
@@ -316,89 +154,31 @@
           <span>Github</span></a>
        </h3>
 
-      <p>A standard submit input (should appear inside a form or be attached to one).</p>
+    <p>A standard submit input (should appear inside a form or be attached to one).</p>
 
-        <div class="demo">
-          <c3m-btn-submit inputValue="submit"></c3m-btn-submit>
-        </div>
+    <div class="demo">
+      <c3m-button-submit inputValue="submit"></c3m-button-submit>
+    </div>
 
-        <c3m-tabs>
-            <c3m-tab tabTitle="HTML">
-                <p class="pre-code"> To call the component </p>
-                <div class="code">
-                    <!--?prettify lang=html linenums=true?-->
-                    <pre class="prettyprint linenums">
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code"> To call the component </p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
                       <code>
   &lt;!-- Button Submit --&gt;
-  &#x3C;c3m-btn-submit inputValue=&#x22;submit&#x22;&#x3E;&#x3C;/c3m-btn-submit&#x3E; </code>
+  &#x3C;c3m-button-submit inputValue=&#x22;submit&#x22;&#x3E;&#x3C;/c3m-button-submit&#x3E; </code>
                   </pre>
-                </div>
+        </div>
+      </c3m-tab>
 
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
 
-                <p class="pre-code"> For btn-submit.component.html </p>
-                <div class="code">
-                    <!--?prettify lang=html linenums=true?-->
-                    <pre class="prettyprint linenums">
-                      <code>
-  &lt;!-- USE &#34;Input&#34; type submit --&gt;
-  &lt;input type= &#34;submit&#34; value=&#34;&#123;&#123; inputValue &#125; &#125; &#34; &gt;</code>
-                  </pre>
-                </div>
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
 
-            </c3m-tab>
-
-            <c3m-tab tabTitle="CSS">
-                <p class="pre-code"> For the button</p>
-                <div class="code">
-                    <!--?prettify lang=css linenums=true?-->
-                    <pre class="prettyprint linenums">
-                         <code>
-  /* Input  */
-  c3m-btn-submit input&#123;
-      color: white;
-      padding: 0.5rem 1rem 0.5rem 1rem;
-      border-radius: 3px;
-      background: rgb(105, 105, 105);
-      cursor: pointer;
-      border: none;
-      font-size: 1rem;
-      font-family: &#34;quicksandregular&#34;;
-  &#125;
-    /* Input Hover */
-    c3m-btn-submit input:hover&#123;
-        opacity:0.8;
-    &#125;</code>
-                    </pre>
-                </div>
-
-            </c3m-tab>
-
-            <c3m-tab tabTitle="TypeScript">
-                <p class="pre-code"> To call the component </p>
-                <div class="code">
-                    <!--?prettify lang=javascript linenums=true?-->
-                    <pre class="prettyprint linenums">
-                      <code>
-  import &#123;Component, Input, ViewEncapsulation&#125; from &apos;@angular/core&apos;;
-
-    @Component(&#123;
-      selector: &apos;c3m-btn-submit&apos;,
-      templateUrl: &apos;./btn-submit.component.html&apos;,
-      styleUrls: [&apos;./btn-submit.component.css&apos;],
-      encapsulation: ViewEncapsulation.None
-    &#125;)
-    export class BtnSubmitComponent &#123;
-
-      constructor() &#123; &#125;
-
-      /* Input Submit value */
-      @Input() inputValue: string;
-  &#125;</code>
-                  </pre>
-                </div>
-
-            </c3m-tab>
-
-        </c3m-tabs>
-    </div>
+    </c3m-tabs>
+  </div>
 </div>

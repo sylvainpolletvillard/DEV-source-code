@@ -9,7 +9,7 @@ import { Component, ViewEncapsulation} from '@angular/core';
 export class HeaderComponent {
 
   menuMobile = false;
-
+  mediumRes = '1000px';
 
   /* Action button burger */
   public ToggleMenuBurger() {

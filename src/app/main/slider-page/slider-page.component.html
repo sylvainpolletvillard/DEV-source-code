@@ -1,21 +1,21 @@
 <!-- TITLE SLIDER COMPONENT PAGE -->
 <div class="panelTitle">
-  <h2> <strong> Slider </strong> Component </h2>
+  <h2><strong>Slider</strong> Component</h2>
   <ul>
-    <li><a scrollTo href="#simpleSlider">Simple Slider</a></li>
-    <li><a scrollTo href="#bubbleSlider">Bubble Slider</a></li>
+    <li><a scrollTo href="#slider">Regular Slider</a></li>
+    <li><a scrollTo href="#slider-bubble">Tooltip Slider</a></li>
   </ul>
 </div>
 
 
 <!-- DESCRIPTION SLIDER COMPONENT PAGE -->
 <div class="titleComponent">
-  <div class="descriptionComponent" id="simpleSlider">
+  <div class="descriptionComponent" id="slider">
     <h3>
       <svg>
         <use xlink:href="#gitListItem"></use>
       </svg>
-      Normal Slider
+      Regular Slider
 
       <a href="https://github.com/CreamNG/Components/tree/master/slider" class="gitBtn" target="_blank">
         <svg>
@@ -24,12 +24,12 @@
 
         <span>Github</span></a>
     </h3>
-    <p> It's a normal slider with OUTPUT tag for display the value</p>
+    <p>Regular slider with OUTPUT tag.</p>
 
     <div class="demo">
       <!-- SIMPLE SLIDER -->
       <c3m-slider
-            title="Simple Slider"
+            title="Choose a value"
             min="0"
             max="50"
             value="45"
@@ -40,34 +40,33 @@
     <div class="explain">
       <dl>
         <dt>title</dt>
-        <dd>for rename the label tag</dd>
+        <dd>The label tag</dd>
       </dl>
       <dl>
         <dt>min</dt>
-        <dd>for choose the minimum value</dd>
+        <dd>Minimum slider value</dd>
       </dl>
       <dl>
         <dt>max</dt>
-        <dd>for choose the maximum value</dd>
+        <dd>Maximum slider value</dd>
       </dl>
       <dl>
         <dt>step</dt>
-        <dd>for choose the step value (Integer or Float)</dd>
+        <dd>Steps value (Integer or Float)</dd>
       </dl>
       <dl>
         <dt>value</dt>
-        <dd>for choose the default value</dd>
+        <dd>Default value</dd>
       </dl>
     </div>
 
     <!-- TABS SNIPPETS -->
-    <c3m-tabs>
+    <c3m-tabs class="snippets">
       <c3m-tab tabTitle="HTML">
-        <p class="pre-code"> To call the component </p>
+        <p class="pre-code">To call the component</p>
         <div class="code">
            <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint linenums">
-              <code>
   &#x3C;!-- SIMPLE SLIDER --&#x3E;
     &#x3C;c3m-slider
           title=&#x22;Simple Slider&#x22;
@@ -75,272 +74,28 @@
           max=&#x22;50&#x22;
           value=&#x22;45&#x22;
           step=&#x22;1&#x22;&#x3E;
-    &#x3C;/c3m-slider&#x3E;</code>
+    &#x3C;/c3m-slider&#x3E;
             </pre>
         </div>
-
-          <p class="pre-code"> For <strong>slider-page.component.html</strong> </p>
-        <div class="code">
-            <!--?prettify lang=html linenums=true?-->
-            <pre class="prettyprint linenums">
-              <code>
-  &lt;!-- Slider Content --&gt;
-  &lt;div class=&#34;SliderContent&#34;&gt;
-      &lt; label for=&#34; sliderBar&#34; &gt; &#123; &#123; this.title &#125; &#125;&lt;/label&gt;
-      &lt;!-- Input type RANGE --&gt;
-      &lt;input type=&#34;range&#34; #slider id=&#34;sliderBar&#34; [attr.min]=&#34;min&#34; [attr.max]=&#34;max&#34; [attr.step]=&#34;step&#34; [attr.value]=&#34;value&#34; (input)=&#34;showValue();&#34;/&gt;
-      &lt;!-- Output for display change value --&gt;
-      &lt;output for=&#34;sliderBar&#34; #output&gt;&#123;&#123; this.value &#125;&#125;&lt;/output&gt;
-  &lt;/div&gt; </code>
-            </pre>
-        </div>
-
-
       </c3m-tab>
+
       <c3m-tab tabTitle="CSS">
-        <p class="pre-code"> To call the component </p>
-        <div class="code">
-              <!--?prettify lang=css linenums=true?-->
-              <pre class="prettyprint linenums">
-              <code>
-  /* INPUT CSS */
-
-  /* DEFAULT INPUT */
-  c3m-slider input[type=range] &#123;
-      -webkit-appearance: none;
-      width: 50%;
-      margin: 8.8px 0;
-      display: inline-block;
-  &#125;
-    /* DEFAULT INPUT FOCUS */
-      c3m-slider input[type=range]:focus &#123;
-          outline: none;
-      &#125;
-          /* TRACK */
-          c3m-slider input[type=range]::-webkit-slider-runnable-track &#123;
-              width: 100%;
-              height: 8.4px;
-              cursor: pointer;
-              box-shadow: none;
-              background: #45ABBC;
-              border-radius: 1.3px;
-              border: 0.2px solid #010101;
-          &#125;
-              /* BALL */
-              c3m-slider input[type=range]::-webkit-slider-thumb &#123;
-                  height: 26px;
-                  width: 26px;
-                  border-radius: 12px;
-                  background: #585454;
-                  cursor: pointer;
-                  -webkit-appearance: none;
-                  margin-top: -9px;
-              &#125;
-                  /* FOCUS TRACK */
-                  c3m-slider input[type=range]:focus::-webkit-slider-runnable-track &#123;
-                      background: #45ABBC;
-                  &#125;
-                  /* TRACK */
-                  c3m-slider input[type=range]::-moz-range-track &#123;
-                      width: 100%;
-                      height: 8.4px;
-                      cursor: pointer;
-                      box-shadow: none;
-                      background: #45ABBC;
-                      border-radius: 1.3px;
-                      border: 0.2px solid #010101;
-                  &#125;
-                  /* BALL */
-                      c3m-slider input[type=range]::-moz-range-thumb &#123;
-                          height: 26px;
-                          width: 26px;
-                          border-radius: 12px;
-                          background: #585454;
-                          cursor: pointer;
-                      &#125;
-                          /* TRACK */
-                          input[type=range]::-ms-track &#123;
-                              width: 100%;
-                              height: 8.4px;
-                              cursor: pointer;
-                              background: transparent;
-                              border-color: transparent;
-                              color: transparent;
-                          &#125;
-                          c3m-slider input[type=range]::-ms-fill-lower &#123;
-                              background: #45ABBC;
-                              border: 0.2px solid #010101;
-                              border-radius: 2.6px;
-                              box-shadow: none;
-                          &#125;
-                          c3m-slider input[type=range]::-ms-fill-upper &#123;
-                              background: #45ABBC;
-                              border: 0.2px solid #010101;
-                              border-radius: 2.6px;
-                              box-shadow: none;
-                          &#125;
-                              c3m-slider input[type=range]::-ms-thumb &#123;
-                                  height: 26px;
-                                  width: 26px;
-                                  border-radius: 12px;
-                                  background: #585454;
-                                  cursor: pointer;
-                                  height: 8.4px;
-                              &#125;
-                              c3m-slider input[type=range]:focus::-ms-fill-lower &#123;
-                                  background: #45ABBC;
-                              &#125;
-                              c3m-slider input[type=range]:focus::-ms-fill-upper &#123;
-                                  background: #45ABBC;
-                              &#125;
-    /* Label */
-  c3m-slider label&#123;
-      display: block;
-      margin: 0.6rem 0;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      color: #5d5555;
-  &#125;
-
-  /* Output */
-  c3m-slider output&#123;
-      display: inline;
-      position: static;
-      font: 1.2rem &#34;quicksandregular&#34;;
-      margin-left: 0.9rem;
-      vertical-align: middle;
-      text-transform: uppercase;
-      color: #44abbc;
-      font-weight: bold;
-  &#125;
-      c3m-slider.bubble output &#123;
-        position: absolute;
-        background-color: #585454;
-        width: 40px;
-        height: 26.2px;
-        text-align: center;
-        color: white;
-        border-radius: 10px;
-        display: inline-block;
-        bottom: -2.4rem;
-        left: 0;
-        margin-left: 0;
-        padding-top: 0.3rem;
-        transform: translate(-50%);
-      &#125;
-          c3m-slider.bubble output:after &#123;
-              content: &#34;&#34;;
-              position: absolute;
-              width: 0;
-              height: 0;
-              border-bottom: 10px solid #585454;
-              border-left: 5px solid transparent;
-              border-right: 5px solid transparent;
-              bottom: 100%;
-              left: 50%;
-              margin-left: -5px;
-              margin-top: -1px;
-          &#125;
-  c3m-slider .SliderContent&#123;
-      position:relative;
-      margin-bottom: 3rem;
-  &#125;
-                  </code>
-            </pre>
-        </div>
-
       </c3m-tab>
+
       <c3m-tab tabTitle="TypeScript">
-          <p class="pre-code">For <strong>slider.component.ts</strong></p>
-          <div class="code">
-             <!--?prettify lang=js linenums=true?-->
-                <pre class="prettyprint linenums">
-                  <code>
-  import &#123;Component, ElementRef, Input, AfterViewInit, ViewChild, ViewEncapsulation, HostListener&#125; from &apos;@angular/core&apos;;
-
-    @Component(&#123;
-      selector: &apos;c3m-slider&apos;,
-      templateUrl: &apos;./slider.component.html&apos;,
-      styleUrls: [&apos;./slider.component.css&apos;],
-      encapsulation: ViewEncapsulation.None
-    &#125;)
-    export class SliderComponent implements AfterViewInit &#123;
-
-        /* INPUTS */
-        @Input() min;
-        @Input() max;
-        @Input() step;
-        @Input() value;
-        @Input() title;
-
-        /* CHILDRENS */
-        @ViewChild(&apos;slider&apos;) input: ElementRef;
-        @ViewChild(&apos;output&apos;) output: ElementRef;
-
-        /* VARIABLES */
-        isBubble: boolean;
-        width: number;
-        point: number;
-        offset = 0;
-        newPoint;
-
-        /* CONSTRUCTOR */
-        constructor(private myComponent: ElementRef) &#123; &#125;
-
-      /* AFTER VIEW INIT */
-      ngAfterViewInit() &#123;
-          this.isBubble = this.myComponent.nativeElement.classList.contains(&apos;bubble&apos;);
-          // If contains Bubble class
-          if (this.isBubble) &#123;
-              this.setPositionBubble();
-          &#125;
-      &#125;
-        /* Resize breakpoint tab */
-        @HostListener(&apos;window:resize&apos;, [&apos;$event&apos;])
-        onResize(event) &#123;
-            if (this.isBubble) &#123;
-                this.setPositionBubble();
-            &#125;
-        &#125;
-        /* Display value */
-        showValue() &#123;
-          if (this.isBubble) &#123;
-              this.setPositionBubble();
-          &#125;
-          this.output.nativeElement.innerHTML = this.input.nativeElement.value;
-      &#125;
-
-      /* Move the output with the slider */
-        setPositionBubble() &#123;
-            this.width = this.input.nativeElement.getBoundingClientRect().width;
-            this.point = (this.input.nativeElement.value - this.min) / (this.max - this.min);
-
-          if (this.point &lt; 0.5) &#123;
-                this.offset = ((this.point * 2) * -12) + 12;
-          &#125; else if (this.point &gt; 0.5) &#123;
-              this.offset = ((this.point - 0.5) * 2) * -12;
-
-            &#125;
-              this.newPoint = this.width * this.point;
-              this.output.nativeElement.style.left = this.newPoint + this.offset + &apos;px&apos;;
-      &#125;
-  &#125; </code>
-                </pre>
-          </div>
       </c3m-tab>
+
     </c3m-tabs>
-
-
   </div>
 </div>
 
 <div class="titleComponent">
-  <div class="descriptionComponent" id="bubbleSlider">
+  <div class="demoComponent" id="slider-bubble">
     <h3>
       <svg>
         <use xlink:href="#gitListItem"></use>
       </svg>
-      Bubble Slider
+      Tooltip Slider
 
       <a href="https://github.com/CreamNG/Components/tree/master/slider" class="gitBtn" target="_blank">
         <svg>
@@ -350,7 +105,9 @@
         <span>Github</span></a>
     </h3>
 
-    <p> It's a slider with a BUBBLE that follow the cursor</p>
+    <div class="explain">
+      <p>The current value is displayed in a sliding tooltip.</p>
+    </div>
 
     <div class="demo">
       <!-- SLIDER WITH BUBBLE -->
@@ -364,29 +121,9 @@
       </c3m-slider>
     </div>
 
-
-      <p> The same component that "normal Slider" but you can add <strong>bubble</strong> class to change the OUTPUT tag</p>
-
-      <!-- BUBBLE SLIDER SNIPPETS -->
-    <c3m-tabs>
-      <c3m-tab tabTitle="HTML">
-        <p class="pre-code"> To call the component </p>
-        <div class="code">
-           <!--?prettify lang=html linenums=true?-->
-            <pre class="prettyprint linenums">
-              <code>
-  &#x3C;c3m-slider
-      class=&#x22;bubble&#x22;
-      title=&#x22;Slider with bubble&#x22;&#x3E;
-      min=&#x22;0&#x22;
-      max=&#x22;100&#x22;
-      value=&#x22;50&#x22;
-      step=&#x22;1&#x22;
-  &#x3C;/c3m-slider&#x3E;</code>
-            </pre>
-        </div>
-      </c3m-tab>
-    </c3m-tabs>
-
+    <div class="explain">
+      <p>Just add the <strong>class="bubble"</strong> when calling the <code>c3m-slider</code> component
+        to display the OUTPUT element as a tooltip.</p>
+    </div>
   </div>
 </div>

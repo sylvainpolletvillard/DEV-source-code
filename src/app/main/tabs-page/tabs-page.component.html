@@ -3,14 +3,14 @@
 <div class="panelTitle">
   <h2> <strong> Tabs </strong> Component </h2>
   <ul>
-    <li><a href="#">Normal Tabs</a></li>
+    <li><a href="#tabs">Normal Tabs</a></li>
   </ul>
 </div>
 
 
 <!-- DESCRIPTION TABS COMPONENT PAGE -->
 <div class="titleComponent">
-  <div class="descriptionComponent" id="nrmTabs">
+  <div class="descriptionComponent" id="tabs">
 
       <h3>
           <svg>
@@ -25,7 +25,8 @@
 
             <span>Github</span></a>
         </h3>
-    <p> Its' a tabs divided into 2 components: one for the container (TabsComponent) and the other for the content (TabComponent)</p>
+    <p>The tab component is composed by two different components: one
+      for the tab container (<code>TabsComponent</code>) and the other one for the tab content (<code>TabComponent</code>).</p>
 
 
     <div class="demo">
@@ -47,16 +48,15 @@
     </div>
 
     <div class="explain">
-      <p> This component is accessible and semantic.
-      The css provides for cases where the width of the
-      tab is greater than the width of the page. It is possible
-      to change the default open tab with the viable startIndexActiv
-      in tabs.component.ts</p>
+      <p>The CSS properties provide for cases where the width of the
+      tab is greater than the width of the page.</p>
+      <p>It is possible to change the default opened tab with the variable <code>startIndexActiv</code>
+      in <em>tabs.component.ts</em></p>
     </div>
 
 
     <!-- TABS SNIPPETS -->
-    <c3m-tabs>
+    <c3m-tabs class="snippets">
       <c3m-tab tabTitle="HTML">
         <p class="pre-code"> To call the component </p>
         <div class="code">
@@ -80,10 +80,11 @@
               </code>
             </pre>
         </div>
-        <p class="pre-code"> For <strong>tabs.component.html</strong> </p>
-        <div class="code">
+
+      <!--  <p class="pre-code"> For <strong>tabs.component.html</strong> </p>
+        <div class="code">-->
             <!--?prettify lang=html linenums=true?-->
-            <pre class="prettyprint linenums">
+            <!--<pre class="prettyprint linenums">
               <code>
                   &#x3C;div class=&#x22;tabsContainer&#x22;&#x3E;
                     &#x3C;ul&#x3E;
@@ -105,9 +106,9 @@
             </pre>
         </div>
           <p class="pre-code"> For <strong>tab.component.html</strong> </p>
-        <div class="code">
+        <div class="code">-->
             <!--?prettify lang=html linenums=true?-->
-            <pre class="prettyprint linenums">
+            <!--<pre class="prettyprint linenums">
               <code>
                       &#x3C;div class=&#x22;content&#x22;
                             [attr.aria-hidden]=&#x22;!isActive&#x22;
@@ -117,15 +118,14 @@
                       &#x3C;/div&#x3E;
               </code>
             </pre>
-        </div>
+        </div>-->
 
 
       </c3m-tab>
       <c3m-tab tabTitle="CSS">
-        <p class="pre-code"> To call the component </p>
-        <div class="code">
+        <!--<div class="code">-->
               <!--?prettify lang=css linenums=true?-->
-              <pre class="prettyprint linenums">
+            <!--  <pre class="prettyprint linenums">
               <code>
 
                   /* GESTION DES SNIPPETS */
@@ -181,14 +181,14 @@
 
               </code>
             </pre>
-        </div>
+        </div>-->
 
       </c3m-tab>
       <c3m-tab tabTitle="TypeScript">
-        <p class="pre-code">For <strong>tabs-page.component.ts</strong></p>
-          <div class="code">
+        <!--<p class="pre-code">For <strong>tabs-page.component.ts</strong></p>
+          <div class="code">-->
               <!--?prettify lang=js linenums=true?-->
-              <pre class="prettyprint linenums">
+              <!--<pre class="prettyprint linenums">
                   <code>
                       import &#123; Component, ViewEncapsulation, Input, ElementRef, AfterViewInit, ViewChildren, QueryList, ChangeDetectorRef, HostListener &#125; from &#x27;@angular/core&#x27;;
                       import &#123; TabComponent &#125; from &#x27;./tab/tab.component&#x27;;
@@ -281,9 +281,9 @@
           </div>
 
           <p class="pre-code">For <strong>tab-page.component.ts</strong></p>
-          <div class="code">
+          <div class="code">-->
              <!--?prettify lang=js linenums=true?-->
-                        <pre class="prettyprint linenums">
+                        <!--<pre class="prettyprint linenums">
                           <code>
                                 import &#123; Component, OnInit, ViewEncapsulation, Input, AfterViewInit&#125; from &#x27;@angular/core&#x27;;
                                 import &#123; TabsComponent &#125; from &#x27;../tabs.component&#x27;;
@@ -324,9 +324,9 @@
           </div>
 
           <p class="pre-code">It's the <strong> Random Function </strong> that generates id automatically for "aria" and "id" attributes <strong> in the AppComponent </strong> for example</p>
-          <div class="code">
+          <div class="code">-->
              <!--?prettify lang=js linenums=true?-->
-              <pre class="prettyprint linenums">
+              <!--<pre class="prettyprint linenums">
                     <code>
                         public randomID() &#123;
                           const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
@@ -334,7 +334,7 @@
                         &#125;
                     </code>
               </pre>
-          </div>
+          </div>-->
       </c3m-tab>
     </c3m-tabs>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'c3m-step-page',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepPageComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private app: AppComponent) {
   }
 
+  ngOnInit() {
+    let subComp = ['step-item'];
+    this.app.codeSnippets(subComp);
+  }
 }

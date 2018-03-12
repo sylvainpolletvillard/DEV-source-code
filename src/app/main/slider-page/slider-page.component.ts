@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'c3m-slider-page',
@@ -8,9 +9,10 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class SliderPageComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private app: AppComponent) {
   }
 
+  ngOnInit() {
+      this.app.codeSnippets('');
+  }
 }

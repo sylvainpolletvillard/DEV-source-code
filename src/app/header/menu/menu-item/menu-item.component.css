@@ -5,24 +5,19 @@
     border-top: 1px solid rgba(255,255,255,.5);
   }
       c3m-menu-item > li > button {
-          height: 100%;
+          position: relative;
           width: 100%;
-          line-height: 1.7rem;
-          font-size: 1rem;
           text-align: left;
-          color: #2b2828;
+          color: #FFF;
           background-color: initial;
-          padding: 1rem;
-          cursor:pointer;
+          padding: 1.1rem 1rem 0.8rem;
           transform: perspective(1px) translateZ(0);
-          position:relative;
-          transition-property: color;
-          transition-duration: 0.5s;
+          transition: color 0.5s;
+          cursor: pointer;
       }
-        c3m-menu-item > li > button:before{
-            content: "";
+        c3m-menu-item > li > button::before {
             position: absolute;
-            z-index: -1;
+            content: "";
             top: 0;
             left: 0;
             right: 0;
@@ -33,6 +28,7 @@
             transition-property: transform;
             transition-duration: 0.5s;
             transition-timing-function: ease-out;
+            z-index: -1;
         }
         c3m-menu-item > li > button:hover:before,
         c3m-menu-item > li > button:focus:before,
@@ -48,18 +44,19 @@
           font-weight: bold;
         }
           c3m-menu-item > li > button svg {
-            display: inline;
-            height: 1.8rem;
-            margin-right: 0.7rem;
+            position: relative;
+            top: -3px;
             width: 24px;
-            fill: black;
+            height: 29px;
+            fill: #CCC;
+            margin-right: 10px;
             vertical-align: middle;
             transition : fill 1.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
           }
-            c3m-menu-item.help > li > button svg{
+            c3m-menu-item.help > li > button svg {
               fill: #45ABBC;
             }
-              c3m-menu-item.help > li > button{
+              c3m-menu-item.help > li > button {
                 color: #45ABBC;
               }
                 c3m-menu-item > li > button:hover > svg,
@@ -75,40 +72,31 @@
 
 
     /* Menu Items */
-        .contenuMenu li {
-          padding: 0 0 0.4rem 1rem;
-          font: 1rem/1 "quicksandlight", Helvetica, Arial, sans-serif;
+    .contenuMenu {margin: 0 0 0.5rem 0.8rem;}
+    .contenuMenu li {
+      padding: 0 0 0.4rem 30px;
+      font: 0.85em/1 "quicksandlight", Helvetica, Arial, sans-serif;
+    }
+
+        .contenuMenu li a {
+          display: block;
+          width: 80%;
+          color: #FFF;
+          background-color: initial;
+          padding: 0.5rem 0 0.5rem 1rem;
+          cursor: pointer;
         }
-          .contenuMenu li:first-child {margin-top: 0.5em;}
-
-            .contenuMenu li a {
-              display: block;
-              width: 80%;
-              font-size: 0.9rem;
-              text-align: left;
-              background-color: initial;
-              padding: 0.5rem 0 0.5rem 1rem;
-              cursor: pointer;
-              color: #333;
-            }
-              .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
-                color: #333;
-                background-color: #EEE;
-              }
+        .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
+          color: #000;
+          background-color: #EEE;
+        }
 
 
 
-  /* DESKTOP */
-  @media screen and (min-width:1000px){
-    c3m-menu-item > li > button {
-      color: #eee;
-    }
-
-    c3m-menu-item > li > button svg{
-      fill: #eee;
-    }
-
-      .contenuMenu li a{
-        color: #eae2e2;
-      }
-  }
+/* DESKTOP */
+@media screen and (min-width: 1000px) {
+  c3m-menu-item > li > button {color: #EEE;}
+  c3m-menu-item > li > button svg {fill: #EEE;}
+    .contenuMenu li li {font-size: 100%;}
+    .contenuMenu li a {color: #EFEFEF;}
+}

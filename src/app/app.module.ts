@@ -12,16 +12,16 @@ import { AccueilComponent } from './main/accueil/accueil.component';
 import { AccordionComponent } from './main/accordion-page/accordion/accordion.component';
 import { AccordionItemComponent } from './main/accordion-page/accordion/accordion-item/accordion-item.component';
 import { RouterModule, Routes } from '@angular/router';
-import { BtnComponent } from './main/button-page/btn/btn.component';
+import { ButtonComponent } from './main/button-page/button/button.component';
 import { TabsComponent } from './main/tabs-page/tabs/tabs.component';
-import { TabComponent } from './main/tabs-page/tabs/tab/tab.component';
+import { TabComponent } from './main/tabs-page/tabs/tabs-item/tabs-item.component';
 import { ButtonPageComponent } from './main/button-page/button-page.component';
 import { TabsPageComponent } from './main/tabs-page/tabs-page.component';
 import { AccordionPageComponent } from './main/accordion-page/accordion-page.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { MenuItemComponent} from './header/menu/menu-item/menu-item.component';
-import { BtnFileComponent } from './main/button-page/btn-file/btn-file.component';
-import { BtnSubmitComponent } from './main/button-page/btn-submit/btn-submit.component';
+import { ButtonFileComponent } from './main/button-page/button-file/button-file.component';
+import { ButtonSubmitComponent } from './main/button-page/button-submit/button-submit.component';
 import { CarouselPageComponent } from './main/carousel-page/carousel-page.component';
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
 import { ModalComponent } from './main/modal-page/modal/modal.component';
@@ -29,9 +29,9 @@ import { ModalAlertComponent } from './main/modal-page/modal-alert/modal-alert.c
 import { CarouselComponent } from './main/carousel-page/carousel/carousel.component';
 import { CarouselItemComponent } from './main/carousel-page/carousel/carousel-item/carousel-item.component';
 import { TablePageComponent } from './main/table-page/table-page.component';
-import { ColumnTableComponent } from './main/table-page/column-table/column-table.component';
-import { ToggleTableComponent } from './main/table-page/toggle-table/toggle-table.component';
-import { PageSwipeTableComponent } from './main/table-page/page-swipe-table/page-swipe-table.component';
+import { ColumnTableComponent } from './main/table-page/table/table.component';
+import { ToggleTableComponent } from './main/table-page/table-toggle/table-toggle.component';
+import { PageSwipeTableComponent } from './main/table-page/table-swipe/table-swipe.component';
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
 import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
 import { PagerService} from './main/pagination-page/pagination/pager.service';
@@ -74,7 +74,7 @@ export const appRoutes: Routes = [
     AccueilComponent,
     AccordionComponent,
     AccordionItemComponent,
-    BtnComponent,
+    ButtonComponent,
     TabsComponent,
     TabComponent,
     ButtonPageComponent,
@@ -82,8 +82,8 @@ export const appRoutes: Routes = [
     AccordionPageComponent,
     MenuComponent,
     MenuItemComponent,
-    BtnFileComponent,
-    BtnSubmitComponent,
+    ButtonFileComponent,
+    ButtonSubmitComponent,
     CarouselPageComponent,
     ModalPageComponent,
     ModalComponent,

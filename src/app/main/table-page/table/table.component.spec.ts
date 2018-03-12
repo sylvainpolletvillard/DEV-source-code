@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BtnSubmitComponent } from './btn-submit.component';
+import { ColumnTableComponent } from './table.component';
 
-describe('BtnSubmitComponent', () => {
-  let component: BtnSubmitComponent;
-  let fixture: ComponentFixture<BtnSubmitComponent>;
+describe('ColumnTableComponent', () => {
+  let component: ColumnTableComponent;
+  let fixture: ComponentFixture<ColumnTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BtnSubmitComponent ]
+      declarations: [ ColumnTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BtnSubmitComponent);
+    fixture = TestBed.createComponent(ColumnTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

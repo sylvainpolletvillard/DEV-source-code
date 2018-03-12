@@ -2,18 +2,18 @@
 <div class="panelTitle">
   <h2> <strong> Step </strong> Component </h2>
   <ul>
-    <li><a  scrollTo href="#multipleSteps">Multiple Steps</a></li>
+    <li><a  scrollTo href="#step">Multiple Steps</a></li>
   </ul>
 </div>
 
 <!-- DESCRIPTION STEP COMPONENT PAGE -->
 <div class="titleComponent">
-  <div class="descriptionComponent" id="multipleSteps">
+  <div class="descriptionComponent" id="step">
     <h3>
       <svg>
         <use xlink:href="#gitListItem"></use>
       </svg>
-      Multiple Step
+      Multiple Steps
 
       <a href="https://github.com/CreamNG/Components/tree/master/step" class="gitBtn" target="_blank">
         <svg>
@@ -23,7 +23,8 @@
         <span>Github</span></a>
     </h3>
 
-    <p> It's a Form Steps to divide your forms in multiple pages/containers. Automatically calculates breakpoints to dynamically manage step size. And detect the previous and next steps </p>
+    <p>This component displays the different steps of a form if divided in different pages/containers.
+      It will automatically detect the previous and next steps.</p>
 
     <div class="demo">
       <!-- STEP -->
@@ -41,25 +42,24 @@
     <div class="explain">
       <dl>
         <dt>title</dt>
-        <dd>for rename the step tag</dd>
+        <dd>The step title</dd>
       </dl>
       <dl>
         <dt>isActive="true"</dt>
-        <dd>for choose the current step</dd>
+        <dd>To indicate the current step</dd>
       </dl>
       <dl>
         <dt>over</dt>
-        <dd>The class added to calculate the breakpoint </dd>
+        <dd>The class added to calculate the breakpoint</dd>
       </dl>
     </div>
 
-    <c3m-tabs>
+    <c3m-tabs class="snippets">
       <c3m-tab tabTitle="HTML">
         <p class="pre-code"> To call the component </p>
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
-              <code>
   &lt;!-- STEP --&gt;
   &lt;c3m-step&gt;
     &lt;!-- STEP ITEMS --&gt;
@@ -68,293 +68,17 @@
     &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
     &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
     &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
-  &lt;/c3m-step&gt;</code>
+  &lt;/c3m-step&gt;
             </pre>
         </div>
-
-        <p class="pre-code"> For <strong>step.component.html</strong> </p>
-        <div class="code">
-          <!--?prettify lang=html linenums=true?-->
-          <pre class="prettyprint linenums">
-              <code>
-  &lt;!-- Items List --&gt;
-  &lt;ol #items [ngClass]=&#34;&#123;over: isOver&#125;&#34;&gt;
-    &lt;ng-content&gt;&lt;/ng-content&gt;
-  &lt;/ol&gt;</code>
-            </pre>
-        </div>
-
-        <p class="pre-code"> For <strong>step-item.component.html</strong> </p>
-        <div class="code">
-          <!--?prettify lang=html linenums=true?-->
-          <pre class="prettyprint linenums">
-              <code>
-  &lt;!-- Step Item --&gt;
-  &lt;li
-    #items
-    [ngClass]=&#34;&#123;&apos;active&apos;: isActive,&apos;past&apos;: Past,&apos;future&apos;: Future&#125;&#34;&gt;
-    &#123; &#123; title &#125; &#125;
-  &lt;/li&gt;</code>
-            </pre>
-        </div>
-
       </c3m-tab>
+
       <c3m-tab tabTitle="CSS">
-        <p class="pre-code"> To call the component </p>
-        <div class="code">
-          <!--?prettify lang=css linenums=true?-->
-          <pre class="prettyprint linenums">
-              <code>
-  /* Step List */
-  c3m-step ol &#123;
-    clear: both;
-    counter-reset: step;
-    padding: 0.5rem;
-  &#125;
-    /* Step List Item */
-    c3m-step ol li &#123;
-      list-style-type: none;
-      font-size: 0.9em;
-      background: #585454;
-      text-align: center;
-      display: inline-block;
-      padding: 0.4rem 1.2rem;
-      margin-bottom:1rem;
-    &#125;
-    /* Step List Item Number */
-      c3m-step ol li::before &#123;
-        width: 1.5rem;
-        height: 1.5rem;
-        line-height: 1.5rem;
-        font-size: 1.2em;
-        content: counter(step);
-        counter-increment: step;
-        text-align: center;
-        border-radius: 1.5em;
-        display: block;
-        margin: 0 auto 0.6rem auto;
-      &#125;
-
-      /* FUTURE */
-      c3m-step ol li.future &#123;
-        color: rgba(99, 224, 49, 0.6);
-        background-color: gray;
-      &#125;
-        c3m-step ol li.future::before &#123;
-          color: white;
-          background: rgba(99, 224, 49, 0.6);
-
-        &#125;
-
-      /* ACTIVE */
-      c3m-step ol li.active &#123;
-        color: #44abbc;
-      &#125;
-        c3m-step ol li.active::before &#123;
-          color: white;
-          background: #44abbc;
-        &#125;
-
-        /* PAST */
-        c3m-step ol li.past &#123;
-          color: #ed9c20;
-        &#125;
-          c3m-step ol li.past::before &#123;
-            color: white;
-            background: #ed9c20;
-          &#125;
-
-
-  /* BREAKPOINT */
-
-  c3m-step ol.over li &#123;
-    width:100%;
-    text-align: left;
-    display: block;
-    padding: 0.5rem;
-  &#125;
-    c3m-step ol.over li:before&#123;
-      display: inline-block;
-      margin: 0;
-    &#125;</code>
-            </pre>
-        </div>
-
       </c3m-tab>
+
       <c3m-tab tabTitle="TypeScript">
-        <p class="pre-code">For <strong>step.component.ts</strong></p>
-        <div class="code">
-          <!--?prettify lang=js linenums=true?-->
-          <pre class="prettyprint linenums">
-                  <code>
-  import &#123; AfterViewChecked,  AfterViewInit, ChangeDetectorRef, Component,
-      ElementRef, HostListener, QueryList, ViewChildren, ViewEncapsulation
-    &#125; from &apos;@angular/core&apos;;
-    import &#123;StepItemComponent&#125; from &apos;./step-item/step-item.component&apos;;
-
-    @Component(&#123;
-      selector: &apos;c3m-step&apos;,
-      templateUrl: &apos;./step.component.html&apos;,
-      styleUrls: [&apos;./step.component.css&apos;],
-      encapsulation: ViewEncapsulation.None
-    &#125;)
-    export class StepComponent implements AfterViewInit, AfterViewChecked &#123;
-
-      /* VARIABLES */
-      itemStepTab: StepItemComponent[] = [];
-      theActiveStepItem: number;
-      isOver: boolean;
-      widthBreak: number;
-      itemsStepTabReference: ElementRef[] = [];
-      sizeInit = 0;
-
-
-      /* CONSTRUCTOR */
-      constructor(private cdr: ChangeDetectorRef) &#123;
-      &#125;
-
-      /* AFTER VIEW INIT */
-      ngAfterViewInit() &#123;
-        this.itemStepTab.forEach((StepItemComponent, index) =&gt; &#123;
-          StepItemComponent.indexStep = index + 1;
-          this.itemsStepTabReference.push(StepItemComponent.reference);
-            console.log(this.itemsStepTabReference);
-          if (StepItemComponent.isActive) &#123;
-            this.theActiveStepItem = StepItemComponent.indexStep;
-          &#125;
-        &#125;);
-
-          /* CALCUL BREAKPOINT ON PAGE LOAD */
-          for ( let i = 0; i &lt; this.itemsStepTabReference.length - 1; i ++ ) &#123;
-              this.sizeInit = this.itemsStepTabReference[i].nativeElement.clientWidth + this.sizeInit;
-          &#125;
-
-          if ( this.itemsStepTabReference[this.itemsStepTabReference.length - 1].nativeElement.offsetTop
-      !== this.itemsStepTabReference[0].nativeElement.offsetTop ) &#123;
-              this.isOver = true;
-          &#125; else &#123;
-              this.isOver = false;
-          &#125;
-          this.cdr.detectChanges();
-      &#125;
-
-      /* AFTER VIEW CHECK */
-      ngAfterViewChecked() &#123;
-        /* For Each items */
-        this.itemStepTab.forEach((StepItemComponent, index) =&gt; &#123;
-          /* if after the active item, add class future */
-          if (index + 1 &gt; this.theActiveStepItem) &#123;
-            StepItemComponent.Future = true;
-          &#125; else &#123;
-            StepItemComponent.Future = false;
-          &#125;
-            /* if before the active item, add class past */
-          if (index + 1 &lt; this.theActiveStepItem) &#123;
-            StepItemComponent.Past = true;
-          &#125; else &#123;
-            StepItemComponent.Past = false;
-          &#125;
-        &#125;);
-
-      &#125;
-
-        /* Resize breakpoint tab*/
-        @HostListener(&apos;window:resize&apos;, [&apos;$event&apos;])
-        onResize(event) &#123;
-            if ( this.itemsStepTabReference[this.itemsStepTabReference.length - 1].nativeElement.offsetTop &gt;
-      this.itemsStepTabReference[0].nativeElement.offsetTop ) &#123;
-
-                if ( (this.itemsStepTabReference[this.itemsStepTabReference.length - 1].nativeElement.offsetTop &gt;
-      this.itemsStepTabReference[0].nativeElement.offsetTop) &&  (this.isOver !== true) ) &#123;
-                    this.widthBreak = event.target.innerWidth;
-                    this.isOver = true;
-                &#125;
-
-                if (this.widthBreak) &#123;
-                    if ( (event.target.innerWidth &gt; this.widthBreak) && (this.isOver === true) ) &#123;
-                        this.isOver = false;
-                    &#125;
-
-                &#125; else &#123;
-                    this.widthBreak = this.sizeInit;
-                    if ( event.target.innerWidth &gt;= this.widthBreak ) &#123;
-                        this.isOver = false;
-                    &#125;
-                &#125;
-            &#125; else &#123;
-                this.isOver = false;
-            &#125;
-            this.cdr.detectChanges();
-        &#125;
-
-      /* ADD AN ITEM INTO ITEMS TAB */
-      addTab(stepItem: StepItemComponent) &#123;
-        stepItem.isActive = false; // And set isActive var to False
-        this.itemStepTab.push(stepItem);
-      &#125;
-    &#125;</code>
-                </pre>
-        </div>
-
-        <p class="pre-code">For <strong>step-item.component.ts</strong></p>
-        <div class="code">
-          <!--?prettify lang=js linenums=true?-->
-          <pre class="prettyprint linenums">
-                  <code>
-      import &#123;AfterViewInit, ChangeDetectorRef, Component, ElementRef, Input, ViewChild&#125; from &apos;@angular/core&apos;;
-      import &#123;StepComponent&#125; from &apos;../step.component&apos;;
-
-      @Component(&#123;
-        selector: &apos;c3m-step-item&apos;,
-        templateUrl: &apos;./step-item.component.html&apos;,
-        styleUrls: [&apos;./step-item.component.css&apos;]
-      &#125;)
-      export class StepItemComponent implements AfterViewInit&#123;
-
-        /* List of Step items */
-        @ViewChild(&apos;items&apos;) itemRef: ElementRef;
-
-        /* INPUTS */
-        @Input() title;
-        @Input() isActive = false;
-        @Input() indexStep: number;
-        @Input() reference: ElementRef;
-
-        /* INPUT &#34;PAST&#34; AND GETTERS / SETTERS */
-        _past: boolean;
-        @Input(&apos;isPast&apos;)
-        set Past(value: boolean) &#123;
-            this._past = value;
-            this.cdr.detectChanges();
-        &#125;
-        get Past()&#123;
-          return this._past;
-        &#125;
-
-          /* INPUT &#34;FUTURE&#34; AND GETTERS / SETTERS */
-        _future: boolean;
-        @Input(&apos;isFuture&apos;)
-        set Future(value: boolean) &#123;
-          this._future = value;
-          this.cdr.detectChanges();
-        &#125;
-        get Future()&#123;
-          return this._future;
-        &#125;
-
-        /* CONSTRUCTOR */
-        constructor(step: StepComponent, private cdr: ChangeDetectorRef) &#123;
-          step.addTab(this); // Add item on Items Tab
-        &#125;
-
-        ngAfterViewInit() &#123;
-            this.reference = this.itemRef;
-        &#125;
-      &#125;</code>
-                </pre>
-        </div>
-
       </c3m-tab>
+
     </c3m-tabs>
 
   </div>

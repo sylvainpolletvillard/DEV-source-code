@@ -1,12 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: 'c3m-btn-file',
-    templateUrl: './btn-file.component.html',
-    styleUrls: ['./btn-file.component.css'],
+    selector: 'c3m-button-file',
+    templateUrl: './button-file.component.html',
+    styleUrls: ['./button-file.component.css'],
     encapsulation: ViewEncapsulation.None
 })
-export class BtnFileComponent {
+export class ButtonFileComponent {
     /* File List */
     files: FileList;
 

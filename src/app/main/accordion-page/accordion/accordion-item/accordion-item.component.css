@@ -1,61 +1,64 @@
 /* Accordion */
-c3m-accordion > ul{
-  width: 80%;
-  padding: 1.5rem;
+c3m-accordion > ul {
+  padding: 1rem;
 }
-  /* Accordion Item */
-  c3m-accordion-item > li{
-      border:none;
-      position:relative;
-      z-index: 5;
-      background-color: rgb(224, 161, 64);
-  }
-      /* Accordion item closed */
-      c3m-accordion-item > li.closed{
-          border-bottom: 1px solid white;
-          background-color: #44abbc;
-      }
-        /* Last Accordion Item Closed */
-        c3m-accordion-item:last-child > li.closed {
-            border:none;
-        }
-            /* Content Accordion Item Closed */
-            c3m-accordion-item > li.closed > .panel-collapse {
-                display: none;
-            }
-              /* Accordion Item Content */
-              c3m-accordion .panel-collapse{
-                padding: 1.5rem;
-                color:white;
-                background-color: #e6b467;
-            }
-              /* Accordion Item Button */
-              c3m-accordion-item > li > button {
-                  height: 100%;
-                  width: 100%;
-                  line-height: 1.7rem;
-                  text-align: left;
-                  color: white;
-                  background-color: initial;
-                  background-size: 2.1rem;
-                  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
-                  cursor: pointer;
-                  z-index: 10;
-                  position: relative;
-              }
-                c3m-accordion-item > li > button svg{
-                  z-index: 1;
-                  transition: all 0.3s;
-                  position: absolute;
-                  right: 1rem;
-                  fill: white;
-                  height: 24px;
-                  width: 24px;
-                  transform: rotate(180deg);
-                }
-                  c3m-accordion-item > li.closed > button svg{
-                    transform: rotate(0deg);
-                  }
 
+/* Accordion Item */
 
+c3m-accordion-item > li {
+  position: relative;
+  color: #FFF;
+  background-color: #AE650C;
+  border: none;
+  z-index: 5;
+}
 
+/* Accordion item closed */
+c3m-accordion-item > li.closed {
+  color: #FFF;
+  background-color: #258197;
+  border-bottom: 1px solid #FFF;
+}
+
+/* Last Accordion Item Closed */
+c3m-accordion-item:last-child > li.closed {border:none;}
+
+/* Content Accordion Item Closed */
+c3m-accordion-item > li.closed > .panel-collapse {
+  display: none;
+}
+
+/* Accordion Item Content */
+c3m-accordion .panel-collapse {
+  color: #000;
+  background-color: #F9F0E2;
+  padding: 1rem;
+}
+
+/* Accordion Item Button */
+c3m-accordion-item > li > button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: 1.7rem;
+  text-align: left;
+  color: #FFF;
+  background-color: initial;
+  background-size: 2.1rem;
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+    c3m-accordion-item > li > button svg {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 1rem;
+      fill: white;
+      transition: all 0.3s;
+      transform: rotate(180deg);
+      z-index: 1;
+    }
+    c3m-accordion-item > li.closed > button svg {
+      transform: rotate(0deg);
+    }

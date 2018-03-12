@@ -4,8 +4,8 @@ import { AppComponent } from '../../../../app.component';
 
 @Component({
   selector: 'c3m-tab',
-  templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.css'],
+  templateUrl: './tabs-item.component.html',
+  styleUrls: ['./tabs-item.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class TabComponent implements OnInit, AfterViewInit {

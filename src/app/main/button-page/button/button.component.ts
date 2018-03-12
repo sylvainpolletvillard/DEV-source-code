@@ -1,12 +1,12 @@
 import {Component, ViewEncapsulation, ElementRef} from '@angular/core';
 
 @Component({
-  selector: 'c3m-btn',
-  templateUrl: './btn.component.html',
-  styleUrls: ['./btn.component.css'],
+  selector: 'c3m-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class BtnComponent {
+export class ButtonComponent {
 
   constructor(private elementRef: ElementRef) {}
 
