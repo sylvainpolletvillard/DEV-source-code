@@ -19,12 +19,12 @@ export class AppComponent implements AfterViewChecked {
 
 // Write snippets into comp pages
 public codeSnippets(subComp) {
-  let compBlock = document.querySelectorAll('.descriptionComponent');
-  let compB = Array.prototype.slice.call(compBlock);
-  let mainFolder = compB[0].getAttribute('id');
+  const compBlock = document.querySelectorAll('.descriptionComponent');
+  const compB = Array.prototype.slice.call(compBlock);
+  const mainFolder = compB[0].getAttribute('id');
   let file2Read, tempo;
-  let charArray = ["<", ">", "{", "}", "\"", " & ", "\'", "\`"];
-  let entArray = ["&lt;", "&gt;", "&#123;", "&#125;", "&#34;", "&amp;", "&apos;", "&#96;"];
+  const charArray = ["<", ">", "{", "}", "\"", " & ", "\'", "\`"];
+  const entArray = ["&lt;", "&gt;", "&#123;", "&#125;", "&#34;", "&amp;", "&apos;", "&#96;"];
 
   for (var i = 0; i < compB.length; i++) {
     const compBlockId = compB[i].getAttribute('id');
@@ -38,18 +38,18 @@ public codeSnippets(subComp) {
       if (tempo.getAttribute('tabTitle') === 'HTML') {
         let output = tempo.querySelector('div.content');
 
-        output.insertAdjacentHTML('beforeend','<div id=\"' + compBlockId + '-HTML' + '\"></div>');
+        output.insertAdjacentHTML('beforeend', '<div id=\"' + compBlockId + '-HTML' + '\"></div>');
         output = document.getElementById(compBlockId + '-HTML');
 
-        file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.html';
+        file2Read = '/app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.html';
         this.http.get(file2Read)
           .map((response: Response) => response.text())
           .subscribe(data => {
             for (var y = 0; y < charArray.length; y++) {
-              var pp = new RegExp(charArray[y], 'g');
+              const pp = new RegExp(charArray[y], 'g');
               data = data.replace(pp, entArray[y]);
             }
-            if (data != "") {
+            if (data !== '') {
               output.innerHTML = output.innerHTML + '<p class=\"pre-code\">For <strong>' + compBlockId + '.component.html</strong></p><div class=\"code\"><!--?prettify lang=html linenums=true?--><pre class=\"prettyprint linenums\">' + data + '</pre></div>';
             }
           });
