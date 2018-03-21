@@ -35,10 +35,6 @@ import { PageSwipeTableComponent } from './main/table-page/table-swipe/table-swi
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
 import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
 import { PagerService} from './main/pagination-page/pagination/pager.service';
-import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
-import { NavbarComponent } from './main/navbar-page/navbar/navbar.component';
-import { DropdownComponent } from './main/navbar-page/navbar/dropdown/dropdown.component';
-import { DropdownItemComponent} from './main/navbar-page/navbar/dropdown/dropdown-item/dropdown-item.component';
 import { SliderPageComponent } from './main/slider-page/slider-page.component';
 import { SliderComponent } from './main/slider-page/slider/slider.component';
 import { GettingStartedComponent } from './main/getting-started/getting-started.component';
@@ -47,6 +43,8 @@ import { StepComponent } from './main/step-page/step/step.component';
 import { StepItemComponent } from './main/step-page/step/step-item/step-item.component';
 import { CalendarPageComponent } from './main/calendar-page/calendar-page.component';
 import { CalendarComponent } from './main/calendar-page/calendar/calendar.component';
+import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
+import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.component';
 
 
 export const appRoutes: Routes = [
@@ -58,11 +56,11 @@ export const appRoutes: Routes = [
   { path: 'carousel', component: CarouselPageComponent, data: { title: 'carousel' } },
   { path: 'table', component: TablePageComponent, data: { title: 'table' } },
   { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
-  { path: 'navbar', component: NavbarPageComponent, data: { title: 'navbar' } },
   { path: 'slider', component: SliderPageComponent, data: { title: 'slider' } },
   { path: 'gettingStarted', component: GettingStartedComponent, data: { title: 'GettingStarted' } },
   { path: 'step', component: StepPageComponent, data: { title: 'Step' } },
   { path: 'calendar', component: CalendarPageComponent, data: { title: 'Calendar' } },
+  { path: 'dropdown', component: DropdownPageComponent, data: { title: 'Dropdown' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   //  { path: '**', component: PageNotFoundComponent }
@@ -99,10 +97,6 @@ export const appRoutes: Routes = [
     PageSwipeTableComponent,
     PaginationPageComponent,
     PaginationComponent,
-    NavbarPageComponent,
-    NavbarComponent,
-    DropdownComponent,
-    DropdownItemComponent,
     SliderPageComponent,
     SliderComponent,
     GettingStartedComponent,
@@ -110,7 +104,9 @@ export const appRoutes: Routes = [
     StepComponent,
     StepItemComponent,
     CalendarPageComponent,
-    CalendarComponent
+    CalendarComponent,
+    DropdownPageComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
