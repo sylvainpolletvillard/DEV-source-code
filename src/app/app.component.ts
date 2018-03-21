@@ -45,7 +45,6 @@ public codeSnippets(subComp) {
         output = document.getElementById(compBlockId + '-HTML');
 
         file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.html';
-        console.log(file2Read);
         this.http.get(file2Read)
           .map((response: Response) => response.text())
           .subscribe(data => {
