@@ -102,6 +102,32 @@ code {
 
 .svgLibrary {display:none;}
 
+/* ********************** SCROLLBAR *************** */
+::-webkit-scrollbar{
+	width:16px;
+	background-color:#dbd8d8;
+}
+::-webkit-scrollbar:horizontal{
+	height:16px;
+}
+::-webkit-scrollbar-track{
+	border:1px #dbd8d8 solid;
+	border-radius:10px;
+	-webkit-box-shadow:0 0 6px #dbd8d8 inset;
+}
+::-webkit-scrollbar-thumb{
+	background-color:#44abbc;
+	border:1px solid #dbd8d8;
+	border-radius:3px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-color:#2b9bad;
+	border:1px solid #2b9bad;
+}
+::-webkit-scrollbar-thumb:active{
+	background-color:#44abbc;
+	border:1px solid #dbd8d8;
+}
 
 /* *********** PAGE STRUCTURE ************* */
 
@@ -493,13 +519,11 @@ c3m-tabs li.L9 {
     app-root {
         display: flex;
         flex-wrap: wrap;
-        overflow: hidden;
     }
-    app-header {
-        width: 25%;
-    }
+
+    app-header { width: 25%; z-index:2;}
     app-main {width: 75%;}
-    app-footer {flex-basis: 100%;}
+    app-footer {flex-basis: 100%; z-index: 1;}
 
 		article.post section {padding: 2rem;}
 		article.post h3 {font-size: 1.5em; margin-bottom: 2em;}

@@ -13,7 +13,7 @@ export class TabsPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    let subComp = ['tabs-item'];
+    const subComp = ['tabs-item'];
     this.app.codeSnippets(subComp);
   }
 }

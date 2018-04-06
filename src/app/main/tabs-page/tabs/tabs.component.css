@@ -13,13 +13,14 @@
       background-color: #F5F5F5;
     }
 
-    .tabsContainer > ul li button {
+    .tabsContainer > ul li a {
         width: 100%;
         font-size: 1.1rem;
         color: #000;
         background-color: initial;
-        padding: 0.5rem 1.3rem;
         cursor: pointer;
+        padding: 0.3rem 0.9rem;
+        display: block;
     }
     .tabsContainer > ul li.over {
       display:block;

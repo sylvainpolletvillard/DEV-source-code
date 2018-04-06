@@ -1,6 +1,7 @@
 /* Accordion */
 c3m-accordion > ul {
   padding: 1rem;
+  width: 80%
 }
 
 /* Accordion Item */
@@ -8,7 +9,7 @@ c3m-accordion > ul {
 c3m-accordion-item > li {
   position: relative;
   color: #FFF;
-  background-color: #AE650C;
+  background-color: #dea348;
   border: none;
   z-index: 5;
 }
@@ -16,7 +17,7 @@ c3m-accordion-item > li {
 /* Accordion item closed */
 c3m-accordion-item > li.closed {
   color: #FFF;
-  background-color: #258197;
+  background-color: #44abbc;
   border-bottom: 1px solid #FFF;
 }
 

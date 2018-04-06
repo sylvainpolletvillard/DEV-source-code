@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'c3m-dropdown-page',
@@ -9,9 +10,12 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 })
 export class DropdownPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private app: AppComponent) {
+  }
 
   ngOnInit() {
+    const subComp = ['dropdown-item'];
+    this.app.codeSnippets(subComp);
   }
 
 }

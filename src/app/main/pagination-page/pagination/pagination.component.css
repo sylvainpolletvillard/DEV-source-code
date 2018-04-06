@@ -10,7 +10,7 @@ c3m-pagination .paginationContainer{
     }
         /* Pagination Items */
         c3m-pagination .paginationItems li{
-          color: #333;
+          color: #fff;
           height: 5rem;
           font: 1rem quicksandbold, Helvetica, Arial, sans-serif;
           width: 5rem;
@@ -20,8 +20,8 @@ c3m-pagination .paginationContainer{
         }
           /* Buttons List for Pagination */
           c3m-pagination .pagination{
-              margin-top:2rem;
-              text-align:center;
+              margin-top: 2rem;
+              text-align: left;
           }
           /* Buttons for Pagination */
            c3m-pagination .pagination li {

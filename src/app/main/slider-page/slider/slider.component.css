@@ -109,7 +109,7 @@ c3m-slider label{
 /* Output */
 c3m-slider output {
   position: relative;
-  top: 0.5em;
+  top: 0.3em;
   font: 1.2rem "quicksandbold";
   text-transform: uppercase;
   color: #44ABBC;

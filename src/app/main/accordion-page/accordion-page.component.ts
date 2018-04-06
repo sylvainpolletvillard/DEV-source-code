@@ -13,7 +13,7 @@ export class AccordionPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    let subComp = ['accordion-item'];
+    const subComp = ['accordion-item'];
     this.app.codeSnippets(subComp);
   }
 }

@@ -45,6 +45,7 @@ import { CalendarPageComponent } from './main/calendar-page/calendar-page.compon
 import { CalendarComponent } from './main/calendar-page/calendar/calendar.component';
 import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
 import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.component';
+import { DropdownItemComponent } from './main/dropdown-page/dropdown/dropdown-item/dropdown-item.component';
 
 
 export const appRoutes: Routes = [
@@ -106,7 +107,8 @@ export const appRoutes: Routes = [
     CalendarPageComponent,
     CalendarComponent,
     DropdownPageComponent,
-    DropdownComponent
+    DropdownComponent,
+    DropdownItemComponent
   ],
   imports: [
     BrowserModule,
