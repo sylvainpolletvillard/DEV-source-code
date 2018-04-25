@@ -46,6 +46,10 @@ import { CalendarComponent } from './main/calendar-page/calendar/calendar.compon
 import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
 import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.component';
 import { DropdownItemComponent } from './main/dropdown-page/dropdown/dropdown-item/dropdown-item.component';
+import { InputPageComponent } from './main/input-page/input-page.component';
+import { InputComponent } from './main/input-page/input/input.component';
+import { InputFloatingComponent } from './main/input-page/input-floating/input-floating.component';
+import { InputMaterialComponent } from './main/input-page/input-material/input-material.component';
 
 
 export const appRoutes: Routes = [
@@ -62,6 +66,7 @@ export const appRoutes: Routes = [
   { path: 'step', component: StepPageComponent, data: { title: 'Step' } },
   { path: 'calendar', component: CalendarPageComponent, data: { title: 'Calendar' } },
   { path: 'dropdown', component: DropdownPageComponent, data: { title: 'Dropdown' } },
+  { path: 'input', component: InputPageComponent, data: { title: 'Input' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   //  { path: '**', component: PageNotFoundComponent }
@@ -108,7 +113,11 @@ export const appRoutes: Routes = [
     CalendarComponent,
     DropdownPageComponent,
     DropdownComponent,
-    DropdownItemComponent
+    DropdownItemComponent,
+    InputPageComponent,
+    InputComponent,
+    InputFloatingComponent,
+    InputMaterialComponent
   ],
   imports: [
     BrowserModule,
