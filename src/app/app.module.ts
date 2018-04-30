@@ -50,6 +50,10 @@ import { InputPageComponent } from './main/input-page/input-page.component';
 import { InputComponent } from './main/input-page/input/input.component';
 import { InputFloatingComponent } from './main/input-page/input-floating/input-floating.component';
 import { InputMaterialComponent } from './main/input-page/input-material/input-material.component';
+import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.component';
+import { CheckboxComponent } from './main/checkbox-page/checkbox/checkbox.component';
+import { CheckboxGroupComponent } from './main/checkbox-page/checkbox-group/checkbox-group.component';
+import { CheckboxButtonComponent } from './main/checkbox-page/checkbox-button/checkbox-button.component';
 
 
 export const appRoutes: Routes = [
@@ -67,6 +71,7 @@ export const appRoutes: Routes = [
   { path: 'calendar', component: CalendarPageComponent, data: { title: 'Calendar' } },
   { path: 'dropdown', component: DropdownPageComponent, data: { title: 'Dropdown' } },
   { path: 'input', component: InputPageComponent, data: { title: 'Input' } },
+  { path: 'checkbox', component: CheckboxPageComponent, data: { title: 'Checkbox' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   //  { path: '**', component: PageNotFoundComponent }
@@ -117,7 +122,11 @@ export const appRoutes: Routes = [
     InputPageComponent,
     InputComponent,
     InputFloatingComponent,
-    InputMaterialComponent
+    InputMaterialComponent,
+    CheckboxPageComponent,
+    CheckboxComponent,
+    CheckboxGroupComponent,
+    CheckboxButtonComponent
   ],
   imports: [
     BrowserModule,

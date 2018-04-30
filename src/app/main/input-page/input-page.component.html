@@ -30,10 +30,10 @@
       <div class="demo">
         <!-- SIMPLE INPUT -->
         <c3m-input
-          title="Entrez votre nom"
+          title="Enter your name"
           placeholder="placeholder"
           name="name"
-          id="name">
+          [id]="'name'">
         </c3m-input>
       </div>
 
@@ -57,12 +57,11 @@
               <pre class="prettyprint linenums">
 &lt;!-- SIMPLE INPUT --&gt;
 &lt;c3m-input
-  title=&#34;Entrez votre nom&#34;
+  title=&#34;Enter your name&#34;
   placeholder=&#34;placeholder&#34;
   name=&#34;name&#34;
-  id=&#34;name&#34;&gt;
+  [id]=&#34;&apos;name&apos;&#34;&gt;
 &lt;/c3m-input&gt;
-
               </pre>
           </div>
         </c3m-tab>
@@ -100,7 +99,7 @@
         <div class="demo">
           <!-- FLOATING BOTTOM INPUT -->
           <c3m-input-floating
-            title="Entrez votre nom"
+            title="Enter your name"
             floating="bottom"
             name="name1"
             id="name1">
@@ -111,7 +110,7 @@
 
         <div class="demo">
             <c3m-input-floating
-              title="Entrez votre nom"
+              title="Enter your name"
               floating="right"
               name="name2"
               id="name2">
@@ -139,7 +138,7 @@
                 <pre class="prettyprint linenums">
 &lt;!-- FLOATING BOTTOM INPUT --&gt;
 &lt;c3m-input-floating
-  title=&#34;Entrez votre nom&#34;
+  title=&#34;Enter your name&#34;
   floating=&#34;bottom&#34;
   name=&#34;name1&#34;
   id=&#34;name1&#34;&gt;
@@ -147,7 +146,7 @@
 
 &lt;!-- FLOATING RIGHT INPUT --&gt;
 &lt;c3m-input-floating
-  title=&#34;Entrez votre nom&#34;
+  title=&#34;Enter your name&#34;
   floating=&#34;right&#34;
   name=&#34;name1&#34;
   id=&#34;name1&#34;&gt;
@@ -184,12 +183,12 @@
 
           <span>Github</span></a>
       </h3>
-      <p>Input Material Like (dont miss to add in a <code>form</code> tag)</p>
+      <p>Input Material Like (dont miss to add in a <code>form</code> tag). It uses the functionality <code>:placeholder-shown</code> that is not handled by all browsers</p>
 
       <div class="demo">
         <!-- Input Material -->
         <c3m-input-material
-          title="Entrez votre nom"
+          title="Enter your name"
           placeholder="placeholder3"
           name="name3"
           id="name3">
@@ -216,7 +215,7 @@
               <pre class="prettyprint linenums">
 &lt;!-- Input Material --&gt;
 &lt;c3m-input-material
-  title=&#34;Entrez votre nom&#34;
+  title=&#34; Enter your name &#34;
   placeholder=&#34;placeholder3&#34;
   name=&#34;name3&#34;
   id=&#34;name3&#34;&gt;

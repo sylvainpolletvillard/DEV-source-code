@@ -3,9 +3,6 @@
 
 /* CUSTOM PROPERTIES */
 
-:root {
-}
-
 
 /* RESET */
 
@@ -221,10 +218,10 @@ article.post {
 			margin-bottom: 0.5em;
 	}
     .panelTitle li {
-        display: inline-block;
+        display: block;
         font: 1.1em "quicksandlight", Helvetica, Arial, sans-serif;
     }
-		.panelTitle li + li {margin-left: 2rem;}
+    .panelTitle li + li {margin-top: 0.5rem;}
     	.panelTitle li a {
         padding: 0.5em 0 0.3rem 0;
         color: #000;
@@ -479,6 +476,12 @@ c3m-tabs li.L9 {
 	.github-corner:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
 	}
+}
+@media (min-width: 650px) {
+  .panelTitle li {
+    display: inline-block;
+  }
+  .panelTitle li + li {margin-left: 2rem; margin-top:0;}
 }
 
 @media screen and (min-width: 750px) {

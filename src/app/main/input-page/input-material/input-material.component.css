@@ -3,6 +3,8 @@ c3m-input-material p.field {
     display: flex;
     flex-flow: column-reverse;
     margin-bottom: 1em;
+    width: 40%;
+    min-width: 220px;
   }
 
   /* Animation Label / Input */
@@ -19,6 +21,7 @@ c3m-input-material p.field {
     border-bottom: 1px solid #ccc;
     font-family: inherit;
     -webkit-appearance: none;
+    -moz-appearance: none;
     border-radius: 0;
     padding: 0;
     cursor: text;
@@ -39,6 +42,7 @@ c3m-input-material p.field {
   /* Label With Input PlaceHolder Selected */
   c3m-input-material input:placeholder-shown + label {
     cursor: text;
+    padding-bottom: 0.4rem;
     max-width: 66.66%;
     pointer-events: none;
     white-space: nowrap;
@@ -55,7 +59,7 @@ c3m-input-material p.field {
   }
 
   /* Input with PlaceHolder selected & focused */
-  c3m-input-material input:focus::-webkit-input-placeholder {
+  c3m-input-material input:focus::-webkit-input-placeholder{
     opacity: 1;
   }
 
@@ -64,5 +68,6 @@ c3m-input-material p.field {
   c3m-input-material input:focus + label {
     transform-origin: top left;
     transform: translate(0, 0) scale(0.8);
+    padding-bottom: 0;
     cursor: pointer;
   }

@@ -4,6 +4,7 @@ c3m-input-floating > p {
   overflow: hidden;
   width: 40%;
   font-size: 1rem;
+  min-width: 220px;
 }
 /* Input */
 c3m-input-floating input {

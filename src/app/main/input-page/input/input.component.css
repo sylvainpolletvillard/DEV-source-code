@@ -10,4 +10,6 @@ c3m-input input{
   font-size: 1.1rem;
   padding: 0.1rem 0 0.1rem 0.4rem;
   font-family: quicksandregular;
+  width: 40%;
+  min-width: 220px;
 }

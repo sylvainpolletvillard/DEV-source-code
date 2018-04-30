@@ -12,7 +12,7 @@ export class InputComponent implements OnInit {
   @Input() title;
   @Input() placeholder = '';
   @Input() name;
-  @Input() id;
+  @Input() id = '';
 
   constructor() { }
 
