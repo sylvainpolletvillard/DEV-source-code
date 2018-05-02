@@ -50,7 +50,7 @@ How to help
 - Go to the nameOftheNewComponent.html
 - Copy/Past the content of an other component page
 -  Do not forget to change H2, href of ScrollTO, id of first type of component, change title, change git repository and create a child component wihtout the 'page' suffix and write his selector tag into the 'demo' div
--Do not forget to add the Auto Snippets Code function in nameOfTheNewComponent.ts
+- Do not forget to add the Auto Snippets Code function in nameOfTheNewComponent.ts
 
 ### Components' structure
 
