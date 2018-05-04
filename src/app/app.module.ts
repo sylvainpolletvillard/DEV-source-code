@@ -54,6 +54,11 @@ import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.compon
 import { CheckboxComponent } from './main/checkbox-page/checkbox/checkbox.component';
 import { CheckboxGroupComponent } from './main/checkbox-page/checkbox-group/checkbox-group.component';
 import { CheckboxButtonComponent } from './main/checkbox-page/checkbox-button/checkbox-button.component';
+import { SelectPageComponent } from './main/select-page/select-page.component';
+import { SelectComponent } from './main/select-page/select/select.component';
+import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
+import { SelectDatalistsComponent } from './main/select-page/select-datalists/select-datalists.component';
+import { FaqComponent } from './main/faq/faq.component';
 
 
 export const appRoutes: Routes = [
@@ -67,11 +72,13 @@ export const appRoutes: Routes = [
   { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
   { path: 'slider', component: SliderPageComponent, data: { title: 'slider' } },
   { path: 'gettingStarted', component: GettingStartedComponent, data: { title: 'GettingStarted' } },
+  { path: 'faq', component: FaqComponent, data: { title: 'F.A.Q' } },
   { path: 'step', component: StepPageComponent, data: { title: 'Step' } },
   { path: 'calendar', component: CalendarPageComponent, data: { title: 'Calendar' } },
   { path: 'dropdown', component: DropdownPageComponent, data: { title: 'Dropdown' } },
   { path: 'input', component: InputPageComponent, data: { title: 'Input' } },
   { path: 'checkbox', component: CheckboxPageComponent, data: { title: 'Checkbox' } },
+  { path: 'select', component: SelectPageComponent, data: { title: 'select' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   //  { path: '**', component: PageNotFoundComponent }
@@ -126,7 +133,12 @@ export const appRoutes: Routes = [
     CheckboxPageComponent,
     CheckboxComponent,
     CheckboxGroupComponent,
-    CheckboxButtonComponent
+    CheckboxButtonComponent,
+    SelectPageComponent,
+    SelectComponent,
+    SelectDatalistComponent,
+    SelectDatalistsComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
