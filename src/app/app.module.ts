@@ -59,6 +59,7 @@ import { SelectComponent } from './main/select-page/select/select.component';
 import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
 import { SelectDatalistsComponent } from './main/select-page/select-datalists/select-datalists.component';
 import { FaqComponent } from './main/faq/faq.component';
+import { CheckboxGroupButtonComponent } from './main/checkbox-page/checkbox-group-button/checkbox-group-button.component';
 
 
 export const appRoutes: Routes = [
@@ -138,7 +139,8 @@ export const appRoutes: Routes = [
     SelectComponent,
     SelectDatalistComponent,
     SelectDatalistsComponent,
-    FaqComponent
+    FaqComponent,
+    CheckboxGroupButtonComponent
   ],
   imports: [
     BrowserModule,
