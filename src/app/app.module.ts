@@ -60,6 +60,9 @@ import { SelectDatalistComponent } from './main/select-page/select-datalist/sele
 import { SelectDatalistsComponent } from './main/select-page/select-datalists/select-datalists.component';
 import { FaqComponent } from './main/faq/faq.component';
 import { CheckboxGroupButtonComponent } from './main/checkbox-page/checkbox-group-button/checkbox-group-button.component';
+import { InputTelComponent } from './main/input-page/input-tel/input-tel.component';
+import { InputMailComponent } from './main/input-page/input-mail/input-mail.component';
+import { InputErrorMsgComponent } from './main/input-page/input-error-msg/input-error-msg.component';
 
 
 export const appRoutes: Routes = [
@@ -140,7 +143,10 @@ export const appRoutes: Routes = [
     SelectDatalistComponent,
     SelectDatalistsComponent,
     FaqComponent,
-    CheckboxGroupButtonComponent
+    CheckboxGroupButtonComponent,
+    InputTelComponent,
+    InputMailComponent,
+    InputErrorMsgComponent
   ],
   imports: [
     BrowserModule,
