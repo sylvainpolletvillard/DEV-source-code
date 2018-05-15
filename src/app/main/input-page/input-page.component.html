@@ -408,7 +408,6 @@
         <c3m-input-error-msg>
           The field is not correct
         </c3m-input-error-msg>
-
       </div>
     </div>
 
@@ -426,7 +425,20 @@
         <div class="code">
            <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint linenums">
+  &lt;div class=&#34;containerForDemo&#34;&gt;
+  &lt;!-- SIMPLE INPUT --&gt;
+  &lt;c3m-input
+    title=&#34;Enter a name&#34;
+    placeholder=&#34;just look error&#34;
+    name=&#34;nameBeforeError&#34;
+    [id]=&#34;&apos;nameBeforeError&apos;&#34;&gt;
+  &lt;/c3m-input&gt;
 
+  &lt;!-- INPUT ERROR MESSAGE --&gt;
+  &lt;c3m-input-error-msg&gt;
+    The field is not correct
+  &lt;/c3m-input-error-msg&gt;
+&lt;/div&gt;
 
             </pre>
         </div>
