@@ -4,6 +4,7 @@ import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { AppComponent } from './app.component';
 import { ScrollToModule} from 'ng2-scroll-to';
 import { LottieAnimationViewModule } from 'ng-lottie';
+import { BreadcrumbsModule } from './module-breadcrumbs';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -63,28 +64,30 @@ import { CheckboxGroupButtonComponent } from './main/checkbox-page/checkbox-grou
 import { InputTelComponent } from './main/input-page/input-tel/input-tel.component';
 import { InputMailComponent } from './main/input-page/input-mail/input-mail.component';
 import { InputErrorMsgComponent } from './main/input-page/input-error-msg/input-error-msg.component';
-
+import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
 
 export const appRoutes: Routes = [
-  { path: 'home', component: AccueilComponent, data: { title: 'Home' } },
-  { path: 'button', component: ButtonPageComponent, data: { title: 'Button' } },
-  { path: 'tabs', component: TabsPageComponent, data: { title: 'Tabs' } },
-  { path: 'accordion', component: AccordionPageComponent, data: { title: 'Accordion' } },
-  { path: 'modal', component: ModalPageComponent, data: { title: 'modal' } },
-  { path: 'carousel', component: CarouselPageComponent, data: { title: 'carousel' } },
-  { path: 'table', component: TablePageComponent, data: { title: 'table' } },
-  { path: 'pagination', component: PaginationPageComponent, data: { title: 'pagination' } },
-  { path: 'slider', component: SliderPageComponent, data: { title: 'slider' } },
-  { path: 'gettingStarted', component: GettingStartedComponent, data: { title: 'GettingStarted' } },
-  { path: 'faq', component: FaqComponent, data: { title: 'F.A.Q' } },
-  { path: 'step', component: StepPageComponent, data: { title: 'Step' } },
-  { path: 'calendar', component: CalendarPageComponent, data: { title: 'Calendar' } },
-  { path: 'dropdown', component: DropdownPageComponent, data: { title: 'Dropdown' } },
-  { path: 'input', component: InputPageComponent, data: { title: 'Input' } },
-  { path: 'checkbox', component: CheckboxPageComponent, data: { title: 'Checkbox' } },
-  { path: 'select', component: SelectPageComponent, data: { title: 'select' } },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
+  { path: 'button', component: ButtonPageComponent, data: { breadcrumb: 'Button' } },
+  { path: 'tabs', component: TabsPageComponent, data: { breadcrumb: 'Tabs' } },
+  { path: 'accordion', component: AccordionPageComponent, data: { breadcrumb: 'Accordion' } },
+  { path: 'modal', component: ModalPageComponent, data: { breadcrumb: 'modal' } },
+  { path: 'carousel', component: CarouselPageComponent, data: { breadcrumb: 'carousel' } },
+  { path: 'table', component: TablePageComponent, data: { breadcrumb: 'table' } },
+  { path: 'pagination', component: PaginationPageComponent, data: { breadcrumb: 'pagination' } },
+  { path: 'slider', component: SliderPageComponent, data: { breadcrumb: 'slider' } },
+  { path: 'gettingStarted', component: GettingStartedComponent, data: { breadcrumb: 'GettingStarted' } },
+  { path: 'faq', component: FaqComponent, data: { breadcrumb: 'F.A.Q' } },
+  { path: 'step', component: StepPageComponent, data: { breadcrumb: 'Step' } },
+  { path: 'calendar', component: CalendarPageComponent, data: { breadcrumb: 'Calendar' } },
+  { path: 'dropdown', component: DropdownPageComponent, data: { breadcrumb: 'Dropdown' } },
+  { path: 'input', component: InputPageComponent, data: { breadcrumb: 'Input' } },
+  { path: 'checkbox', component: CheckboxPageComponent, data: { breadcrumb: 'Checkbox' } },
+  { path: 'select', component: SelectPageComponent, data: { breadcrumb: 'select' } },
+  { path: 'breadcrumbs', component: BreadcrumbsPageComponent, data: { breadcrumb: 'Breadcrumbs' }
+ },
 
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   //  { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -146,14 +149,16 @@ export const appRoutes: Routes = [
     CheckboxGroupButtonComponent,
     InputTelComponent,
     InputMailComponent,
-    InputErrorMsgComponent
+    InputErrorMsgComponent,
+    BreadcrumbsPageComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    LottieAnimationViewModule.forRoot()
+    LottieAnimationViewModule.forRoot(),
+    BreadcrumbsModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   exports: [RouterModule],

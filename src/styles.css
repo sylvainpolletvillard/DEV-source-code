@@ -127,6 +127,9 @@ code {
 }
 
 /* *********** PAGE STRUCTURE ************* */
+body > app-root > app-main > main > div > c3m-breadcrumbs{
+  display: none;
+}
 
 main {
   background: url(assets/img/background.jpg);
@@ -340,6 +343,10 @@ article.post {
   }
     .titleComponent > div > p > strong {
       color: #000;
+    }
+    .titleComponent > div > p > a{
+      text-decoration: underline;
+      color: #1A7B90;
     }
 
 /* DEMO BLOCK */
