@@ -65,6 +65,13 @@ import { InputTelComponent } from './main/input-page/input-tel/input-tel.compone
 import { InputMailComponent } from './main/input-page/input-mail/input-mail.component';
 import { InputErrorMsgComponent } from './main/input-page/input-error-msg/input-error-msg.component';
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
+import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.component';
+import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
+import { FooterPageComponent } from './main/footer-page/footer-page.component';
+import { ListPageComponent } from './main/list-page/list-page.component';
+import { SkipPageComponent } from './main/skip-page/skip-page.component';
+import { FieldsetComponent } from './main/fieldset-page/fieldset/fieldset.component';
+import { SkipComponent } from './main/skip-page/skip/skip.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
@@ -84,6 +91,8 @@ export const appRoutes: Routes = [
   { path: 'input', component: InputPageComponent, data: { breadcrumb: 'Input' } },
   { path: 'checkbox', component: CheckboxPageComponent, data: { breadcrumb: 'Checkbox' } },
   { path: 'select', component: SelectPageComponent, data: { breadcrumb: 'select' } },
+  { path: 'fieldset', component: FieldsetPageComponent, data: { breadcrumb: 'fieldset' } },
+  { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'skip' } },
   { path: 'breadcrumbs', component: BreadcrumbsPageComponent, data: { breadcrumb: 'Breadcrumbs' }
  },
 
@@ -151,6 +160,13 @@ export const appRoutes: Routes = [
     InputMailComponent,
     InputErrorMsgComponent,
     BreadcrumbsPageComponent,
+    FieldsetPageComponent,
+    NavbarPageComponent,
+    FooterPageComponent,
+    ListPageComponent,
+    SkipPageComponent,
+    FieldsetComponent,
+    SkipComponent,
   ],
   imports: [
     BrowserModule,

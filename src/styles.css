@@ -219,12 +219,20 @@ article.post {
 	.panelTitle h2 {
 	    font: 1.6em "quicksandregular", Helvetica, Arial, sans-serif;
 			margin-bottom: 0.5em;
-	}
-    .panelTitle li {
-        display: block;
-        font: 1.1em "quicksandlight", Helvetica, Arial, sans-serif;
+  }
+    .panelTitle ul{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
-    .panelTitle li + li {margin-top: 0.5rem;}
+    .panelTitle li {
+        font: 1.1em "quicksandlight", Helvetica, Arial, sans-serif;
+        margin-bottom: 1rem;
+        min-width: 30%;
+        /* text-align: left; */
+        flex-basis: 20%;
+        text-overflow: ellipsis;
+    }
     	.panelTitle li a {
         padding: 0.5em 0 0.3rem 0;
         color: #000;
@@ -484,13 +492,13 @@ c3m-tabs li.L9 {
     animation: octocat-wave 560ms ease-in-out;
 	}
 }
-@media (min-width: 650px) {
-  .panelTitle li {
-    display: inline-block;
-  }
-  .panelTitle li + li {margin-left: 2rem; margin-top:0;}
-}
 
+@media (max-width: 660px) {
+  .panelTitle li {min-width: 50%;}
+}
+@media (max-width: 460px) {
+  .panelTitle li {min-width: 100%;}
+}
 @media screen and (min-width: 750px) {
 
 	p, li, dt, dd {font-size: 1.3em;}

@@ -29,6 +29,7 @@
                 <li (click)="ToggleMenuBurger()"><a routerLink="/slider" routerLinkActive="active">Slider</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/step" routerLinkActive="active">Steps</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/calendar" routerLinkActive="active"> Calendar </a></li>
+                <li (click)="ToggleMenuBurger()"><a routerLink="/fieldset" routerLinkActive="active"> Fieldset </a></li>
             </ul>
         </c3m-menu-item>
 
@@ -49,6 +50,13 @@
                 <li (click)="ToggleMenuBurger()"><a routerLink="/tabs" routerLinkActive="active">Tabs</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/accordion" routerLinkActive="active">Accordion</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/dropdown" routerLinkActive="active">Dropdown</a></li>
+            </ul>
+        </c3m-menu-item>
+
+        <!-- SPECIAL ELEMENT -->
+        <c3m-menu-item nameButton="Special Element" idSvg="#svg5" [index]=4 [isOpen]=false>
+            <ul class="contenuMenu">
+                <li (click)="ToggleMenuBurger()"><a routerLink="/skip" routerLinkActive="active">Skip Link</a></li>
             </ul>
         </c3m-menu-item>
 
