@@ -72,6 +72,8 @@ import { ListPageComponent } from './main/list-page/list-page.component';
 import { SkipPageComponent } from './main/skip-page/skip-page.component';
 import { FieldsetComponent } from './main/fieldset-page/fieldset/fieldset.component';
 import { SkipComponent } from './main/skip-page/skip/skip.component';
+import { ToastPageComponent } from './main/toast-page/toast-page.component';
+import { ToastComponent } from './main/toast-page/toast/toast.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
@@ -93,6 +95,7 @@ export const appRoutes: Routes = [
   { path: 'select', component: SelectPageComponent, data: { breadcrumb: 'select' } },
   { path: 'fieldset', component: FieldsetPageComponent, data: { breadcrumb: 'fieldset' } },
   { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'skip' } },
+  { path: 'toast', component: ToastPageComponent, data: { breadcrumb: 'toast' } },
   { path: 'breadcrumbs', component: BreadcrumbsPageComponent, data: { breadcrumb: 'Breadcrumbs' }
  },
 
@@ -167,6 +170,8 @@ export const appRoutes: Routes = [
     SkipPageComponent,
     FieldsetComponent,
     SkipComponent,
+    ToastPageComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
