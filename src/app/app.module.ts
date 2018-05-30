@@ -67,7 +67,6 @@ import { InputErrorMsgComponent } from './main/input-page/input-error-msg/input-
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
 import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.component';
 import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
-import { FooterPageComponent } from './main/footer-page/footer-page.component';
 import { ListPageComponent } from './main/list-page/list-page.component';
 import { SkipPageComponent } from './main/skip-page/skip-page.component';
 import { FieldsetComponent } from './main/fieldset-page/fieldset/fieldset.component';
@@ -78,6 +77,8 @@ import { ListComponent } from './main/list-page/list/list.component';
 import { ListOrderComponent } from './main/list-page/list-order/list-order.component';
 import { ListThumbnailsComponent } from './main/list-page/list-thumbnails/list-thumbnails.component';
 import { ListDescriptionComponent } from './main/list-page/list-description/list-description.component';
+import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
+import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
@@ -101,6 +102,7 @@ export const appRoutes: Routes = [
   { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'skip' } },
   { path: 'toast', component: ToastPageComponent, data: { breadcrumb: 'toast' } },
   { path: 'list', component: ListPageComponent, data: { breadcrumb: 'list' } },
+  { path: 'bottom', component: BottomPageComponent, data: { breadcrumb: 'Bottom' } },
   { path: 'breadcrumbs', component: BreadcrumbsPageComponent, data: { breadcrumb: 'Breadcrumbs' }
  },
 
@@ -170,7 +172,6 @@ export const appRoutes: Routes = [
     BreadcrumbsPageComponent,
     FieldsetPageComponent,
     NavbarPageComponent,
-    FooterPageComponent,
     ListPageComponent,
     SkipPageComponent,
     FieldsetComponent,
@@ -181,6 +182,8 @@ export const appRoutes: Routes = [
     ListOrderComponent,
     ListThumbnailsComponent,
     ListDescriptionComponent,
+    BottomPageComponent,
+    BottomComponent,
   ],
   imports: [
     BrowserModule,
