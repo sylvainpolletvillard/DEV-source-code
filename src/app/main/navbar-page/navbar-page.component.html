@@ -1,3 +1,63 @@
-<p>
-  navbar-page works!
-</p>
+<!-- TITLE NAVBAR COMPONENT PAGE -->
+<div class="panelTitle">
+  <h2><strong>Navbar</strong> Component</h2>
+  <ul>
+      <li><a scrollTo href="navbar">Navbar</a></li>
+  </ul>
+</div>
+
+
+<!-- DESCRIPTION NAVBAR COMPONENT PAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="navbar">
+      <h3>
+          <svg>
+            <use xlink:href="#gitListItem"></use>
+          </svg>
+          Navbar (Burger)
+
+          <a href="https://github.com/CreamNG/Components/tree/master/navbar" class="gitBtn" target="_blank">
+            <svg>
+              <use xlink:href="#gitSvg"></use>
+            </svg>
+            <span>Github</span></a>
+      </h3>
+
+      <div class="demo">
+        <!-- NAVBAR DEMO -->
+        <c3m-navbar>
+            <c3m-navbar-item title="Home"></c3m-navbar-item>
+            <c3m-navbar-item title="Contact"></c3m-navbar-item>
+            <c3m-navbar-item title="About Us"></c3m-navbar-item>
+        </c3m-navbar>
+      </div>
+
+      <div class="explain">
+        <p> A responsive navbar with burger button for mobile version </p>
+      </div>
+
+      <!-- TABS SNIPPETS -->
+      <c3m-tabs class="snippets">
+        <c3m-tab tabTitle="HTML">
+            <p class="pre-code">To call the component</p>
+            <div class="code">
+                  <!--?prettify lang=html linenums=true?-->
+                  <pre class="prettyprint linenums">
+  &lt;!-- NAVBAR DEMO --&gt;
+  &lt;c3m-navbar&gt;
+      &lt;c3m-navbar-item title=&#34;Home&#34;&gt;&lt;/c3m-navbar-item&gt;
+      &lt;c3m-navbar-item title=&#34;Contact&#34;&gt;&lt;/c3m-navbar-item&gt;
+      &lt;c3m-navbar-item title=&#34;About Us&#34;&gt;&lt;/c3m-navbar-item&gt;
+  &lt;/c3m-navbar&gt;
+                  </pre>
+            </div>
+        </c3m-tab>
+
+        <c3m-tab tabTitle="CSS">
+        </c3m-tab>
+
+        <c3m-tab tabTitle="TypeScript">
+        </c3m-tab>
+      </c3m-tabs>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+/* Nav */
+c3m-navbar nav{
+  background-color: #333333;
+  padding: 0.75rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+  /* When First Li Offset Top < Last Li Offset Top */
+  c3m-navbar nav.over{
+    display: block;
+  }
+
+  c3m-navbar ul{
+    margin-left: 1rem;
+  }
+    c3m-navbar ul li{
+      display: inline-block;
+      margin-right: 1.45rem;
+    }
+      c3m-navbar ul li a{
+        color: white;
+      }
+
+ /* Burger Btn */
+c3m-navbar button{
+  height: 1.5rem;
+  width: 1.5rem;
+  display: none;
+  cursor: pointer;
+  background-color: initial;
+  transition: transform 0.8s;
+}
+  c3m-navbar nav.over button{
+    display: block;
+  }
+    c3m-navbar nav.over.open button{
+      transform: rotate(90deg);
+    }
+
+/* Containers of Link when First Li Offset Top < Last Li Offset Top AND Containers is CLOSE */
+c3m-navbar nav.over ul {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 3rem;
+  background-color: #6f6c6c;
+  padding: 0.5rem 0.7rem;
+  width: 100%;
+  margin-left: 0;
+}
+/* Li When First Li Offset Top < Last Li Offset Top */
+c3m-navbar nav.over ul li {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+/* Containers of Link when First Li Offset Top < Last Li Offset Top AND Containers is OPEN */
+c3m-navbar nav.over.open ul {
+  display: block;
+}

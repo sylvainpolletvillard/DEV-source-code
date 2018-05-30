@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+import { AppComponent } from '../../app.component';
 @Component({
   selector: 'c3m-navbar-page',
   templateUrl: './navbar-page.component.html',
@@ -8,9 +8,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class NavbarPageComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private app: AppComponent) {
   }
 
+  ngOnInit() {
+    const subComp = ['navbar-item'];
+    this.app.codeSnippets(subComp);
+  }
 }

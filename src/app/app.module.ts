@@ -78,15 +78,17 @@ import { ListComponent } from './main/list-page/list/list.component';
 import { ListOrderComponent } from './main/list-page/list-order/list-order.component';
 import { ListThumbnailsComponent } from './main/list-page/list-thumbnails/list-thumbnails.component';
 import { ListDescriptionComponent } from './main/list-page/list-description/list-description.component';
+import { NavbarComponent } from './main/navbar-page/navbar/navbar.component';
+import { NavbarItemComponent } from './main/navbar-page/navbar/navbar-item/navbar-item.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
   { path: 'button', component: ButtonPageComponent, data: { breadcrumb: 'Button' } },
   { path: 'tabs', component: TabsPageComponent, data: { breadcrumb: 'Tabs' } },
   { path: 'accordion', component: AccordionPageComponent, data: { breadcrumb: 'Accordion' } },
-  { path: 'modal', component: ModalPageComponent, data: { breadcrumb: 'modal' } },
+  { path: 'modal', component: ModalPageComponent, data: { breadcrumb: 'Modal' } },
   { path: 'carousel', component: CarouselPageComponent, data: { breadcrumb: 'carousel' } },
-  { path: 'table', component: TablePageComponent, data: { breadcrumb: 'table' } },
+  { path: 'table', component: TablePageComponent, data: { breadcrumb: 'Table' } },
   { path: 'pagination', component: PaginationPageComponent, data: { breadcrumb: 'pagination' } },
   { path: 'slider', component: SliderPageComponent, data: { breadcrumb: 'slider' } },
   { path: 'gettingStarted', component: GettingStartedComponent, data: { breadcrumb: 'GettingStarted' } },
@@ -96,11 +98,12 @@ export const appRoutes: Routes = [
   { path: 'dropdown', component: DropdownPageComponent, data: { breadcrumb: 'Dropdown' } },
   { path: 'input', component: InputPageComponent, data: { breadcrumb: 'Input' } },
   { path: 'checkbox', component: CheckboxPageComponent, data: { breadcrumb: 'Checkbox' } },
-  { path: 'select', component: SelectPageComponent, data: { breadcrumb: 'select' } },
-  { path: 'fieldset', component: FieldsetPageComponent, data: { breadcrumb: 'fieldset' } },
-  { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'skip' } },
-  { path: 'toast', component: ToastPageComponent, data: { breadcrumb: 'toast' } },
-  { path: 'list', component: ListPageComponent, data: { breadcrumb: 'list' } },
+  { path: 'select', component: SelectPageComponent, data: { breadcrumb: 'Select' } },
+  { path: 'fieldset', component: FieldsetPageComponent, data: { breadcrumb: 'Fieldset' } },
+  { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'Skip' } },
+  { path: 'toast', component: ToastPageComponent, data: { breadcrumb: 'Toast' } },
+  { path: 'list', component: ListPageComponent, data: { breadcrumb: 'List' } },
+  { path: 'navbar', component: NavbarPageComponent, data: { breadcrumb: 'Navbar' } },
   { path: 'breadcrumbs', component: BreadcrumbsPageComponent, data: { breadcrumb: 'Breadcrumbs' }
  },
 
@@ -181,6 +184,8 @@ export const appRoutes: Routes = [
     ListOrderComponent,
     ListThumbnailsComponent,
     ListDescriptionComponent,
+    NavbarComponent,
+    NavbarItemComponent,
   ],
   imports: [
     BrowserModule,
